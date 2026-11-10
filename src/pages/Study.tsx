@@ -55,6 +55,10 @@ export function TimetablePage() {
   const nowMinutes = now.getHours() * 60 + now.getMinutes();
   const [selected, setSelected] = useState<(typeof timetable)[number] | null>(null);
   const toast = useToast();
+  const contactHours = timetable.reduce(
+    (sum, slot) => sum + (toMinutes(slot.end) - toMinutes(slot.start)) / 60,
+    0
+  );
 
   return (
     <>
@@ -76,7 +80,7 @@ export function TimetablePage() {
           >
             <Download /> Export week
           </Button>
-          <Pill tone="brand">8 contact hours a week</Pill>
+          <Pill tone="brand">{contactHours} contact hours a week</Pill>
         </div>
       </div>
 
@@ -96,7 +100,10 @@ export function TimetablePage() {
       </div>
 
       <Card>
-        <CardHead title="Lecture timetable" sub="First semester, 2025/2026" />
+        <CardHead
+          title="Lecture timetable"
+          sub={`${student.semester} semester, ${student.session}`}
+        />
         <div className="card__bd">
           <div className="week">
             {DAYS.map((d) => {

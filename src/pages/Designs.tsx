@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { ArrowUpRight, ChevronRight } from "lucide-react";
 import { cx } from "../components/ui";
+import { cgpa, fees, naira, registered, registeredUnits, student } from "../data";
 
 /*
  * Five visual directions for the Chrisland University portal.
@@ -95,8 +96,15 @@ const gpaBars = [
 function Portrait() {
   return (
     <span className="dp-portrait" aria-hidden="true">
-      <span>AO</span>
-      <img src="/student-avatar.jpg" alt="" />
+      <span>
+        {student.name
+          .split(" ")
+          .filter((word) => /^[A-Za-z]/.test(word))
+          .map((word) => word[0])
+          .slice(0, 2)
+          .join("")}
+      </span>
+      <img src={student.photo} alt="" />
     </span>
   );
 }
@@ -138,8 +146,8 @@ function RegisterBoard() {
           </nav>
 
           <div className="register__railfoot">
-            <span>First semester</span>
-            <strong>2025 / 2026</strong>
+            <span>{student.semester} semester</span>
+            <strong>{student.session.replace("/", " / ")}</strong>
           </div>
         </aside>
 
@@ -149,8 +157,8 @@ function RegisterBoard() {
             <span className="register__me">
               <Portrait />
               <span>
-                <b>Adaeze N. Okonkwo</b>
-                <small>CLU210118-042</small>
+                <b>{student.name}</b>
+                <small>{student.matric}</small>
               </span>
             </span>
           </header>
@@ -159,16 +167,16 @@ function RegisterBoard() {
             <div className="register__kicker">
               Semester record <span>01</span>
             </div>
-            <h2>Adaeze N. Okonkwo</h2>
-            <p>BSc Software Engineering · Level 500</p>
+            <h2>{student.name}</h2>
+            <p>{student.programme} · Level {student.level}</p>
             <div className="register__facts">
               <div>
                 <span>CGPA</span>
-                <strong>4.25</strong>
+                <strong>{cgpa.toFixed(2)}</strong>
               </div>
               <div>
                 <span>Units</span>
-                <strong>21</strong>
+                <strong>{registeredUnits(registered)}</strong>
               </div>
               <div>
                 <span>Attendance</span>
@@ -176,7 +184,7 @@ function RegisterBoard() {
               </div>
               <div>
                 <span>Fees</span>
-                <strong>Cleared</strong>
+                <strong>{fees.outstanding === 0 ? "Cleared" : "Outstanding"}</strong>
               </div>
             </div>
           </section>
@@ -185,21 +193,21 @@ function RegisterBoard() {
             <section className="register__ledger">
               <header>
                 <h3>Term ledger</h3>
-                <span>2025/2026 · First</span>
+                <span>{student.session} · {student.semester}</span>
               </header>
               <div className="register__row">
                 <span>Tuition and fees</span>
-                <span>₦400,000</span>
+                <span>{naira(fees.billed)}</span>
               </div>
               <div className="register__row">
                 <span>Paid to date</span>
-                <span>₦400,000</span>
+                <span>{naira(fees.billed)}</span>
               </div>
               <div className="register__row register__row--total">
                 <span>Balance</span>
-                <strong>₦0</strong>
+                <strong>{naira(fees.outstanding)}</strong>
               </div>
-              <p className="register__fine">Cleared 13 October 2025 · Paystack</p>
+              <p className="register__fine">{fees.outstanding === 0 ? "Cleared" : "Outstanding"} 13 October 2025 · Paystack</p>
             </section>
 
             <section className="register__day">
@@ -281,26 +289,26 @@ function QuadBoard() {
           </nav>
           <div className="quad__me">
             <Portrait />
-            <span>Adaeze</span>
+            <span>{student.firstName}</span>
           </div>
         </header>
 
         <main className="quad__main">
           <section className="quad__intro">
             <div className="quad__heading">
-              <span className="quad__kicker">Final year · first semester</span>
+              <span className="quad__kicker">Final year · {student.semester.toLowerCase()} semester</span>
               <h2>
                 Your term,
                 <br />
                 in plain view.
               </h2>
-              <p>BSc Software Engineering · Level 500 · 21 registered units</p>
+              <p>{student.programme} · Level {student.level} · {registeredUnits(registered)} registered units</p>
             </div>
             <aside className="quad__fees">
               <span>Account balance</span>
-              <strong>₦0</strong>
+              <strong>{naira(fees.outstanding)}</strong>
               <i aria-hidden="true" />
-              <p>Paid in full · 13 October</p>
+              <p>{fees.outstanding === 0 ? "Paid in full" : `${naira(fees.outstanding)} outstanding`} · 13 October</p>
               <span className="quad__feeLink">
                 View statement <ArrowUpRight />
               </span>
@@ -310,7 +318,7 @@ function QuadBoard() {
           <section className="quad__stats" aria-label="Term summary">
             <div>
               <span>CGPA</span>
-              <strong>4.25</strong>
+              <strong>{cgpa.toFixed(2)}</strong>
               <p>Of 5.00</p>
             </div>
             <div>
@@ -356,7 +364,7 @@ function QuadBoard() {
             <section className="quad__chart">
               <header>
                 <h3>GPA across semesters</h3>
-                <span>4.25 CGPA</span>
+                <span>{cgpa.toFixed(2)} CGPA</span>
               </header>
               <div className="quad__bars">
                 {gpaBars.map((bar) => (
@@ -400,7 +408,7 @@ function BulletinBoard() {
           <span>Results</span>
           <span>Payments</span>
           <span className="bulletin__me">
-            <Portrait /> <span className="bulletin__mename">Adaeze N. Okonkwo</span>
+            <Portrait /> <span className="bulletin__mename">{student.name}</span>
           </span>
         </nav>
 
@@ -408,13 +416,13 @@ function BulletinBoard() {
           <section className="bulletin__lead">
             <div>
               <span className="bulletin__kicker">Semester report / 2025–26</span>
-              <h2>Adaeze N. Okonkwo</h2>
-              <p>BSc Software Engineering · Level 500 · CLU210118-042</p>
+              <h2>{student.name}</h2>
+              <p>{student.programme} · Level {student.level} · {student.matric}</p>
             </div>
             <div className="bulletin__stamp">
               <span>Fee status</span>
-              <strong>Cleared</strong>
-              <small>₦0 outstanding</small>
+              <strong>{fees.outstanding === 0 ? "Cleared" : "Outstanding"}</strong>
+              <small>{naira(fees.outstanding)} outstanding</small>
             </div>
           </section>
 
@@ -458,7 +466,7 @@ function BulletinBoard() {
             <aside className="bulletin__sidecol">
               <section className="bulletin__score">
                 <span>Term summary</span>
-                <strong>4.25</strong>
+                <strong>{cgpa.toFixed(2)}</strong>
                 <p>Current CGPA</p>
               </section>
               <section className="bulletin__facts">
@@ -468,7 +476,7 @@ function BulletinBoard() {
                 </div>
                 <div>
                   <span>Units</span>
-                  <b>21</b>
+                  <b>{registeredUnits(registered)}</b>
                 </div>
                 <div>
                   <span>Next class</span>
@@ -513,19 +521,19 @@ function EveningBoard() {
           </nav>
           <div className="evening__railfoot">
             <i aria-hidden="true" />
-            <span>First semester</span>
-            <strong>2025 / 2026</strong>
+            <span>{student.semester} semester</span>
+            <strong>{student.session.replace("/", " / ")}</strong>
           </div>
         </aside>
 
         <main className="evening__main">
           <header className="evening__utility">
-            <span>2025/2026 · First semester</span>
+            <span>{student.session} · {student.semester} semester</span>
             <span className="evening__me">
               <Portrait />
               <span>
-                <b>Adaeze N. Okonkwo</b>
-                <small>CLU210118-042</small>
+                <b>{student.name}</b>
+                <small>{student.matric}</small>
               </span>
             </span>
           </header>
@@ -534,17 +542,17 @@ function EveningBoard() {
             <div className="evening__heading">
               <span>Student overview</span>
               <h2>
-                First semester,
+                {student.semester} semester,
                 <br />
                 steady progress.
               </h2>
-              <p>BSc Software Engineering · Level 500 · 21 registered units</p>
+              <p>{student.programme} · Level {student.level} · {registeredUnits(registered)} registered units</p>
             </div>
 
             <div className="evening__chart">
               <header>
                 <span>GPA trend</span>
-                <b>4.25</b>
+                <b>{cgpa.toFixed(2)}</b>
               </header>
               <svg viewBox="0 0 360 138" role="img" aria-label="GPA trend across six semesters">
                 <title>GPA across six semesters, from 4.10 to 4.69</title>
@@ -584,7 +592,7 @@ function EveningBoard() {
           <section className="evening__stats" aria-label="Term summary">
             <div>
               <span>CGPA</span>
-              <strong>4.25</strong>
+              <strong>{cgpa.toFixed(2)}</strong>
               <p>Stable this semester</p>
             </div>
             <div>
@@ -594,8 +602,8 @@ function EveningBoard() {
             </div>
             <div>
               <span>Fees</span>
-              <strong>₦0</strong>
-              <p>Cleared 13 October</p>
+              <strong>{naira(fees.outstanding)}</strong>
+              <p>{fees.outstanding === 0 ? "Cleared" : "Outstanding"} 13 October</p>
             </div>
             <div>
               <span>Next class</span>
@@ -631,15 +639,15 @@ function EveningBoard() {
               </header>
               <div>
                 <span>Billed</span>
-                <b>₦400,000</b>
+                <b>{naira(fees.billed)}</b>
               </div>
               <div>
                 <span>Paid</span>
-                <b>₦400,000</b>
+                <b>{naira(fees.billed)}</b>
               </div>
               <div className="evening__balance">
                 <span>Balance</span>
-                <strong>₦0</strong>
+                <strong>{naira(fees.outstanding)}</strong>
               </div>
               <p>Last payment 13 October 2025 · Paystack</p>
             </section>
@@ -674,13 +682,13 @@ function StudioBoard() {
             <div>
               <span className="studio__index">Record 01 / 2025–26</span>
               <h2>
-                Adaeze N.
+                {student.name.split(" ").slice(0, 2).join(" ")}
                 <br />
-                Okonkwo
+                {student.name.split(" ").slice(2).join(" ")}
               </h2>
             </div>
             <div className="studio__details">
-              <p>BSc Software Engineering</p>
+              <p>{student.programme}</p>
               <dl>
                 <div>
                   <dt>Level</dt>
@@ -688,15 +696,15 @@ function StudioBoard() {
                 </div>
                 <div>
                   <dt>CGPA</dt>
-                  <dd>4.25</dd>
+                  <dd>{cgpa.toFixed(2)}</dd>
                 </div>
                 <div>
                   <dt>Units</dt>
-                  <dd>21</dd>
+                  <dd>{registeredUnits(registered)}</dd>
                 </div>
                 <div>
                   <dt>Matric</dt>
-                  <dd>CLU210118-042</dd>
+                  <dd>{student.matric}</dd>
                 </div>
               </dl>
             </div>
@@ -712,9 +720,9 @@ function StudioBoard() {
                 <i>01</i>
                 <div>
                   <b>Tuition and fees</b>
-                  <p>2025/2026 · First semester</p>
+                  <p>{student.session} · {student.semester} semester</p>
                 </div>
-                <strong>Cleared</strong>
+                <strong>{fees.outstanding === 0 ? "Cleared" : "Outstanding"}</strong>
               </div>
               <div className="studio__row">
                 <i>02</i>
@@ -745,8 +753,8 @@ function StudioBoard() {
             <aside className="studio__side">
               <div className="studio__fees">
                 <span>Account balance</span>
-                <strong>₦0</strong>
-                <p>Paid in full on 13 October 2025</p>
+                <strong>{naira(fees.outstanding)}</strong>
+                <p>{fees.outstanding === 0 ? "Paid in full" : `${naira(fees.outstanding)} outstanding`} on 13 October 2025</p>
                 <span className="studio__link">
                   View statement <ArrowUpRight />
                 </span>

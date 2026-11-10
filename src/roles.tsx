@@ -1,4 +1,5 @@
 import { createContext, useCallback, useContext, useEffect, useState, type ReactNode } from "react";
+import { student } from "./data";
 
 export type Role = "student" | "lecturer" | "bursar" | "ict" | "vc" | "registrar";
 
@@ -16,11 +17,11 @@ export const ROLE_META: Record<Role, RoleMeta> = {
   student: {
     label: "Student",
     short: "Student",
-    name: "Adaeze N. Okonkwo",
-    detail: "CLU210118-042",
-    email: "adaeze.okonkwo@chrislanduniversity.edu.ng",
+    name: student.name,
+    detail: student.matric,
+    email: student.email,
     home: "dashboard",
-    photo: "/student-avatar.jpg",
+    photo: student.photo,
   },
   lecturer: {
     label: "Lecturer",

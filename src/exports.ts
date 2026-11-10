@@ -81,7 +81,7 @@ export function exportClasses(slots: ClassSlot[], filename: string): string {
         end: at(day, slot.end),
         summary: `${slot.code} — ${slot.title}`,
         location: slot.venue,
-        description: `Lecturer: ${slot.lecturer}\nChrisland University · ${student.session} first semester`,
+        description: `Lecturer: ${slot.lecturer}\nChrisland University · ${student.session} ${student.semester.toLowerCase()} semester`,
       };
     })
   );

@@ -4,6 +4,8 @@
  * and academic offices actually work — all identities and numbers are invented.
  */
 
+import { student } from "./data";
+
 /* ---------------------------------------------------------------- lecturer */
 
 export interface StaffCourse {
@@ -52,7 +54,7 @@ export interface RosterStudent {
 
 export const lecturerRoster: Record<string, RosterStudent[]> = {
   "SWE 501": [
-    { matric: "CLU210118-042", name: "Adaeze Okonkwo", ca: 27, exam: 61 },
+    { matric: student.matric, name: student.name, ca: 27, exam: 61 },
     { matric: "CLU210118-057", name: "Ibrahim Suleiman", ca: 24, exam: 55 },
     { matric: "CLU210118-063", name: "Chiamaka Obi", ca: 29, exam: 66 },
     { matric: "CLU210118-071", name: "Tunde Balogun", ca: 21, exam: 44 },
@@ -62,7 +64,7 @@ export const lecturerRoster: Record<string, RosterStudent[]> = {
     { matric: "CLU210118-118", name: "Kelechi Eze", ca: 23, exam: null },
   ],
   "SWE 511": [
-    { matric: "CLU210118-042", name: "Adaeze Okonkwo", ca: 28, exam: 64 },
+    { matric: student.matric, name: student.name, ca: 28, exam: 64 },
     { matric: "CLU210118-063", name: "Chiamaka Obi", ca: 27, exam: 60 },
     { matric: "CLU210118-071", name: "Tunde Balogun", ca: 22, exam: 41 },
     { matric: "CLU210118-084", name: "Fatima Bello", ca: 25, exam: 52 },
@@ -112,7 +114,7 @@ export const bursarMonthly = [
 ];
 
 export const ledger: LedgerRow[] = [
-  { id: "l1", date: "13 Oct 2025", student: "Adaeze Okonkwo", matric: "CLU210118-042", item: "School fee", amount: 400_000, channel: "Paystack", status: "Confirmed", reference: "T812578850258641" },
+  { id: "l1", date: "13 Oct 2025", student: student.name, matric: student.matric, item: "School fee", amount: 400_000, channel: "Paystack", status: "Confirmed", reference: "T812578850258641" },
   { id: "l2", date: "13 Oct 2025", student: "Ibrahim Suleiman", matric: "CLU210118-057", item: "School fee", amount: 400_000, channel: "Paystack", status: "Confirmed", reference: "T827361784050449" },
   { id: "l3", date: "13 Oct 2025", student: "Chiamaka Obi", matric: "CLU210118-063", item: "Hostel accommodation", amount: 85_000, channel: "Bank transfer", status: "Pending", reference: "T706588823289515" },
   { id: "l4", date: "12 Oct 2025", student: "Tunde Balogun", matric: "CLU210118-071", item: "School fee", amount: 400_000, channel: "Paystack", status: "Confirmed", reference: "T184066784475197" },
@@ -168,7 +170,7 @@ export interface SystemUser {
 }
 
 export const systemUsers: SystemUser[] = [
-  { id: "u1", name: "Adaeze Okonkwo", email: "adaeze.okonkwo@chrislanduniversity.edu.ng", role: "Student", status: "Active", lastLogin: "Today, 21:04" },
+  { id: "u1", name: student.name, email: student.email, role: "Student", status: "Active", lastLogin: "Today, 21:04" },
   { id: "u2", name: "Dr. Bamidele Adeyemi", email: "b.adeyemi@chrislanduniversity.edu.ng", role: "Lecturer", status: "Active", lastLogin: "Today, 18:22" },
   { id: "u3", name: "Mrs. Folake Adekunle", email: "f.adekunle@chrislanduniversity.edu.ng", role: "Bursar", status: "Active", lastLogin: "Today, 09:41" },
   { id: "u4", name: "Mr. Tochukwu Okafor", email: "t.okafor@chrislanduniversity.edu.ng", role: "ICT", status: "Active", lastLogin: "Today, 22:10" },
@@ -251,7 +253,7 @@ export interface RegistryRequest {
 }
 
 export const registryQueue: RegistryRequest[] = [
-  { id: "r1", type: "Transcript", student: "Adaeze Okonkwo", matric: "CLU210118-042", submitted: "08 Nov 2025", fee: 5_000, status: "New" },
+  { id: "r1", type: "Transcript", student: student.name, matric: student.matric, submitted: "08 Nov 2025", fee: 5_000, status: "New" },
   { id: "r2", type: "Certificate verification", student: "Kelechi Eze", matric: "CLU210118-118", submitted: "07 Nov 2025", fee: 10_000, status: "In review" },
   { id: "r3", type: "English proficiency", student: "Yusuf Danjuma", matric: "CLU210118-152", submitted: "06 Nov 2025", fee: 7_500, status: "New" },
   { id: "r4", type: "Transcript", student: "Ngozi Uche", matric: "CLU210118-145", submitted: "05 Nov 2025", fee: 5_000, status: "Completed" },

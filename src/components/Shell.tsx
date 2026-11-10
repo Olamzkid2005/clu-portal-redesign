@@ -179,6 +179,15 @@ export const pageTitles: Record<string, string> = {
 const isActive = (route: string, item: NavItem) =>
   route === item.id || (!!item.children && route.startsWith(item.id + "/"));
 
+const RAIL_PROMOS: Record<Role, { title: [string, string]; note: string }> = {
+  student: { title: ["Dream bigger.", "Achieve more."], note: "" },
+  lecturer: { title: ["Teach well.", "Shape minds."], note: "Teaching workspace" },
+  bursar: { title: ["Clarity in", "every naira."], note: "Finance workspace" },
+  ict: { title: ["Keep campus", "connected."], note: "Systems workspace" },
+  vc: { title: ["Lead with", "foresight."], note: "Executive workspace" },
+  registrar: { title: ["Every record,", "made right."], note: "Registry workspace" },
+};
+
 function DrawerNav({
   groups,
   route,
@@ -205,7 +214,10 @@ function DrawerNav({
   ).length;
 
   return (
-    <aside className="drawerpanel" onClick={(event) => event.stopPropagation()}>
+    <aside
+      className={cx("drawerpanel", role === "student" && "drawerpanel--student")}
+      onClick={(event) => event.stopPropagation()}
+    >
       <div className="drawerpanel__head">
         <div className="drawerpanel__brand">
           <span className="quadbrand__mark">CLU</span>
@@ -375,6 +387,9 @@ export default function Shell({ children }: { children: ReactNode }) {
   const activeGroup =
     groups.find((group) => group.items.some((item) => isActive(route, item))) ?? groups[0];
   const unread = role === "student" ? notes.filter((note) => note.unread).length : 0;
+  const pendingAssignments = assignments.filter(
+    (a) => a.status === "pending" || a.status === "overdue"
+  ).length;
   const toggleTheme = () => setTheme((current) => (current === "dark" ? "light" : "dark"));
 
   const handleSignOut = () => {
@@ -398,8 +413,84 @@ export default function Shell({ children }: { children: ReactNode }) {
           icon: item.icon,
         }));
 
+  const promo = RAIL_PROMOS[role];
+
   return (
-    <div className="shell shell--quad">
+    <div
+      className={cx(
+        "shell shell--quad shell--workspace",
+        role === "student" && "shell--student"
+      )}
+    >
+      <aside className="portal-rail" aria-label={`${meta.label} navigation`}>
+          <button className="portal-rail__brand" onClick={() => go(meta.home)}>
+            <span className="portal-rail__mark">
+              <GraduationCap />
+            </span>
+            <span className="portal-rail__brandcopy">
+              <b>Chrisland University</b>
+              <small>{role === "student" ? "Student portal" : "Staff portal"}</small>
+            </span>
+          </button>
+
+          <nav className="portal-rail__nav">
+            {groups.map((group) => (
+              <div className="portal-rail__group" key={group.label}>
+                <div className="portal-rail__group-label">{group.label}</div>
+                {group.items.map((item) => {
+                  const active = isActive(route, item);
+                  return (
+                    <div key={item.id}>
+                      <button
+                        className={cx("portal-rail__link", active && "is-active")}
+                        onClick={() => go(item.id)}
+                      >
+                        {item.icon}
+                        <span>{item.label}</span>
+                        {item.id === "assignments" && pendingAssignments > 0 && (
+                          <span className="portal-rail__badge">{pendingAssignments}</span>
+                        )}
+                      </button>
+                      {item.children && active && (
+                        <div className="portal-rail__sub">
+                          {item.children.map((child) => (
+                            <button
+                              key={child.id}
+                              className={cx(
+                                "portal-rail__sublink",
+                                route === child.id && "is-active"
+                              )}
+                              onClick={() => go(child.id)}
+                            >
+                              {child.label}
+                            </button>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+            ))}
+          </nav>
+
+          <div className="portal-rail__promo">
+            <span className="portal-rail__promo-icon">
+              <GraduationCap />
+            </span>
+            <b>
+              {promo.title[0]}
+              <br />
+              {promo.title[1]}
+            </b>
+            <small>
+              {role === "student"
+                ? `${student.session} · ${student.semester} semester`
+                : `${promo.note} · 2025/2026`}
+            </small>
+          </div>
+        </aside>
+
       <div className="main">
         <header className="quadhead" ref={headerRef}>
           <div className="quadbar">

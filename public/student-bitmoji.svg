@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 460" role="img" aria-labelledby="title desc">
+  <title id="title">Waving student illustration</title>
+  <desc id="desc">A stylised young woman with curly hair and a dark hoodie, waving hello.</desc>
+  <defs>
+    <linearGradient id="skin" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#a96845"/>
+      <stop offset=".48" stop-color="#874b30"/>
+      <stop offset="1" stop-color="#5c2c1c"/>
+    </linearGradient>
+    <linearGradient id="skinArm" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#b5744e"/>
+      <stop offset="1" stop-color="#7c4028"/>
+    </linearGradient>
+    <linearGradient id="hoodie" x1=".1" y1="0" x2=".9" y2="1">
+      <stop offset="0" stop-color="#3a3044"/>
+      <stop offset=".5" stop-color="#241e2d"/>
+      <stop offset="1" stop-color="#14111b"/>
+    </linearGradient>
+    <linearGradient id="hoodieLight" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4a3e58"/>
+      <stop offset="1" stop-color="#2a2333"/>
+    </linearGradient>
+    <linearGradient id="hair" x1=".2" y1="0" x2=".8" y2="1">
+      <stop offset="0" stop-color="#382128"/>
+      <stop offset=".55" stop-color="#1f1418"/>
+      <stop offset="1" stop-color="#0f0b0e"/>
+    </linearGradient>
+    <linearGradient id="hairCurl" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4b2d33"/>
+      <stop offset="1" stop-color="#241519"/>
+    </linearGradient>
+    <radialGradient id="cheek" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#d98b68" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#d98b68" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow" cx=".5" cy=".45" r=".5">
+      <stop offset="0" stop-color="#c4b5fd" stop-opacity=".75"/>
+      <stop offset="1" stop-color="#c4b5fd" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="7"/>
+    </filter>
+  </defs>
+
+  <ellipse cx="210" cy="438" rx="126" ry="16" fill="#4c1d95" opacity=".13" filter="url(#soft)"/>
+  <circle cx="210" cy="232" r="176" fill="url(#glow)"/>
+
+  <!-- raised arm and waving hand -->
+  <path d="M154 301c-20-18-37-49-45-83-2-9 7-15 15-12 13 32 33 64 54 82z" fill="url(#hoodieLight)"/>
+  <path d="M108 218c-6-2-9-9-7-16l7-27c2-8 10-12 17-9 7 4 9 12 6 19l-7 26c-2 7-9 10-16 7z" fill="url(#skinArm)"/>
+  <ellipse cx="105" cy="185" rx="18" ry="23" fill="url(#skinArm)"/>
+  <g fill="url(#skinArm)" stroke="#6d3622" stroke-width="1.1" stroke-linejoin="round">
+    <rect x="88" y="148" width="8" height="34" rx="4" transform="rotate(-11 92 165)"/>
+    <rect x="97" y="142" width="8.5" height="40" rx="4.2" transform="rotate(-4 101 162)"/>
+    <rect x="107" y="144" width="8.5" height="39" rx="4.2" transform="rotate(3 111 163)"/>
+    <rect x="117" y="151" width="8" height="32" rx="4" transform="rotate(10 121 167)"/>
+    <rect x="78" y="182" width="8" height="26" rx="4" transform="rotate(-52 82 195)"/>
+  </g>
+  <path d="M95 158c3-4 9-5 14-2M104 146c3-4 9-5 14-2M114 148c3-4 9-4 13-1" fill="none" stroke="#dca184" stroke-width="2.2" stroke-linecap="round" opacity=".7"/>
+  <path d="M121 218l26 8-7 18-27-11z" fill="#191520"/>
+
+  <!-- torso -->
+  <path d="M151 283c-24 9-41 36-48 72l-9 87h232l-9-87c-7-36-24-63-48-72l-19-10h-80z" fill="url(#hoodie)"/>
+  <path d="M154 292c-17 12-29 36-34 64l-6 86h30l7-95c2-27 8-47 18-61z" fill="#332b3e" opacity=".55"/>
+  <path d="M266 292c17 12 29 36 34 64l6 86h-30l-7-95c-2-27-8-47-18-61z" fill="#0e0b12" opacity=".55"/>
+
+  <!-- right arm down -->
+  <path d="M273 296c22 18 35 58 38 118l-28 10c-3-50-13-91-30-116z" fill="url(#hoodieLight)"/>
+  <path d="M282 414c8-4 18-1 22 7 3 7 1 15-5 18l-15 7c-8 4-17 0-20-7-3-8 1-16 8-20z" fill="url(#skinArm)"/>
+  <path d="M270 424c2-18 9-34 19-43" fill="none" stroke="#c08360" stroke-width="2" stroke-linecap="round" opacity=".5"/>
+
+  <!-- neck and hood -->
+  <path d="M187 235h46v55c-12 10-34 10-46 0z" fill="#6f3a26"/>
+  <path d="M153 282c5-22 22-37 44-38h26c22 1 39 16 44 38-20 18-94 18-114 0z" fill="#17131f"/>
+  <path d="M163 279c13 10 30 15 47 15s34-5 47-15" fill="none" stroke="#4b4059" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- hair silhouette -->
+  <path d="M150 188c-14-33-2-73 32-91 20-11 46-12 68-3 35 15 50 54 36 92-5 13-13 22-23 27 1-24-5-44-17-56-12-13-30-19-50-15-23 4-38 20-41 45-2 13 0 25 4 34-4-10-7-21-9-33z" fill="url(#hair)"/>
+  <path d="M154 166c-9-25 1-53 22-69 17-13 41-18 62-13-21 1-40 9-54 23-16 16-24 37-30 59z" fill="#56343a" opacity=".55"/>
+
+  <!-- ears -->
+  <ellipse cx="159" cy="191" rx="12" ry="18" fill="url(#skin)"/>
+  <ellipse cx="261" cy="191" rx="12" ry="18" fill="url(#skin)"/>
+  <path d="M157 188c4 3 5 8 2 12M263 188c-4 3-5 8-2 12" fill="none" stroke="#5b2d1d" stroke-width="2" stroke-linecap="round" opacity=".65"/>
+
+  <!-- face -->
+  <path d="M163 159c3-35 21-56 47-56s44 21 47 56l-2 47c-3 31-22 50-45 50s-42-19-45-50z" fill="url(#skin)"/>
+  <path d="M178 117c8-10 19-15 32-15 20 0 34 11 41 28-11 14-27 21-45 21-12 0-22-3-31-9z" fill="#b97a53" opacity=".25"/>
+  <ellipse cx="181" cy="201" rx="17" ry="10" fill="url(#cheek)"/>
+  <ellipse cx="239" cy="201" rx="17" ry="10" fill="url(#cheek)"/>
+
+  <!-- brows -->
+  <path d="M178 156c6-4 14-4 20 0" fill="none" stroke="#2c1712" stroke-width="4.5" stroke-linecap="round"/>
+  <path d="M222 156c6-4 14-4 20 0" fill="none" stroke="#2c1712" stroke-width="4.5" stroke-linecap="round"/>
+
+  <!-- eyes -->
+  <g>
+    <ellipse cx="189" cy="173" rx="11" ry="7.6" fill="#fffaf7"/>
+    <ellipse cx="231" cy="173" rx="11" ry="7.6" fill="#fffaf7"/>
+    <circle cx="190" cy="174" r="5.2" fill="#2a1713"/>
+    <circle cx="230" cy="174" r="5.2" fill="#2a1713"/>
+    <circle cx="192" cy="172" r="1.8" fill="#fff"/>
+    <circle cx="232" cy="172" r="1.8" fill="#fff"/>
+    <path d="M178 169c5-4 13-5 19-1M222 168c6-4 14-3 19 1" fill="none" stroke="#24120e" stroke-width="2" stroke-linecap="round"/>
+  </g>
+
+  <!-- nose and smile -->
+  <path d="M211 177c-3 9-7 15-2 18 4 2 8 1 11-2" fill="none" stroke="#5a2b1c" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M190 209c8 12 30 15 40 0-10 7-29 8-40 0z" fill="#4a1d1b"/>
+  <path d="M193 210c9 7 24 8 34 1-8 4-24 4-34-1z" fill="#fff8f4"/>
+  <path d="M193 210c9 7 24 8 34 1" fill="none" stroke="#381412" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M197 224c8 4 19 4 26 0" fill="none" stroke="#6b3025" stroke-width="2.2" stroke-linecap="round" opacity=".65"/>
+
+  <!-- earrings -->
+  <circle cx="159" cy="207" r="7" fill="none" stroke="#f0bf65" stroke-width="2.5"/>
+  <circle cx="261" cy="207" r="7" fill="none" stroke="#f0bf65" stroke-width="2.5"/>
+
+  <!-- curls around the hairline -->
+  <g fill="url(#hairCurl)">
+    <circle cx="161" cy="135" r="16"/><circle cx="172" cy="115" r="18"/>
+    <circle cx="193" cy="101" r="19"/><circle cx="216" cy="96" r="19"/>
+    <circle cx="239" cy="102" r="18"/><circle cx="258" cy="118" r="17"/>
+    <circle cx="270" cy="139" r="15"/><circle cx="274" cy="162" r="13"/>
+    <circle cx="145" cy="158" r="13"/><circle cx="147" cy="180" r="11"/>
+  </g>
+  <g fill="none" stroke="#6a4046" stroke-width="2" stroke-linecap="round" opacity=".7">
+    <path d="M164 124c8-9 17-15 28-18M190 108c8-7 18-11 28-11M224 99c10 1 19 5 26 12M250 111c8 6 14 14 17 23M160 145c-4 9-5 18-2 27M268 148c4 9 4 18 1 26"/>
+  </g>
+
+  <!-- hoodie details -->
+  <path d="M185 318c-14 4-24 13-30 26l4 4c11-12 25-20 41-22zM235 318c14 4 24 13 30 26l-4 4c-11-12-25-20-41-22z" fill="#443851" opacity=".65"/>
+  <path d="M188 290l-6 44M232 290l6 44" stroke="#8d7a9f" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="182" cy="337" r="4" fill="#8d7a9f"/><circle cx="238" cy="337" r="4" fill="#8d7a9f"/>
+  <path d="M170 374c12-7 25-10 40-10s28 3 40 10l-6 52h-68z" fill="#1b1623"/>
+  <path d="M170 374c12-7 25-10 40-10s28 3 40 10" fill="none" stroke="#4b4059" stroke-width="3"/>
+  <path d="M204 347h12l3 11h-18z" fill="#c4b5fd" opacity=".95"/>
+  <text x="210" y="356" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="7" font-weight="700" fill="#3b1d73">CLU</text>
+  <g fill="none" stroke="#4b4059" stroke-width="2" stroke-linecap="round" opacity=".55">
+    <path d="M126 352c12 9 18 21 20 36M121 391c13 5 21 14 24 26M294 352c-12 9-18 21-20 36M299 391c-13 5-21 14-24 26"/>
+  </g>
+</svg>

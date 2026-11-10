@@ -61,6 +61,7 @@ export const student = {
   department: "Software Engineering",
   school: "Natural and Applied Sciences",
   level: 500,
+  degreeUnits: 150,
   session: "2025/2026",
   semester: "First",
   gender: "Female",

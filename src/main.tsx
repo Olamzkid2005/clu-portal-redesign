@@ -5,6 +5,7 @@ import { RoleProvider } from "./roles";
 import "./styles.css";
 import "./designs.css";
 import "./quad.css";
+import "./workspace.css";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
