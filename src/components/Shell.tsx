@@ -55,7 +55,7 @@ interface NavGroup {
 
 const studentGroups: NavGroup[] = [
   {
-    label: "Study",
+    label: "Classes",
     items: [
       { id: "dashboard", label: "Overview", icon: <LayoutDashboard /> },
       { id: "timetable", label: "Timetable", icon: <CalendarDays /> },
@@ -66,7 +66,7 @@ const studentGroups: NavGroup[] = [
     ],
   },
   {
-    label: "Money & campus",
+    label: "Money",
     items: [
       { id: "payments", label: "Payments", icon: <CreditCard /> },
       { id: "accommodation", label: "Accommodation", icon: <BedDouble /> },
@@ -429,14 +429,14 @@ export default function Shell({ children }: { children: ReactNode }) {
                 <input
                   ref={searchRef}
                   className="search__input"
-                  placeholder="Search the portal"
+                  placeholder="Search"
                   value={query}
                   onChange={(event) => {
                     setQuery(event.target.value);
                     setMenu("search");
                   }}
                   onFocus={() => setMenu("search")}
-                  aria-label="Search the portal"
+                  aria-label="Search"
                 />
                 {menu === "search" && (
                   <div className="search__panel">

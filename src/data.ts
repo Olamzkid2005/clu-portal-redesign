@@ -298,9 +298,9 @@ export const attendance = [
 ];
 
 export const announcements = [
-  { id: "n1", tag: "Examinations", title: "First semester exams begin 1 December", body: "Course registration must be approved before you can download your exam card.", date: "7 Nov 2025" },
-  { id: "n2", tag: "Fees", title: "School fee deadline extended to 30 November", body: "A late payment charge applies after the deadline. Pay through the Payments page.", date: "5 Nov 2025" },
-  { id: "n3", tag: "Department", title: "SWE 505 venue moved to Computing Lab 2", body: "Tuesday's Advanced Algorithms lecture now holds in the computing lab.", date: "3 Nov 2025" },
+  { id: "n1", tag: "Examinations", source: "Registry", title: "First semester exams begin 1 December", body: "Course registration must be approved before you can download your exam card.", date: "7 Nov 2025" },
+  { id: "n2", tag: "Fees", source: "Bursary", title: "School fee deadline extended to 30 November", body: "A late payment charge applies after the deadline. Pay through the Payments page.", date: "5 Nov 2025" },
+  { id: "n3", tag: "Department", source: "Software Engineering", title: "SWE 505 venue moved to Computing Lab 2", body: "Tuesday's Advanced Algorithms lecture now holds in the computing lab.", date: "3 Nov 2025" },
 ];
 
 export const medicalRecords = [

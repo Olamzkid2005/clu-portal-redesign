@@ -60,7 +60,7 @@ export function TimetablePage() {
     <>
       <div className="page__head">
         <div>
-          <div className="eyebrow">Study</div>
+          <div className="eyebrow">Classes</div>
           <h1 className="page__title">Timetable</h1>
           <p className="page__sub">
             {student.session} · {student.semester} semester · Level {student.level}. All times
@@ -218,7 +218,7 @@ export function AssignmentsPage() {
     <>
       <div className="page__head">
         <div>
-          <div className="eyebrow">Study</div>
+          <div className="eyebrow">Classes</div>
           <h1 className="page__title">Assignments</h1>
           <p className="page__sub">
             {pendingCount} of {assignments.length} still open. Uploads close at 23:59 on the due
@@ -312,7 +312,7 @@ export function AttendancePage() {
     <>
       <div className="page__head">
         <div>
-          <div className="eyebrow">Study</div>
+          <div className="eyebrow">Classes</div>
           <h1 className="page__title">Attendance</h1>
           <p className="page__sub">
             The university requires 75% attendance per course to sit the examination.

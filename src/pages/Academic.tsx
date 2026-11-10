@@ -264,7 +264,7 @@ export function CoursesPage() {
     <>
       <div className="page__head">
         <div>
-          <div className="eyebrow">Study</div>
+          <div className="eyebrow">Classes</div>
           <h1 className="page__title">Course registration</h1>
           <p className="page__sub">
             {student.session} · {student.semester} semester. You must register every carry-over

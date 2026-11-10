@@ -2,9 +2,7 @@
 
 [![Design and access audit](https://github.com/Olamzkid2005/clu-portal-redesign/actions/workflows/audit.yml/badge.svg)](https://github.com/Olamzkid2005/clu-portal-redesign/actions/workflows/audit.yml)
 
-A six-role university portal with a shared visual language: warm paper surfaces, hairline rules, editorial typography and restrained controls. The project is a front-end demo; all accounts and records are fictional.
-
-![Student dashboard at 1440px](screenshots/routes/student-dashboard-1440.png)
+A six-role university portal built around the student's day: warm paper, plum, hairline rules and restrained controls. The project is a front-end demo; all accounts and records are fictional.
 
 ## Stack
 

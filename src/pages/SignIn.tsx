@@ -53,49 +53,28 @@ export default function SignIn() {
       <main className="signin__body">
         <section className="signin__intro">
           <div className="signin__kicker">Portal access · 2025/2026</div>
-          <h1>
-            One portal.
-            <br />
-            Every record.
-          </h1>
+          <h1>Sign in to your portal.</h1>
           <p className="signin__lede">
-            Results and registration for students. Teaching, finance, registry and systems for
-            staff. Sign in to the workspace that belongs to your role.
+            Timetable, registration, results and fees for students. Teaching, finance, registry and
+            systems for staff.
           </p>
 
           <div className="signin__meta">
+            <span>Student and staff</span>
             <span>First semester</span>
-            <span>10 November 2026</span>
-            <span>Six workspaces</span>
+            <span>Portal support</span>
           </div>
 
-          <ol className="signin__points">
-            <li>
-              <span>01</span>
-              <div>
-                <b>Student records</b>
-                <p>Courses, results, attendance, fees and campus services.</p>
-              </div>
-            </li>
-            <li>
-              <span>02</span>
-              <div>
-                <b>Teaching and assessment</b>
-                <p>Course lists, score entry and class attendance.</p>
-              </div>
-            </li>
-            <li>
-              <span>03</span>
-              <div>
-                <b>Finance, registry and systems</b>
-                <p>Ledgers, approvals, request queues and user accounts.</p>
-              </div>
-            </li>
-          </ol>
-
-          <p className="signin__aside">
-            One university. Six working views. Each view shows only the records that role needs.
-          </p>
+          <div className="signin__facts">
+            <div>
+              <b>Students</b>
+              <p>Timetable, registration, results, fees and campus services.</p>
+            </div>
+            <div>
+              <b>Staff</b>
+              <p>Teaching, finance, registry and systems workspaces.</p>
+            </div>
+          </div>
         </section>
 
         <section className="signin__panel" aria-labelledby="signin-heading">
@@ -106,7 +85,7 @@ export default function SignIn() {
           </div>
 
           <div className="signin__roles" role="tablist" aria-label="Portal role">
-            {ROLE_ORDER.map((item, index) => (
+            {ROLE_ORDER.map((item) => (
               <button
                 key={item}
                 type="button"
@@ -115,7 +94,6 @@ export default function SignIn() {
                 className={cx("signin__role", selected === item && "is-active")}
                 onClick={() => chooseRole(item)}
               >
-                <span>{String(index + 1).padStart(2, "0")}</span>
                 <b>{ROLE_META[item].label}</b>
               </button>
             ))}

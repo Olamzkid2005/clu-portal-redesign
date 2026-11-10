@@ -171,12 +171,10 @@ export default function App() {
                   <button onClick={() => go("feedback")}>Give feedback</button>
                   <button onClick={() => go("medicals")}>Health centre</button>
                   <button onClick={() => go("settings")}>Security</button>
-                  <button onClick={() => go("designs")}>Design study</button>
                 </span>
               ) : (
                 <span className="foot__links">
                   <button onClick={() => go("settings")}>Security</button>
-                  <button onClick={() => go("designs")}>Design study</button>
                 </span>
               )}
             </footer>
