@@ -1,0 +1,134 @@
+{
+  "ok": true,
+  "failureCount": 0,
+  "consoleLogCount": 0,
+  "themes": {
+    "themeStudent": {
+      "scope": "theme/student@1024",
+      "before": {
+        "theme": "light",
+        "storedTheme": "light",
+        "htmlBg": "rgba(0, 0, 0, 0)",
+        "bodyBg": "rgb(246, 244, 248)",
+        "bodyInk": "rgb(25, 19, 34)",
+        "cardBg": "rgb(255, 255, 255)"
+      },
+      "dark": {
+        "theme": "dark",
+        "storedTheme": "dark",
+        "htmlBg": "rgba(0, 0, 0, 0)",
+        "bodyBg": "rgb(15, 10, 19)",
+        "bodyInk": "rgb(244, 239, 248)",
+        "cardBg": "rgb(24, 17, 33)"
+      },
+      "persisted": {
+        "theme": "dark",
+        "storedTheme": "dark",
+        "htmlBg": "rgba(0, 0, 0, 0)",
+        "bodyBg": "rgb(15, 10, 19)",
+        "bodyInk": "rgb(244, 239, 248)",
+        "cardBg": "rgb(24, 17, 33)"
+      },
+      "lightPersisted": {
+        "theme": "light",
+        "storedTheme": "light",
+        "htmlBg": "rgba(0, 0, 0, 0)",
+        "bodyBg": "rgb(246, 244, 248)",
+        "bodyInk": "rgb(25, 19, 34)",
+        "cardBg": "rgb(255, 255, 255)"
+      }
+    },
+    "themeBursar": {
+      "scope": "theme/bursar@1024",
+      "before": {
+        "theme": "light",
+        "storedTheme": "light",
+        "htmlBg": "rgba(0, 0, 0, 0)",
+        "bodyBg": "rgb(246, 244, 248)",
+        "bodyInk": "rgb(25, 19, 34)",
+        "cardBg": "rgb(255, 255, 255)"
+      },
+      "dark": {
+        "theme": "dark",
+        "storedTheme": "dark",
+        "htmlBg": "rgba(0, 0, 0, 0)",
+        "bodyBg": "rgb(15, 10, 19)",
+        "bodyInk": "rgb(244, 239, 248)",
+        "cardBg": "rgb(24, 17, 33)"
+      },
+      "persisted": {
+        "theme": "dark",
+        "storedTheme": "dark",
+        "htmlBg": "rgba(0, 0, 0, 0)",
+        "bodyBg": "rgb(15, 10, 19)",
+        "bodyInk": "rgb(244, 239, 248)",
+        "cardBg": "rgb(24, 17, 33)"
+      },
+      "lightPersisted": {
+        "theme": "light",
+        "storedTheme": "light",
+        "htmlBg": "rgba(0, 0, 0, 0)",
+        "bodyBg": "rgb(246, 244, 248)",
+        "bodyInk": "rgb(25, 19, 34)",
+        "cardBg": "rgb(255, 255, 255)"
+      }
+    }
+  },
+  "download": {
+    "scope": "download/payments",
+    "suggested": "clu-payments-all.csv",
+    "exists": true,
+    "bytes": 1030,
+    "rows": 11,
+    "total": 1049500,
+    "totalLine": "Total,,,11 payments,1049500",
+    "firstRows": [
+      [
+        "13 Oct 2025",
+        "13:21",
+        "2025/2026",
+        "School Fee",
+        "400000",
+        "Online",
+        "T812578850258641"
+      ],
+      [
+        "13 Oct 2025",
+        "13:20",
+        "2025/2026",
+        "SRC Dues",
+        "5000",
+        "Online",
+        "T706588823289515"
+      ],
+      [
+        "13 Oct 2025",
+        "13:18",
+        "2025/2026",
+        "New Horizon",
+        "35000",
+        "Online",
+        "T827361784050449"
+      ]
+    ],
+    "header": "Date,Time,Session,Payment for,Amount (NGN),Channel,Reference"
+  },
+  "flows": {
+    "lecturer": {
+      "before": "Fatima BelloCLU210118-08426——UngradedEnter score",
+      "after": "Fatima BelloCLU210118-084265076AEdit",
+      "grade": "A"
+    },
+    "registrar": {
+      "before": "TranscriptAdaeze OkonkwoCLU210118-04208 Nov 2025₦5,000NewStart review",
+      "after": "TranscriptAdaeze OkonkwoCLU210118-04208 Nov 2025₦5,000In reviewComplete"
+    },
+    "bursar": {
+      "initial": 12,
+      "narrowed": 1,
+      "restored": 12,
+      "narrowedText": "13 Oct 2025Adaeze OkonkwoCLU210118-042School fee₦400,000PaystackT812578850258641Confirmed"
+    }
+  },
+  "failures": []
+}

@@ -1,0 +1,92 @@
+{
+  "output": "screenshots/routes/post-fix-findings.json",
+  "capture": true,
+  "summary": {
+    "totalChecks": 58,
+    "cleanChecks": 58,
+    "failedChecks": 0,
+    "cleanRoutes": 29,
+    "failedRoutes": []
+  },
+  "roleChecks": [
+    {
+      "role": "student",
+      "routeCount": 16,
+      "clean": 32,
+      "total": 32,
+      "consoleErrors": []
+    },
+    {
+      "role": "lecturer",
+      "routeCount": 3,
+      "clean": 6,
+      "total": 6,
+      "consoleErrors": []
+    },
+    {
+      "role": "bursar",
+      "routeCount": 3,
+      "clean": 6,
+      "total": 6,
+      "consoleErrors": []
+    },
+    {
+      "role": "ict",
+      "routeCount": 3,
+      "clean": 6,
+      "total": 6,
+      "consoleErrors": []
+    },
+    {
+      "role": "vc",
+      "routeCount": 2,
+      "clean": 4,
+      "total": 4,
+      "consoleErrors": []
+    },
+    {
+      "role": "registrar",
+      "routeCount": 1,
+      "clean": 2,
+      "total": 2,
+      "consoleErrors": []
+    }
+  ],
+  "designStudy": [
+    {
+      "viewport": "desktop",
+      "clean": true,
+      "gradients": 0,
+      "translucent": 0,
+      "glossy": 0,
+      "pills": 0,
+      "oversized": 0,
+      "truncated": 0,
+      "overflow": {
+        "document": 0,
+        "page": 0,
+        "lab": 0
+      },
+      "missing": [],
+      "specimenExcluded": 2
+    },
+    {
+      "viewport": "phone",
+      "clean": true,
+      "gradients": 0,
+      "translucent": 0,
+      "glossy": 0,
+      "pills": 0,
+      "oversized": 0,
+      "truncated": 0,
+      "overflow": {
+        "document": 0,
+        "page": 0,
+        "lab": 0
+      },
+      "missing": [],
+      "specimenExcluded": 2
+    }
+  ],
+  "failedChecks": []
+}

@@ -1,0 +1,6133 @@
+{
+  "runAt": "2026-11-10T02:31:41.131Z",
+  "baseUrl": "http://127.0.0.1:3000/",
+  "viewports": {
+    "desktop": {
+      "width": 1440,
+      "height": 1000
+    },
+    "phone": {
+      "width": 390,
+      "height": 844
+    }
+  },
+  "build": {
+    "command": "npm run build",
+    "exitCode": 0,
+    "css": "index-BjKl59k2.css",
+    "js": "index-DRRx5J9K.js"
+  },
+  "before": {
+    "freshDashboard": {
+      "signIn": true,
+      "shell": false,
+      "hash": "#/dashboard"
+    },
+    "freshDeepLecturer": {
+      "signIn": true,
+      "shell": false,
+      "hash": "#/dashboard"
+    },
+    "cachedPersistentSession": {
+      "signIn": false,
+      "shell": true,
+      "hash": "#/bursar",
+      "sessionLocal": "active"
+    },
+    "freshDesignRoute": {
+      "signIn": false,
+      "designLab": true,
+      "hash": "#/designs"
+    },
+    "cause": "The sign-in screen existed for clean visits, but the default checked 'Keep me signed in' wrote clu-session to localStorage and readSession restored it on every visit. The design study also sat before the gate."
+  },
+  "after": {
+    "persistentSessionRemoved": true,
+    "legacySessionKeysRetired": true,
+    "storagePolicy": "sessionStorage only; removed when the tab closes or the user signs out",
+    "gateCoversDesignLab": true,
+    "signedOutHashPinnedTo": "#/signin",
+    "inAppRoleSwitchingRemoved": true
+  },
+  "cleanGate": {
+    "hash": "#/signin",
+    "title": "Sign in · CLU Portal",
+    "signIn": true,
+    "shell": false,
+    "designLab": false,
+    "sessionLocal": null,
+    "sessionNew": null,
+    "legacyTab": null,
+    "roleButtonCount": 6,
+    "design": {
+      "kickerRule": "14px",
+      "roleCount": 6,
+      "sessionMarker": "1px",
+      "hasRemember": false,
+      "hasDesignLink": false
+    }
+  },
+  "legacySessionTest": {
+    "hash": "#/signin",
+    "title": "Sign in · CLU Portal",
+    "signIn": true,
+    "shell": false,
+    "designLab": false,
+    "sessionLocal": null,
+    "sessionNew": null,
+    "legacyTab": null
+  },
+  "designRouteTest": {
+    "hash": "#/signin",
+    "title": "Sign in · CLU Portal",
+    "signIn": true,
+    "shell": false,
+    "designLab": false,
+    "sessionLocal": null,
+    "sessionNew": null,
+    "legacyTab": null
+  },
+  "designStudy": {
+    "route": "designs",
+    "signedIn": true,
+    "state": {
+      "hash": "#/designs",
+      "title": "Five directions · CLU Portal",
+      "signIn": false,
+      "shell": false,
+      "designLab": true,
+      "sessionLocal": null,
+      "sessionNew": "active",
+      "legacyTab": null
+    },
+    "consoleErrors": [],
+    "summary": {
+      "checks": 2,
+      "clean": 2,
+      "failed": 0,
+      "screenshots": [
+        "screenshots/routes/global-designs-1440.png",
+        "screenshots/routes/global-designs-390.png"
+      ]
+    },
+    "checks": [
+      {
+        "role": "global",
+        "route": "designs",
+        "viewport": "desktop",
+        "title": "Five directions · CLU Portal",
+        "hash": "#/designs",
+        "clean": true,
+        "gradients": [],
+        "translucent": [],
+        "glossy": [],
+        "pillControls": [],
+        "oversizedRadii": [],
+        "navTruncated": [],
+        "overflow": {
+          "document": 0,
+          "page": 0,
+          "lab": 0
+        },
+        "details": {
+          "eyebrowRule": {
+            "selector": ".lab__kicker",
+            "pseudo": "::before",
+            "content": "\"\"",
+            "width": "14px",
+            "height": "1px",
+            "background": "rgb(197, 111, 71)",
+            "borderLeftWidth": "0px",
+            "boxShadow": "none"
+          },
+          "sectionRule": {
+            "selector": ".lab__intro",
+            "pseudo": "::after",
+            "content": "\"\"",
+            "width": "44px",
+            "height": "2px",
+            "background": "rgb(197, 111, 71)",
+            "borderLeftWidth": "0px",
+            "boxShadow": "none"
+          },
+          "cardTitleDetails": {
+            "applicable": true,
+            "titles": [
+              {
+                "node": "span.lab__barname",
+                "borderLeftWidth": "2px"
+              }
+            ],
+            "filterHeaders": [],
+            "present": true
+          },
+          "pillDetails": {
+            "applicable": true,
+            "pills": [
+              {
+                "node": "span.lab__shipTag",
+                "boxShadow": "rgb(75, 32, 91) 2px 0px 0px 0px inset"
+              }
+            ],
+            "present": true
+          },
+          "hairlines": {
+            "footer": "1px",
+            "nav": "1px",
+            "card": "1px"
+          },
+          "missing": []
+        },
+        "specimenExcluded": [
+          {
+            "node": "span.quad__mark"
+          },
+          {
+            "node": "span.dp-portrait"
+          }
+        ],
+        "screenshot": "screenshots/routes/global-designs-1440.png"
+      },
+      {
+        "role": "global",
+        "route": "designs",
+        "viewport": "phone",
+        "title": "Five directions · CLU Portal",
+        "hash": "#/designs",
+        "clean": true,
+        "gradients": [],
+        "translucent": [],
+        "glossy": [],
+        "pillControls": [],
+        "oversizedRadii": [],
+        "navTruncated": [],
+        "overflow": {
+          "document": 0,
+          "page": 0,
+          "lab": 0
+        },
+        "details": {
+          "eyebrowRule": {
+            "selector": ".lab__kicker",
+            "pseudo": "::before",
+            "content": "\"\"",
+            "width": "14px",
+            "height": "1px",
+            "background": "rgb(197, 111, 71)",
+            "borderLeftWidth": "0px",
+            "boxShadow": "none"
+          },
+          "sectionRule": {
+            "selector": ".lab__intro",
+            "pseudo": "::after",
+            "content": "\"\"",
+            "width": "44px",
+            "height": "2px",
+            "background": "rgb(197, 111, 71)",
+            "borderLeftWidth": "0px",
+            "boxShadow": "none"
+          },
+          "cardTitleDetails": {
+            "applicable": true,
+            "titles": [
+              {
+                "node": "span.lab__barname",
+                "borderLeftWidth": "2px"
+              }
+            ],
+            "filterHeaders": [],
+            "present": true
+          },
+          "pillDetails": {
+            "applicable": true,
+            "pills": [
+              {
+                "node": "span.lab__shipTag",
+                "boxShadow": "rgb(75, 32, 91) 2px 0px 0px 0px inset"
+              }
+            ],
+            "present": true
+          },
+          "hairlines": {
+            "footer": "1px",
+            "nav": "1px",
+            "card": "1px"
+          },
+          "missing": []
+        },
+        "specimenExcluded": [
+          {
+            "node": "span.quad__mark"
+          },
+          {
+            "node": "span.dp-portrait"
+          }
+        ],
+        "screenshot": "screenshots/routes/global-designs-390.png"
+      }
+    ]
+  },
+  "routeAudit": {
+    "inventory": {
+      "counts": {
+        "student": 16,
+        "lecturer": 3,
+        "bursar": 3,
+        "ict": 3,
+        "vc": 2,
+        "registrar": 1,
+        "designStudy": 1,
+        "total": 29
+      },
+      "viewports": [
+        "desktop",
+        "phone"
+      ],
+      "checks": 58
+    },
+    "summary": {
+      "totalRoutes": 29,
+      "totalChecks": 58,
+      "cleanChecks": 58,
+      "failedChecks": 0,
+      "failedRoutes": []
+    },
+    "byRole": [
+      {
+        "role": "student",
+        "routes": 16,
+        "checks": 32,
+        "clean": 32,
+        "failed": 0
+      },
+      {
+        "role": "lecturer",
+        "routes": 3,
+        "checks": 6,
+        "clean": 6,
+        "failed": 0
+      },
+      {
+        "role": "bursar",
+        "routes": 3,
+        "checks": 6,
+        "clean": 6,
+        "failed": 0
+      },
+      {
+        "role": "ict",
+        "routes": 3,
+        "checks": 6,
+        "clean": 6,
+        "failed": 0
+      },
+      {
+        "role": "vc",
+        "routes": 2,
+        "checks": 4,
+        "clean": 4,
+        "failed": 0
+      },
+      {
+        "role": "registrar",
+        "routes": 1,
+        "checks": 2,
+        "clean": 2,
+        "failed": 0
+      }
+    ]
+  },
+  "roles": [
+    {
+      "role": "student",
+      "label": "Student",
+      "identity": {
+        "name": "Adaeze N. Okonkwo",
+        "email": "adaeze.okonkwo@chrislanduniversity.edu.ng",
+        "detail": "CLU210118-042"
+      },
+      "freshContext": {
+        "directHash": "#/results",
+        "cleanStorage": true,
+        "renderedSignIn": true,
+        "renderedPortal": false,
+        "gateHash": "#/signin",
+        "roleButtonCount": 6
+      },
+      "signIn": {
+        "selectedIdentity": "Adaeze N. Okonkwo\nStudent · CLU210118-042",
+        "email": "adaeze.okonkwo@chrislanduniversity.edu.ng",
+        "desktop": {
+          "viewport": 1440,
+          "overflow": 0,
+          "gradients": [],
+          "screenshot": "screenshots/auth/student-signin-1440.png"
+        },
+        "phone": {
+          "viewport": 390,
+          "overflow": 0,
+          "screenshot": "screenshots/auth/student-signin-390.png"
+        }
+      },
+      "landing": {
+        "home": "#/dashboard",
+        "title": "Overview · CLU Portal",
+        "nav": [
+          "Study",
+          "Money & campus",
+          "Services",
+          "Account"
+        ],
+        "account": {
+          "name": "Adaeze N. Okonkwo",
+          "detail": "CLU210118-042"
+        },
+        "phone": {
+          "subtitle": "Student portal",
+          "tabs": [
+            "Overview",
+            "Timetable",
+            "Results",
+            "Payments",
+            "More"
+          ],
+          "overflow": 0
+        },
+        "desktop": {
+          "overflow": 0,
+          "gradients": []
+        },
+        "session": "active",
+        "screenshots": {
+          "homeDesktop": "screenshots/auth/student-home-1440.png",
+          "homePhone": "screenshots/auth/student-home-390.png"
+        }
+      },
+      "routes": [
+        {
+          "route": "dashboard",
+          "viewport": "desktop",
+          "title": "Overview · CLU Portal",
+          "hash": "#/dashboard",
+          "clean": true,
+          "gradients": [],
+          "translucent": [],
+          "glossy": [],
+          "pillControls": [],
+          "oversizedRadii": [],
+          "navTruncated": [],
+          "overflow": {
+            "document": 0,
+            "page": 0,
+            "lab": 0
+          },
+          "details": {
+            "eyebrowRule": {
+              "selector": ".eyebrow",
+              "pseudo": "::before",
+              "content": "\"\"",
+              "width": "14px",
+              "height": "1px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "sectionRule": {
+              "selector": ".page__head, .workspace-hero, .page .hero",
+              "pseudo": "::after",
+              "content": "\"\"",
+              "width": "44px",
+              "height": "2px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "cardTitleDetails": {
+              "applicable": true,
+              "titles": [
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                },
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                },
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                },
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                },
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                }
+              ],
+              "filterHeaders": [],
+              "present": true
+            },
+            "pillDetails": {
+              "applicable": true,
+              "pills": [
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(255, 249, 242) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--brand",
+                  "boxShadow": "rgb(86, 35, 102) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--outline",
+                  "boxShadow": "rgb(118, 107, 121) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--outline",
+                  "boxShadow": "rgb(118, 107, 121) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--outline",
+                  "boxShadow": "rgb(118, 107, 121) 2px 0px 0px 0px inset"
+                }
+              ],
+              "present": true
+            },
+            "hairlines": {
+              "footer": "1px",
+              "nav": "1px",
+              "card": "1px"
+            },
+            "missing": []
+          },
+          "specimenExcluded": [],
+          "screenshot": "screenshots/routes/student-dashboard-1440.png"
+        },
+        {
+          "route": "timetable",
+          "viewport": "desktop",
+          "title": "Timetable · CLU Portal",
+          "hash": "#/timetable",
+          "clean": true,
+          "gradients": [],
+          "translucent": [],
+          "glossy": [],
+          "pillControls": [],
+          "oversizedRadii": [],
+          "navTruncated": [],
+          "overflow": {
+            "document": 0,
+            "page": 0,
+            "lab": 0
+          },
+          "details": {
+            "eyebrowRule": {
+              "selector": ".eyebrow",
+              "pseudo": "::before",
+              "content": "\"\"",
+              "width": "14px",
+              "height": "1px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "sectionRule": {
+              "selector": ".page__head, .workspace-hero, .page .hero",
+              "pseudo": "::after",
+              "content": "\"\"",
+              "width": "44px",
+              "height": "2px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "cardTitleDetails": {
+              "applicable": true,
+              "titles": [
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                }
+              ],
+              "filterHeaders": [],
+              "present": true
+            },
+            "pillDetails": {
+              "applicable": true,
+              "pills": [
+                {
+                  "node": "span.pill.pill--brand",
+                  "boxShadow": "rgb(86, 35, 102) 2px 0px 0px 0px inset"
+                }
+              ],
+              "present": true
+            },
+            "hairlines": {
+              "footer": "1px",
+              "nav": "1px",
+              "card": "1px"
+            },
+            "missing": []
+          },
+          "specimenExcluded": [],
+          "screenshot": "screenshots/routes/student-timetable-1440.png"
+        },
+        {
+          "route": "courses",
+          "viewport": "desktop",
+          "title": "Course registration · CLU Portal",
+          "hash": "#/courses",
+          "clean": true,
+          "gradients": [],
+          "translucent": [],
+          "glossy": [],
+          "pillControls": [],
+          "oversizedRadii": [],
+          "navTruncated": [],
+          "overflow": {
+            "document": 0,
+            "page": 0,
+            "lab": 0
+          },
+          "details": {
+            "eyebrowRule": {
+              "selector": ".eyebrow",
+              "pseudo": "::before",
+              "content": "\"\"",
+              "width": "14px",
+              "height": "1px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "sectionRule": {
+              "selector": ".page__head, .workspace-hero, .page .hero",
+              "pseudo": "::after",
+              "content": "\"\"",
+              "width": "44px",
+              "height": "2px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "cardTitleDetails": {
+              "applicable": true,
+              "titles": [
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                },
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                }
+              ],
+              "filterHeaders": [],
+              "present": true
+            },
+            "pillDetails": {
+              "applicable": true,
+              "pills": [
+                {
+                  "node": "span.pill.pill--amber",
+                  "boxShadow": "rgb(138, 91, 20) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--outline",
+                  "boxShadow": "rgb(118, 107, 121) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--outline",
+                  "boxShadow": "rgb(118, 107, 121) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--outline",
+                  "boxShadow": "rgb(118, 107, 121) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--outline",
+                  "boxShadow": "rgb(118, 107, 121) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--outline",
+                  "boxShadow": "rgb(118, 107, 121) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--outline",
+                  "boxShadow": "rgb(118, 107, 121) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--outline",
+                  "boxShadow": "rgb(118, 107, 121) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--brand",
+                  "boxShadow": "rgb(86, 35, 102) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--outline",
+                  "boxShadow": "rgb(118, 107, 121) 2px 0px 0px 0px inset"
+                }
+              ],
+              "present": true
+            },
+            "hairlines": {
+              "footer": "1px",
+              "nav": "1px",
+              "card": "1px"
+            },
+            "missing": []
+          },
+          "specimenExcluded": [],
+          "screenshot": "screenshots/routes/student-courses-1440.png"
+        },
+        {
+          "route": "results",
+          "viewport": "desktop",
+          "title": "Results · CLU Portal",
+          "hash": "#/results",
+          "clean": true,
+          "gradients": [],
+          "translucent": [],
+          "glossy": [],
+          "pillControls": [],
+          "oversizedRadii": [],
+          "navTruncated": [],
+          "overflow": {
+            "document": 0,
+            "page": 0,
+            "lab": 0
+          },
+          "details": {
+            "eyebrowRule": {
+              "selector": ".eyebrow",
+              "pseudo": "::before",
+              "content": "\"\"",
+              "width": "14px",
+              "height": "1px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "sectionRule": {
+              "selector": ".page__head, .workspace-hero, .page .hero",
+              "pseudo": "::after",
+              "content": "\"\"",
+              "width": "44px",
+              "height": "2px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "cardTitleDetails": {
+              "applicable": true,
+              "titles": [
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                }
+              ],
+              "filterHeaders": [],
+              "present": true
+            },
+            "pillDetails": {
+              "applicable": true,
+              "pills": [
+                {
+                  "node": "span.pill.pill--amber",
+                  "boxShadow": "rgb(138, 91, 20) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                }
+              ],
+              "present": true
+            },
+            "hairlines": {
+              "footer": "1px",
+              "nav": "1px",
+              "card": "1px"
+            },
+            "missing": []
+          },
+          "specimenExcluded": [],
+          "screenshot": "screenshots/routes/student-results-1440.png"
+        },
+        {
+          "route": "assignments",
+          "viewport": "desktop",
+          "title": "Assignments · CLU Portal",
+          "hash": "#/assignments",
+          "clean": true,
+          "gradients": [],
+          "translucent": [],
+          "glossy": [],
+          "pillControls": [],
+          "oversizedRadii": [],
+          "navTruncated": [],
+          "overflow": {
+            "document": 0,
+            "page": 0,
+            "lab": 0
+          },
+          "details": {
+            "eyebrowRule": {
+              "selector": ".eyebrow",
+              "pseudo": "::before",
+              "content": "\"\"",
+              "width": "14px",
+              "height": "1px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "sectionRule": {
+              "selector": ".page__head, .workspace-hero, .page .hero",
+              "pseudo": "::after",
+              "content": "\"\"",
+              "width": "44px",
+              "height": "2px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "cardTitleDetails": {
+              "applicable": false,
+              "titles": [],
+              "filterHeaders": [],
+              "present": true
+            },
+            "pillDetails": {
+              "applicable": true,
+              "pills": [
+                {
+                  "node": "span.pill.pill--amber",
+                  "boxShadow": "rgb(138, 91, 20) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--amber",
+                  "boxShadow": "rgb(138, 91, 20) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--amber",
+                  "boxShadow": "rgb(138, 91, 20) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--red",
+                  "boxShadow": "rgb(163, 58, 67) 2px 0px 0px 0px inset"
+                }
+              ],
+              "present": true
+            },
+            "hairlines": {
+              "footer": "1px",
+              "nav": "1px",
+              "card": "0px"
+            },
+            "missing": []
+          },
+          "specimenExcluded": [],
+          "screenshot": "screenshots/routes/student-assignments-1440.png"
+        },
+        {
+          "route": "attendance",
+          "viewport": "desktop",
+          "title": "Attendance · CLU Portal",
+          "hash": "#/attendance",
+          "clean": true,
+          "gradients": [],
+          "translucent": [],
+          "glossy": [],
+          "pillControls": [],
+          "oversizedRadii": [],
+          "navTruncated": [],
+          "overflow": {
+            "document": 0,
+            "page": 0,
+            "lab": 0
+          },
+          "details": {
+            "eyebrowRule": {
+              "selector": ".eyebrow",
+              "pseudo": "::before",
+              "content": "\"\"",
+              "width": "14px",
+              "height": "1px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "sectionRule": {
+              "selector": ".page__head, .workspace-hero, .page .hero",
+              "pseudo": "::after",
+              "content": "\"\"",
+              "width": "44px",
+              "height": "2px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "cardTitleDetails": {
+              "applicable": true,
+              "titles": [
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                },
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                }
+              ],
+              "filterHeaders": [],
+              "present": true
+            },
+            "pillDetails": {
+              "applicable": false,
+              "pills": [],
+              "present": false
+            },
+            "hairlines": {
+              "footer": "1px",
+              "nav": "1px",
+              "card": "1px"
+            },
+            "missing": []
+          },
+          "specimenExcluded": [],
+          "screenshot": "screenshots/routes/student-attendance-1440.png"
+        },
+        {
+          "route": "payments",
+          "viewport": "desktop",
+          "title": "Payments · CLU Portal",
+          "hash": "#/payments",
+          "clean": true,
+          "gradients": [],
+          "translucent": [],
+          "glossy": [],
+          "pillControls": [],
+          "oversizedRadii": [],
+          "navTruncated": [],
+          "overflow": {
+            "document": 0,
+            "page": 0,
+            "lab": 0
+          },
+          "details": {
+            "eyebrowRule": {
+              "selector": ".eyebrow",
+              "pseudo": "::before",
+              "content": "\"\"",
+              "width": "14px",
+              "height": "1px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "sectionRule": {
+              "selector": ".page__head, .workspace-hero, .page .hero",
+              "pseudo": "::after",
+              "content": "\"\"",
+              "width": "44px",
+              "height": "2px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "cardTitleDetails": {
+              "applicable": true,
+              "titles": [
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                },
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                },
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                }
+              ],
+              "filterHeaders": [],
+              "present": true
+            },
+            "pillDetails": {
+              "applicable": true,
+              "pills": [
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--outline",
+                  "boxShadow": "rgb(118, 107, 121) 2px 0px 0px 0px inset"
+                }
+              ],
+              "present": true
+            },
+            "hairlines": {
+              "footer": "1px",
+              "nav": "1px",
+              "card": "1px"
+            },
+            "missing": []
+          },
+          "specimenExcluded": [],
+          "screenshot": "screenshots/routes/student-payments-1440.png"
+        },
+        {
+          "route": "accommodation",
+          "viewport": "desktop",
+          "title": "Accommodation · CLU Portal",
+          "hash": "#/accommodation",
+          "clean": true,
+          "gradients": [],
+          "translucent": [],
+          "glossy": [],
+          "pillControls": [],
+          "oversizedRadii": [],
+          "navTruncated": [],
+          "overflow": {
+            "document": 0,
+            "page": 0,
+            "lab": 0
+          },
+          "details": {
+            "eyebrowRule": {
+              "selector": ".eyebrow",
+              "pseudo": "::before",
+              "content": "\"\"",
+              "width": "14px",
+              "height": "1px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "sectionRule": {
+              "selector": ".page__head, .workspace-hero, .page .hero",
+              "pseudo": "::after",
+              "content": "\"\"",
+              "width": "44px",
+              "height": "2px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "cardTitleDetails": {
+              "applicable": true,
+              "titles": [
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                },
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                }
+              ],
+              "filterHeaders": [],
+              "present": true
+            },
+            "pillDetails": {
+              "applicable": true,
+              "pills": [
+                {
+                  "node": "span.pill.pill--outline",
+                  "boxShadow": "rgb(118, 107, 121) 2px 0px 0px 0px inset"
+                }
+              ],
+              "present": true
+            },
+            "hairlines": {
+              "footer": "1px",
+              "nav": "1px",
+              "card": "1px"
+            },
+            "missing": []
+          },
+          "specimenExcluded": [],
+          "screenshot": "screenshots/routes/student-accommodation-1440.png"
+        },
+        {
+          "route": "requests/transcript",
+          "viewport": "desktop",
+          "title": "Requests · CLU Portal",
+          "hash": "#/requests/transcript",
+          "clean": true,
+          "gradients": [],
+          "translucent": [],
+          "glossy": [],
+          "pillControls": [],
+          "oversizedRadii": [],
+          "navTruncated": [],
+          "overflow": {
+            "document": 0,
+            "page": 0,
+            "lab": 0
+          },
+          "details": {
+            "eyebrowRule": {
+              "selector": ".eyebrow",
+              "pseudo": "::before",
+              "content": "\"\"",
+              "width": "14px",
+              "height": "1px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "sectionRule": {
+              "selector": ".page__head, .workspace-hero, .page .hero",
+              "pseudo": "::after",
+              "content": "\"\"",
+              "width": "44px",
+              "height": "2px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "cardTitleDetails": {
+              "applicable": true,
+              "titles": [
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                },
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                },
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                }
+              ],
+              "filterHeaders": [],
+              "present": true
+            },
+            "pillDetails": {
+              "applicable": true,
+              "pills": [
+                {
+                  "node": "span.pill.pill--brand",
+                  "boxShadow": "rgb(86, 35, 102) 2px 0px 0px 0px inset"
+                }
+              ],
+              "present": true
+            },
+            "hairlines": {
+              "footer": "1px",
+              "nav": "1px",
+              "card": "1px"
+            },
+            "missing": []
+          },
+          "specimenExcluded": [],
+          "screenshot": "screenshots/routes/student-requests-transcript-1440.png"
+        },
+        {
+          "route": "requests/proficiency",
+          "viewport": "desktop",
+          "title": "Requests · CLU Portal",
+          "hash": "#/requests/proficiency",
+          "clean": true,
+          "gradients": [],
+          "translucent": [],
+          "glossy": [],
+          "pillControls": [],
+          "oversizedRadii": [],
+          "navTruncated": [],
+          "overflow": {
+            "document": 0,
+            "page": 0,
+            "lab": 0
+          },
+          "details": {
+            "eyebrowRule": {
+              "selector": ".eyebrow",
+              "pseudo": "::before",
+              "content": "\"\"",
+              "width": "14px",
+              "height": "1px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "sectionRule": {
+              "selector": ".page__head, .workspace-hero, .page .hero",
+              "pseudo": "::after",
+              "content": "\"\"",
+              "width": "44px",
+              "height": "2px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "cardTitleDetails": {
+              "applicable": true,
+              "titles": [
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                },
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                },
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                }
+              ],
+              "filterHeaders": [],
+              "present": true
+            },
+            "pillDetails": {
+              "applicable": true,
+              "pills": [
+                {
+                  "node": "span.pill.pill--brand",
+                  "boxShadow": "rgb(86, 35, 102) 2px 0px 0px 0px inset"
+                }
+              ],
+              "present": true
+            },
+            "hairlines": {
+              "footer": "1px",
+              "nav": "1px",
+              "card": "1px"
+            },
+            "missing": []
+          },
+          "specimenExcluded": [],
+          "screenshot": "screenshots/routes/student-requests-proficiency-1440.png"
+        },
+        {
+          "route": "requests/verification",
+          "viewport": "desktop",
+          "title": "Requests · CLU Portal",
+          "hash": "#/requests/verification",
+          "clean": true,
+          "gradients": [],
+          "translucent": [],
+          "glossy": [],
+          "pillControls": [],
+          "oversizedRadii": [],
+          "navTruncated": [],
+          "overflow": {
+            "document": 0,
+            "page": 0,
+            "lab": 0
+          },
+          "details": {
+            "eyebrowRule": {
+              "selector": ".eyebrow",
+              "pseudo": "::before",
+              "content": "\"\"",
+              "width": "14px",
+              "height": "1px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "sectionRule": {
+              "selector": ".page__head, .workspace-hero, .page .hero",
+              "pseudo": "::after",
+              "content": "\"\"",
+              "width": "44px",
+              "height": "2px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "cardTitleDetails": {
+              "applicable": true,
+              "titles": [
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                },
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                },
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                }
+              ],
+              "filterHeaders": [],
+              "present": true
+            },
+            "pillDetails": {
+              "applicable": true,
+              "pills": [
+                {
+                  "node": "span.pill.pill--brand",
+                  "boxShadow": "rgb(86, 35, 102) 2px 0px 0px 0px inset"
+                }
+              ],
+              "present": true
+            },
+            "hairlines": {
+              "footer": "1px",
+              "nav": "1px",
+              "card": "1px"
+            },
+            "missing": []
+          },
+          "specimenExcluded": [],
+          "screenshot": "screenshots/routes/student-requests-verification-1440.png"
+        },
+        {
+          "route": "evaluation",
+          "viewport": "desktop",
+          "title": "Course evaluation · CLU Portal",
+          "hash": "#/evaluation",
+          "clean": true,
+          "gradients": [],
+          "translucent": [],
+          "glossy": [],
+          "pillControls": [],
+          "oversizedRadii": [],
+          "navTruncated": [],
+          "overflow": {
+            "document": 0,
+            "page": 0,
+            "lab": 0
+          },
+          "details": {
+            "eyebrowRule": {
+              "selector": ".eyebrow",
+              "pseudo": "::before",
+              "content": "\"\"",
+              "width": "14px",
+              "height": "1px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "sectionRule": {
+              "selector": ".page__head, .workspace-hero, .page .hero",
+              "pseudo": "::after",
+              "content": "\"\"",
+              "width": "44px",
+              "height": "2px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "cardTitleDetails": {
+              "applicable": false,
+              "titles": [],
+              "filterHeaders": [],
+              "present": true
+            },
+            "pillDetails": {
+              "applicable": true,
+              "pills": [
+                {
+                  "node": "span.pill.pill--amber",
+                  "boxShadow": "rgb(138, 91, 20) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                }
+              ],
+              "present": true
+            },
+            "hairlines": {
+              "footer": "1px",
+              "nav": "1px",
+              "card": "0px"
+            },
+            "missing": []
+          },
+          "specimenExcluded": [],
+          "screenshot": "screenshots/routes/student-evaluation-1440.png"
+        },
+        {
+          "route": "medicals",
+          "viewport": "desktop",
+          "title": "Medicals · CLU Portal",
+          "hash": "#/medicals",
+          "clean": true,
+          "gradients": [],
+          "translucent": [],
+          "glossy": [],
+          "pillControls": [],
+          "oversizedRadii": [],
+          "navTruncated": [],
+          "overflow": {
+            "document": 0,
+            "page": 0,
+            "lab": 0
+          },
+          "details": {
+            "eyebrowRule": {
+              "selector": ".eyebrow",
+              "pseudo": "::before",
+              "content": "\"\"",
+              "width": "14px",
+              "height": "1px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "sectionRule": {
+              "selector": ".page__head, .workspace-hero, .page .hero",
+              "pseudo": "::after",
+              "content": "\"\"",
+              "width": "44px",
+              "height": "2px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "cardTitleDetails": {
+              "applicable": true,
+              "titles": [
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                }
+              ],
+              "filterHeaders": [],
+              "present": true
+            },
+            "pillDetails": {
+              "applicable": false,
+              "pills": [],
+              "present": false
+            },
+            "hairlines": {
+              "footer": "1px",
+              "nav": "1px",
+              "card": "1px"
+            },
+            "missing": []
+          },
+          "specimenExcluded": [],
+          "screenshot": "screenshots/routes/student-medicals-1440.png"
+        },
+        {
+          "route": "feedback",
+          "viewport": "desktop",
+          "title": "Student feedback · CLU Portal",
+          "hash": "#/feedback",
+          "clean": true,
+          "gradients": [],
+          "translucent": [],
+          "glossy": [],
+          "pillControls": [],
+          "oversizedRadii": [],
+          "navTruncated": [],
+          "overflow": {
+            "document": 0,
+            "page": 0,
+            "lab": 0
+          },
+          "details": {
+            "eyebrowRule": {
+              "selector": ".eyebrow",
+              "pseudo": "::before",
+              "content": "\"\"",
+              "width": "14px",
+              "height": "1px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "sectionRule": {
+              "selector": ".page__head, .workspace-hero, .page .hero",
+              "pseudo": "::after",
+              "content": "\"\"",
+              "width": "44px",
+              "height": "2px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "cardTitleDetails": {
+              "applicable": true,
+              "titles": [
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                },
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                }
+              ],
+              "filterHeaders": [],
+              "present": true
+            },
+            "pillDetails": {
+              "applicable": false,
+              "pills": [],
+              "present": false
+            },
+            "hairlines": {
+              "footer": "1px",
+              "nav": "1px",
+              "card": "1px"
+            },
+            "missing": []
+          },
+          "specimenExcluded": [],
+          "screenshot": "screenshots/routes/student-feedback-1440.png"
+        },
+        {
+          "route": "profile",
+          "viewport": "desktop",
+          "title": "Profile · CLU Portal",
+          "hash": "#/profile",
+          "clean": true,
+          "gradients": [],
+          "translucent": [],
+          "glossy": [],
+          "pillControls": [],
+          "oversizedRadii": [],
+          "navTruncated": [],
+          "overflow": {
+            "document": 0,
+            "page": 0,
+            "lab": 0
+          },
+          "details": {
+            "eyebrowRule": {
+              "selector": ".eyebrow",
+              "pseudo": "::before",
+              "content": "\"\"",
+              "width": "14px",
+              "height": "1px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "sectionRule": {
+              "selector": ".page__head, .workspace-hero, .page .hero",
+              "pseudo": "::after",
+              "content": "\"\"",
+              "width": "44px",
+              "height": "2px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "cardTitleDetails": {
+              "applicable": true,
+              "titles": [
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                },
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                },
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                }
+              ],
+              "filterHeaders": [],
+              "present": true
+            },
+            "pillDetails": {
+              "applicable": true,
+              "pills": [
+                {
+                  "node": "span.pill.pill--brand",
+                  "boxShadow": "rgb(86, 35, 102) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--outline",
+                  "boxShadow": "rgb(118, 107, 121) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--outline",
+                  "boxShadow": "rgb(118, 107, 121) 2px 0px 0px 0px inset"
+                }
+              ],
+              "present": true
+            },
+            "hairlines": {
+              "footer": "1px",
+              "nav": "1px",
+              "card": "1px"
+            },
+            "missing": []
+          },
+          "specimenExcluded": [],
+          "screenshot": "screenshots/routes/student-profile-1440.png"
+        },
+        {
+          "route": "settings",
+          "viewport": "desktop",
+          "title": "Settings · CLU Portal",
+          "hash": "#/settings",
+          "clean": true,
+          "gradients": [],
+          "translucent": [],
+          "glossy": [],
+          "pillControls": [],
+          "oversizedRadii": [],
+          "navTruncated": [],
+          "overflow": {
+            "document": 0,
+            "page": 0,
+            "lab": 0
+          },
+          "details": {
+            "eyebrowRule": {
+              "selector": ".eyebrow",
+              "pseudo": "::before",
+              "content": "\"\"",
+              "width": "14px",
+              "height": "1px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "sectionRule": {
+              "selector": ".page__head, .workspace-hero, .page .hero",
+              "pseudo": "::after",
+              "content": "\"\"",
+              "width": "44px",
+              "height": "2px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "cardTitleDetails": {
+              "applicable": true,
+              "titles": [
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                },
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                },
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                }
+              ],
+              "filterHeaders": [],
+              "present": true
+            },
+            "pillDetails": {
+              "applicable": false,
+              "pills": [],
+              "present": false
+            },
+            "hairlines": {
+              "footer": "1px",
+              "nav": "1px",
+              "card": "1px"
+            },
+            "missing": []
+          },
+          "specimenExcluded": [],
+          "screenshot": "screenshots/routes/student-settings-1440.png"
+        },
+        {
+          "route": "dashboard",
+          "viewport": "phone",
+          "title": "Overview · CLU Portal",
+          "hash": "#/dashboard",
+          "clean": true,
+          "gradients": [],
+          "translucent": [],
+          "glossy": [],
+          "pillControls": [],
+          "oversizedRadii": [],
+          "navTruncated": [],
+          "overflow": {
+            "document": 0,
+            "page": 0,
+            "lab": 0
+          },
+          "details": {
+            "eyebrowRule": {
+              "selector": ".eyebrow",
+              "pseudo": "::before",
+              "content": "\"\"",
+              "width": "14px",
+              "height": "1px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "sectionRule": {
+              "selector": ".page__head, .workspace-hero, .page .hero",
+              "pseudo": "::after",
+              "content": "\"\"",
+              "width": "44px",
+              "height": "2px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "cardTitleDetails": {
+              "applicable": true,
+              "titles": [
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                },
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                },
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                },
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                },
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                }
+              ],
+              "filterHeaders": [],
+              "present": true
+            },
+            "pillDetails": {
+              "applicable": true,
+              "pills": [
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(255, 249, 242) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--brand",
+                  "boxShadow": "rgb(86, 35, 102) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--outline",
+                  "boxShadow": "rgb(118, 107, 121) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--outline",
+                  "boxShadow": "rgb(118, 107, 121) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--outline",
+                  "boxShadow": "rgb(118, 107, 121) 2px 0px 0px 0px inset"
+                }
+              ],
+              "present": true
+            },
+            "hairlines": {
+              "footer": "1px",
+              "nav": "1px",
+              "card": "1px"
+            },
+            "missing": []
+          },
+          "specimenExcluded": [],
+          "screenshot": "screenshots/routes/student-dashboard-390.png"
+        },
+        {
+          "route": "timetable",
+          "viewport": "phone",
+          "title": "Timetable · CLU Portal",
+          "hash": "#/timetable",
+          "clean": true,
+          "gradients": [],
+          "translucent": [],
+          "glossy": [],
+          "pillControls": [],
+          "oversizedRadii": [],
+          "navTruncated": [],
+          "overflow": {
+            "document": 0,
+            "page": 0,
+            "lab": 0
+          },
+          "details": {
+            "eyebrowRule": {
+              "selector": ".eyebrow",
+              "pseudo": "::before",
+              "content": "\"\"",
+              "width": "14px",
+              "height": "1px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "sectionRule": {
+              "selector": ".page__head, .workspace-hero, .page .hero",
+              "pseudo": "::after",
+              "content": "\"\"",
+              "width": "44px",
+              "height": "2px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "cardTitleDetails": {
+              "applicable": true,
+              "titles": [
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                }
+              ],
+              "filterHeaders": [],
+              "present": true
+            },
+            "pillDetails": {
+              "applicable": true,
+              "pills": [
+                {
+                  "node": "span.pill.pill--brand",
+                  "boxShadow": "rgb(86, 35, 102) 2px 0px 0px 0px inset"
+                }
+              ],
+              "present": true
+            },
+            "hairlines": {
+              "footer": "1px",
+              "nav": "1px",
+              "card": "1px"
+            },
+            "missing": []
+          },
+          "specimenExcluded": [],
+          "screenshot": "screenshots/routes/student-timetable-390.png"
+        },
+        {
+          "route": "courses",
+          "viewport": "phone",
+          "title": "Course registration · CLU Portal",
+          "hash": "#/courses",
+          "clean": true,
+          "gradients": [],
+          "translucent": [],
+          "glossy": [],
+          "pillControls": [],
+          "oversizedRadii": [],
+          "navTruncated": [],
+          "overflow": {
+            "document": 0,
+            "page": 0,
+            "lab": 0
+          },
+          "details": {
+            "eyebrowRule": {
+              "selector": ".eyebrow",
+              "pseudo": "::before",
+              "content": "\"\"",
+              "width": "14px",
+              "height": "1px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "sectionRule": {
+              "selector": ".page__head, .workspace-hero, .page .hero",
+              "pseudo": "::after",
+              "content": "\"\"",
+              "width": "44px",
+              "height": "2px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "cardTitleDetails": {
+              "applicable": true,
+              "titles": [
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                },
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                }
+              ],
+              "filterHeaders": [],
+              "present": true
+            },
+            "pillDetails": {
+              "applicable": true,
+              "pills": [
+                {
+                  "node": "span.pill.pill--amber",
+                  "boxShadow": "rgb(138, 91, 20) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--outline",
+                  "boxShadow": "rgb(118, 107, 121) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--outline",
+                  "boxShadow": "rgb(118, 107, 121) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--outline",
+                  "boxShadow": "rgb(118, 107, 121) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--outline",
+                  "boxShadow": "rgb(118, 107, 121) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--outline",
+                  "boxShadow": "rgb(118, 107, 121) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--outline",
+                  "boxShadow": "rgb(118, 107, 121) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--outline",
+                  "boxShadow": "rgb(118, 107, 121) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--brand",
+                  "boxShadow": "rgb(86, 35, 102) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--outline",
+                  "boxShadow": "rgb(118, 107, 121) 2px 0px 0px 0px inset"
+                }
+              ],
+              "present": true
+            },
+            "hairlines": {
+              "footer": "1px",
+              "nav": "1px",
+              "card": "1px"
+            },
+            "missing": []
+          },
+          "specimenExcluded": [],
+          "screenshot": "screenshots/routes/student-courses-390.png"
+        },
+        {
+          "route": "results",
+          "viewport": "phone",
+          "title": "Results · CLU Portal",
+          "hash": "#/results",
+          "clean": true,
+          "gradients": [],
+          "translucent": [],
+          "glossy": [],
+          "pillControls": [],
+          "oversizedRadii": [],
+          "navTruncated": [],
+          "overflow": {
+            "document": 0,
+            "page": 0,
+            "lab": 0
+          },
+          "details": {
+            "eyebrowRule": {
+              "selector": ".eyebrow",
+              "pseudo": "::before",
+              "content": "\"\"",
+              "width": "14px",
+              "height": "1px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "sectionRule": {
+              "selector": ".page__head, .workspace-hero, .page .hero",
+              "pseudo": "::after",
+              "content": "\"\"",
+              "width": "44px",
+              "height": "2px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "cardTitleDetails": {
+              "applicable": true,
+              "titles": [
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                }
+              ],
+              "filterHeaders": [],
+              "present": true
+            },
+            "pillDetails": {
+              "applicable": true,
+              "pills": [
+                {
+                  "node": "span.pill.pill--amber",
+                  "boxShadow": "rgb(138, 91, 20) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                }
+              ],
+              "present": true
+            },
+            "hairlines": {
+              "footer": "1px",
+              "nav": "1px",
+              "card": "1px"
+            },
+            "missing": []
+          },
+          "specimenExcluded": [],
+          "screenshot": "screenshots/routes/student-results-390.png"
+        },
+        {
+          "route": "assignments",
+          "viewport": "phone",
+          "title": "Assignments · CLU Portal",
+          "hash": "#/assignments",
+          "clean": true,
+          "gradients": [],
+          "translucent": [],
+          "glossy": [],
+          "pillControls": [],
+          "oversizedRadii": [],
+          "navTruncated": [],
+          "overflow": {
+            "document": 0,
+            "page": 0,
+            "lab": 0
+          },
+          "details": {
+            "eyebrowRule": {
+              "selector": ".eyebrow",
+              "pseudo": "::before",
+              "content": "\"\"",
+              "width": "14px",
+              "height": "1px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "sectionRule": {
+              "selector": ".page__head, .workspace-hero, .page .hero",
+              "pseudo": "::after",
+              "content": "\"\"",
+              "width": "44px",
+              "height": "2px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "cardTitleDetails": {
+              "applicable": false,
+              "titles": [],
+              "filterHeaders": [],
+              "present": true
+            },
+            "pillDetails": {
+              "applicable": true,
+              "pills": [
+                {
+                  "node": "span.pill.pill--amber",
+                  "boxShadow": "rgb(138, 91, 20) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--amber",
+                  "boxShadow": "rgb(138, 91, 20) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--amber",
+                  "boxShadow": "rgb(138, 91, 20) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--red",
+                  "boxShadow": "rgb(163, 58, 67) 2px 0px 0px 0px inset"
+                }
+              ],
+              "present": true
+            },
+            "hairlines": {
+              "footer": "1px",
+              "nav": "1px",
+              "card": "0px"
+            },
+            "missing": []
+          },
+          "specimenExcluded": [],
+          "screenshot": "screenshots/routes/student-assignments-390.png"
+        },
+        {
+          "route": "attendance",
+          "viewport": "phone",
+          "title": "Attendance · CLU Portal",
+          "hash": "#/attendance",
+          "clean": true,
+          "gradients": [],
+          "translucent": [],
+          "glossy": [],
+          "pillControls": [],
+          "oversizedRadii": [],
+          "navTruncated": [],
+          "overflow": {
+            "document": 0,
+            "page": 0,
+            "lab": 0
+          },
+          "details": {
+            "eyebrowRule": {
+              "selector": ".eyebrow",
+              "pseudo": "::before",
+              "content": "\"\"",
+              "width": "14px",
+              "height": "1px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "sectionRule": {
+              "selector": ".page__head, .workspace-hero, .page .hero",
+              "pseudo": "::after",
+              "content": "\"\"",
+              "width": "44px",
+              "height": "2px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "cardTitleDetails": {
+              "applicable": true,
+              "titles": [
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                },
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                }
+              ],
+              "filterHeaders": [],
+              "present": true
+            },
+            "pillDetails": {
+              "applicable": false,
+              "pills": [],
+              "present": false
+            },
+            "hairlines": {
+              "footer": "1px",
+              "nav": "1px",
+              "card": "1px"
+            },
+            "missing": []
+          },
+          "specimenExcluded": [],
+          "screenshot": "screenshots/routes/student-attendance-390.png"
+        },
+        {
+          "route": "payments",
+          "viewport": "phone",
+          "title": "Payments · CLU Portal",
+          "hash": "#/payments",
+          "clean": true,
+          "gradients": [],
+          "translucent": [],
+          "glossy": [],
+          "pillControls": [],
+          "oversizedRadii": [],
+          "navTruncated": [],
+          "overflow": {
+            "document": 0,
+            "page": 0,
+            "lab": 0
+          },
+          "details": {
+            "eyebrowRule": {
+              "selector": ".eyebrow",
+              "pseudo": "::before",
+              "content": "\"\"",
+              "width": "14px",
+              "height": "1px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "sectionRule": {
+              "selector": ".page__head, .workspace-hero, .page .hero",
+              "pseudo": "::after",
+              "content": "\"\"",
+              "width": "44px",
+              "height": "2px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "cardTitleDetails": {
+              "applicable": true,
+              "titles": [
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                },
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                },
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                }
+              ],
+              "filterHeaders": [],
+              "present": true
+            },
+            "pillDetails": {
+              "applicable": true,
+              "pills": [
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--outline",
+                  "boxShadow": "rgb(118, 107, 121) 2px 0px 0px 0px inset"
+                }
+              ],
+              "present": true
+            },
+            "hairlines": {
+              "footer": "1px",
+              "nav": "1px",
+              "card": "1px"
+            },
+            "missing": []
+          },
+          "specimenExcluded": [],
+          "screenshot": "screenshots/routes/student-payments-390.png"
+        },
+        {
+          "route": "accommodation",
+          "viewport": "phone",
+          "title": "Accommodation · CLU Portal",
+          "hash": "#/accommodation",
+          "clean": true,
+          "gradients": [],
+          "translucent": [],
+          "glossy": [],
+          "pillControls": [],
+          "oversizedRadii": [],
+          "navTruncated": [],
+          "overflow": {
+            "document": 0,
+            "page": 0,
+            "lab": 0
+          },
+          "details": {
+            "eyebrowRule": {
+              "selector": ".eyebrow",
+              "pseudo": "::before",
+              "content": "\"\"",
+              "width": "14px",
+              "height": "1px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "sectionRule": {
+              "selector": ".page__head, .workspace-hero, .page .hero",
+              "pseudo": "::after",
+              "content": "\"\"",
+              "width": "44px",
+              "height": "2px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "cardTitleDetails": {
+              "applicable": true,
+              "titles": [
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                },
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                }
+              ],
+              "filterHeaders": [],
+              "present": true
+            },
+            "pillDetails": {
+              "applicable": true,
+              "pills": [
+                {
+                  "node": "span.pill.pill--outline",
+                  "boxShadow": "rgb(118, 107, 121) 2px 0px 0px 0px inset"
+                }
+              ],
+              "present": true
+            },
+            "hairlines": {
+              "footer": "1px",
+              "nav": "1px",
+              "card": "1px"
+            },
+            "missing": []
+          },
+          "specimenExcluded": [],
+          "screenshot": "screenshots/routes/student-accommodation-390.png"
+        },
+        {
+          "route": "requests/transcript",
+          "viewport": "phone",
+          "title": "Requests · CLU Portal",
+          "hash": "#/requests/transcript",
+          "clean": true,
+          "gradients": [],
+          "translucent": [],
+          "glossy": [],
+          "pillControls": [],
+          "oversizedRadii": [],
+          "navTruncated": [],
+          "overflow": {
+            "document": 0,
+            "page": 0,
+            "lab": 0
+          },
+          "details": {
+            "eyebrowRule": {
+              "selector": ".eyebrow",
+              "pseudo": "::before",
+              "content": "\"\"",
+              "width": "14px",
+              "height": "1px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "sectionRule": {
+              "selector": ".page__head, .workspace-hero, .page .hero",
+              "pseudo": "::after",
+              "content": "\"\"",
+              "width": "44px",
+              "height": "2px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "cardTitleDetails": {
+              "applicable": true,
+              "titles": [
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                },
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                },
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                }
+              ],
+              "filterHeaders": [],
+              "present": true
+            },
+            "pillDetails": {
+              "applicable": true,
+              "pills": [
+                {
+                  "node": "span.pill.pill--brand",
+                  "boxShadow": "rgb(86, 35, 102) 2px 0px 0px 0px inset"
+                }
+              ],
+              "present": true
+            },
+            "hairlines": {
+              "footer": "1px",
+              "nav": "1px",
+              "card": "1px"
+            },
+            "missing": []
+          },
+          "specimenExcluded": [],
+          "screenshot": "screenshots/routes/student-requests-transcript-390.png"
+        },
+        {
+          "route": "requests/proficiency",
+          "viewport": "phone",
+          "title": "Requests · CLU Portal",
+          "hash": "#/requests/proficiency",
+          "clean": true,
+          "gradients": [],
+          "translucent": [],
+          "glossy": [],
+          "pillControls": [],
+          "oversizedRadii": [],
+          "navTruncated": [],
+          "overflow": {
+            "document": 0,
+            "page": 0,
+            "lab": 0
+          },
+          "details": {
+            "eyebrowRule": {
+              "selector": ".eyebrow",
+              "pseudo": "::before",
+              "content": "\"\"",
+              "width": "14px",
+              "height": "1px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "sectionRule": {
+              "selector": ".page__head, .workspace-hero, .page .hero",
+              "pseudo": "::after",
+              "content": "\"\"",
+              "width": "44px",
+              "height": "2px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "cardTitleDetails": {
+              "applicable": true,
+              "titles": [
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                },
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                },
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                }
+              ],
+              "filterHeaders": [],
+              "present": true
+            },
+            "pillDetails": {
+              "applicable": true,
+              "pills": [
+                {
+                  "node": "span.pill.pill--brand",
+                  "boxShadow": "rgb(86, 35, 102) 2px 0px 0px 0px inset"
+                }
+              ],
+              "present": true
+            },
+            "hairlines": {
+              "footer": "1px",
+              "nav": "1px",
+              "card": "1px"
+            },
+            "missing": []
+          },
+          "specimenExcluded": [],
+          "screenshot": "screenshots/routes/student-requests-proficiency-390.png"
+        },
+        {
+          "route": "requests/verification",
+          "viewport": "phone",
+          "title": "Requests · CLU Portal",
+          "hash": "#/requests/verification",
+          "clean": true,
+          "gradients": [],
+          "translucent": [],
+          "glossy": [],
+          "pillControls": [],
+          "oversizedRadii": [],
+          "navTruncated": [],
+          "overflow": {
+            "document": 0,
+            "page": 0,
+            "lab": 0
+          },
+          "details": {
+            "eyebrowRule": {
+              "selector": ".eyebrow",
+              "pseudo": "::before",
+              "content": "\"\"",
+              "width": "14px",
+              "height": "1px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "sectionRule": {
+              "selector": ".page__head, .workspace-hero, .page .hero",
+              "pseudo": "::after",
+              "content": "\"\"",
+              "width": "44px",
+              "height": "2px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "cardTitleDetails": {
+              "applicable": true,
+              "titles": [
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                },
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                },
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                }
+              ],
+              "filterHeaders": [],
+              "present": true
+            },
+            "pillDetails": {
+              "applicable": true,
+              "pills": [
+                {
+                  "node": "span.pill.pill--brand",
+                  "boxShadow": "rgb(86, 35, 102) 2px 0px 0px 0px inset"
+                }
+              ],
+              "present": true
+            },
+            "hairlines": {
+              "footer": "1px",
+              "nav": "1px",
+              "card": "1px"
+            },
+            "missing": []
+          },
+          "specimenExcluded": [],
+          "screenshot": "screenshots/routes/student-requests-verification-390.png"
+        },
+        {
+          "route": "evaluation",
+          "viewport": "phone",
+          "title": "Course evaluation · CLU Portal",
+          "hash": "#/evaluation",
+          "clean": true,
+          "gradients": [],
+          "translucent": [],
+          "glossy": [],
+          "pillControls": [],
+          "oversizedRadii": [],
+          "navTruncated": [],
+          "overflow": {
+            "document": 0,
+            "page": 0,
+            "lab": 0
+          },
+          "details": {
+            "eyebrowRule": {
+              "selector": ".eyebrow",
+              "pseudo": "::before",
+              "content": "\"\"",
+              "width": "14px",
+              "height": "1px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "sectionRule": {
+              "selector": ".page__head, .workspace-hero, .page .hero",
+              "pseudo": "::after",
+              "content": "\"\"",
+              "width": "44px",
+              "height": "2px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "cardTitleDetails": {
+              "applicable": false,
+              "titles": [],
+              "filterHeaders": [],
+              "present": true
+            },
+            "pillDetails": {
+              "applicable": true,
+              "pills": [
+                {
+                  "node": "span.pill.pill--amber",
+                  "boxShadow": "rgb(138, 91, 20) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                }
+              ],
+              "present": true
+            },
+            "hairlines": {
+              "footer": "1px",
+              "nav": "1px",
+              "card": "0px"
+            },
+            "missing": []
+          },
+          "specimenExcluded": [],
+          "screenshot": "screenshots/routes/student-evaluation-390.png"
+        },
+        {
+          "route": "medicals",
+          "viewport": "phone",
+          "title": "Medicals · CLU Portal",
+          "hash": "#/medicals",
+          "clean": true,
+          "gradients": [],
+          "translucent": [],
+          "glossy": [],
+          "pillControls": [],
+          "oversizedRadii": [],
+          "navTruncated": [],
+          "overflow": {
+            "document": 0,
+            "page": 0,
+            "lab": 0
+          },
+          "details": {
+            "eyebrowRule": {
+              "selector": ".eyebrow",
+              "pseudo": "::before",
+              "content": "\"\"",
+              "width": "14px",
+              "height": "1px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "sectionRule": {
+              "selector": ".page__head, .workspace-hero, .page .hero",
+              "pseudo": "::after",
+              "content": "\"\"",
+              "width": "44px",
+              "height": "2px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "cardTitleDetails": {
+              "applicable": true,
+              "titles": [
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                }
+              ],
+              "filterHeaders": [],
+              "present": true
+            },
+            "pillDetails": {
+              "applicable": false,
+              "pills": [],
+              "present": false
+            },
+            "hairlines": {
+              "footer": "1px",
+              "nav": "1px",
+              "card": "1px"
+            },
+            "missing": []
+          },
+          "specimenExcluded": [],
+          "screenshot": "screenshots/routes/student-medicals-390.png"
+        },
+        {
+          "route": "feedback",
+          "viewport": "phone",
+          "title": "Student feedback · CLU Portal",
+          "hash": "#/feedback",
+          "clean": true,
+          "gradients": [],
+          "translucent": [],
+          "glossy": [],
+          "pillControls": [],
+          "oversizedRadii": [],
+          "navTruncated": [],
+          "overflow": {
+            "document": 0,
+            "page": 0,
+            "lab": 0
+          },
+          "details": {
+            "eyebrowRule": {
+              "selector": ".eyebrow",
+              "pseudo": "::before",
+              "content": "\"\"",
+              "width": "14px",
+              "height": "1px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "sectionRule": {
+              "selector": ".page__head, .workspace-hero, .page .hero",
+              "pseudo": "::after",
+              "content": "\"\"",
+              "width": "44px",
+              "height": "2px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "cardTitleDetails": {
+              "applicable": true,
+              "titles": [
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                },
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                }
+              ],
+              "filterHeaders": [],
+              "present": true
+            },
+            "pillDetails": {
+              "applicable": false,
+              "pills": [],
+              "present": false
+            },
+            "hairlines": {
+              "footer": "1px",
+              "nav": "1px",
+              "card": "1px"
+            },
+            "missing": []
+          },
+          "specimenExcluded": [],
+          "screenshot": "screenshots/routes/student-feedback-390.png"
+        },
+        {
+          "route": "profile",
+          "viewport": "phone",
+          "title": "Profile · CLU Portal",
+          "hash": "#/profile",
+          "clean": true,
+          "gradients": [],
+          "translucent": [],
+          "glossy": [],
+          "pillControls": [],
+          "oversizedRadii": [],
+          "navTruncated": [],
+          "overflow": {
+            "document": 0,
+            "page": 0,
+            "lab": 0
+          },
+          "details": {
+            "eyebrowRule": {
+              "selector": ".eyebrow",
+              "pseudo": "::before",
+              "content": "\"\"",
+              "width": "14px",
+              "height": "1px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "sectionRule": {
+              "selector": ".page__head, .workspace-hero, .page .hero",
+              "pseudo": "::after",
+              "content": "\"\"",
+              "width": "44px",
+              "height": "2px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "cardTitleDetails": {
+              "applicable": true,
+              "titles": [
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                },
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                },
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                }
+              ],
+              "filterHeaders": [],
+              "present": true
+            },
+            "pillDetails": {
+              "applicable": true,
+              "pills": [
+                {
+                  "node": "span.pill.pill--brand",
+                  "boxShadow": "rgb(86, 35, 102) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--outline",
+                  "boxShadow": "rgb(118, 107, 121) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--outline",
+                  "boxShadow": "rgb(118, 107, 121) 2px 0px 0px 0px inset"
+                }
+              ],
+              "present": true
+            },
+            "hairlines": {
+              "footer": "1px",
+              "nav": "1px",
+              "card": "1px"
+            },
+            "missing": []
+          },
+          "specimenExcluded": [],
+          "screenshot": "screenshots/routes/student-profile-390.png"
+        },
+        {
+          "route": "settings",
+          "viewport": "phone",
+          "title": "Settings · CLU Portal",
+          "hash": "#/settings",
+          "clean": true,
+          "gradients": [],
+          "translucent": [],
+          "glossy": [],
+          "pillControls": [],
+          "oversizedRadii": [],
+          "navTruncated": [],
+          "overflow": {
+            "document": 0,
+            "page": 0,
+            "lab": 0
+          },
+          "details": {
+            "eyebrowRule": {
+              "selector": ".eyebrow",
+              "pseudo": "::before",
+              "content": "\"\"",
+              "width": "14px",
+              "height": "1px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "sectionRule": {
+              "selector": ".page__head, .workspace-hero, .page .hero",
+              "pseudo": "::after",
+              "content": "\"\"",
+              "width": "44px",
+              "height": "2px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "cardTitleDetails": {
+              "applicable": true,
+              "titles": [
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                },
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                },
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                }
+              ],
+              "filterHeaders": [],
+              "present": true
+            },
+            "pillDetails": {
+              "applicable": false,
+              "pills": [],
+              "present": false
+            },
+            "hairlines": {
+              "footer": "1px",
+              "nav": "1px",
+              "card": "1px"
+            },
+            "missing": []
+          },
+          "specimenExcluded": [],
+          "screenshot": "screenshots/routes/student-settings-390.png"
+        }
+      ],
+      "routeSummary": {
+        "checks": 32,
+        "clean": 32,
+        "failed": 0,
+        "screenshots": [
+          "screenshots/routes/student-dashboard-1440.png",
+          "screenshots/routes/student-timetable-1440.png",
+          "screenshots/routes/student-courses-1440.png",
+          "screenshots/routes/student-results-1440.png",
+          "screenshots/routes/student-assignments-1440.png",
+          "screenshots/routes/student-attendance-1440.png",
+          "screenshots/routes/student-payments-1440.png",
+          "screenshots/routes/student-accommodation-1440.png",
+          "screenshots/routes/student-requests-transcript-1440.png",
+          "screenshots/routes/student-requests-proficiency-1440.png",
+          "screenshots/routes/student-requests-verification-1440.png",
+          "screenshots/routes/student-evaluation-1440.png",
+          "screenshots/routes/student-medicals-1440.png",
+          "screenshots/routes/student-feedback-1440.png",
+          "screenshots/routes/student-profile-1440.png",
+          "screenshots/routes/student-settings-1440.png",
+          "screenshots/routes/student-dashboard-390.png",
+          "screenshots/routes/student-timetable-390.png",
+          "screenshots/routes/student-courses-390.png",
+          "screenshots/routes/student-results-390.png",
+          "screenshots/routes/student-assignments-390.png",
+          "screenshots/routes/student-attendance-390.png",
+          "screenshots/routes/student-payments-390.png",
+          "screenshots/routes/student-accommodation-390.png",
+          "screenshots/routes/student-requests-transcript-390.png",
+          "screenshots/routes/student-requests-proficiency-390.png",
+          "screenshots/routes/student-requests-verification-390.png",
+          "screenshots/routes/student-evaluation-390.png",
+          "screenshots/routes/student-medicals-390.png",
+          "screenshots/routes/student-feedback-390.png",
+          "screenshots/routes/student-profile-390.png",
+          "screenshots/routes/student-settings-390.png"
+        ]
+      },
+      "designDetails": {
+        "eyebrowRule": {
+          "width": "14px",
+          "height": "1px",
+          "background": "rgb(197, 111, 71)",
+          "borderLeft": "0px",
+          "boxShadow": "none"
+        },
+        "sectionRule": {
+          "width": "44px",
+          "height": "2px",
+          "background": "rgb(197, 111, 71)",
+          "borderLeft": "0px",
+          "boxShadow": "none"
+        },
+        "cardTitleRule": {
+          "width": "305.344px",
+          "height": "15.625px",
+          "background": "rgba(0, 0, 0, 0)",
+          "borderLeft": "2px",
+          "boxShadow": "none"
+        },
+        "filterHeaderRule": null,
+        "footerRule": {
+          "width": "34px",
+          "height": "1px",
+          "background": "rgb(197, 111, 71)",
+          "borderLeft": "0px",
+          "boxShadow": "none"
+        },
+        "subnavRule": {
+          "width": "16px",
+          "height": "1px",
+          "background": "rgb(197, 111, 71)",
+          "borderLeft": "0px",
+          "boxShadow": "none"
+        },
+        "pillSpine": {
+          "width": "52px",
+          "height": "21px",
+          "background": "rgba(0, 0, 0, 0)",
+          "borderLeft": "1px",
+          "boxShadow": "rgb(255, 249, 242) 2px 0px 0px 0px inset"
+        },
+        "dashboardHero": true
+      },
+      "signOut": {
+        "reachedSignIn": true,
+        "portalVisible": false,
+        "hash": "#/signin",
+        "persistentSession": null,
+        "tabSession": null,
+        "inAppRoleSwitchRemoved": true
+      },
+      "back": {
+        "url": "http://127.0.0.1:3000/#/signin",
+        "renderedSignIn": true,
+        "renderedPortal": false,
+        "hash": "#/signin"
+      },
+      "reloadAfterSignOut": {
+        "renderedSignIn": true,
+        "renderedPortal": false
+      },
+      "consoleErrors": []
+    },
+    {
+      "role": "lecturer",
+      "label": "Lecturer",
+      "identity": {
+        "name": "Dr. Bamidele Adeyemi",
+        "email": "b.adeyemi@chrislanduniversity.edu.ng",
+        "detail": "Software Engineering"
+      },
+      "freshContext": {
+        "directHash": "#/lecturer/attendance",
+        "cleanStorage": true,
+        "renderedSignIn": true,
+        "renderedPortal": false,
+        "gateHash": "#/signin",
+        "roleButtonCount": 6
+      },
+      "signIn": {
+        "selectedIdentity": "DB\nDr. Bamidele Adeyemi\nLecturer · Software Engineering",
+        "email": "b.adeyemi@chrislanduniversity.edu.ng",
+        "desktop": {
+          "viewport": 1440,
+          "overflow": 0,
+          "gradients": [],
+          "screenshot": "screenshots/auth/lecturer-signin-1440.png"
+        },
+        "phone": {
+          "viewport": 390,
+          "overflow": 0,
+          "screenshot": "screenshots/auth/lecturer-signin-390.png"
+        }
+      },
+      "landing": {
+        "home": "#/lecturer",
+        "title": "Teaching overview · CLU Portal",
+        "nav": [
+          "Teaching"
+        ],
+        "account": {
+          "name": "Dr. Bamidele Adeyemi",
+          "detail": "Software Engineering"
+        },
+        "phone": {
+          "subtitle": "Lecturer portal",
+          "tabs": [
+            "Overview",
+            "Courses",
+            "Attendance",
+            "More"
+          ],
+          "overflow": 0
+        },
+        "desktop": {
+          "overflow": 0,
+          "gradients": []
+        },
+        "session": "active",
+        "screenshots": {
+          "homeDesktop": "screenshots/auth/lecturer-home-1440.png",
+          "homePhone": "screenshots/auth/lecturer-home-390.png"
+        }
+      },
+      "routes": [
+        {
+          "route": "lecturer",
+          "viewport": "desktop",
+          "title": "Teaching overview · CLU Portal",
+          "hash": "#/lecturer",
+          "clean": true,
+          "gradients": [],
+          "translucent": [],
+          "glossy": [],
+          "pillControls": [],
+          "oversizedRadii": [],
+          "navTruncated": [],
+          "overflow": {
+            "document": 0,
+            "page": 0,
+            "lab": 0
+          },
+          "details": {
+            "eyebrowRule": {
+              "selector": ".eyebrow",
+              "pseudo": "::before",
+              "content": "\"\"",
+              "width": "14px",
+              "height": "1px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "sectionRule": {
+              "selector": ".page__head, .workspace-hero, .page .hero",
+              "pseudo": "::after",
+              "content": "\"\"",
+              "width": "44px",
+              "height": "2px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "cardTitleDetails": {
+              "applicable": true,
+              "titles": [
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                },
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                },
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                }
+              ],
+              "filterHeaders": [],
+              "present": true
+            },
+            "pillDetails": {
+              "applicable": true,
+              "pills": [
+                {
+                  "node": "span.pill.pill--outline",
+                  "boxShadow": "rgb(118, 107, 121) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--outline",
+                  "boxShadow": "rgb(118, 107, 121) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                }
+              ],
+              "present": true
+            },
+            "hairlines": {
+              "footer": "1px",
+              "nav": "1px",
+              "card": "1px"
+            },
+            "missing": []
+          },
+          "specimenExcluded": [],
+          "screenshot": "screenshots/routes/lecturer-lecturer-1440.png"
+        },
+        {
+          "route": "lecturer/courses",
+          "viewport": "desktop",
+          "title": "My courses · CLU Portal",
+          "hash": "#/lecturer/courses",
+          "clean": true,
+          "gradients": [],
+          "translucent": [],
+          "glossy": [],
+          "pillControls": [],
+          "oversizedRadii": [],
+          "navTruncated": [],
+          "overflow": {
+            "document": 0,
+            "page": 0,
+            "lab": 0
+          },
+          "details": {
+            "eyebrowRule": {
+              "selector": ".eyebrow",
+              "pseudo": "::before",
+              "content": "\"\"",
+              "width": "14px",
+              "height": "1px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "sectionRule": {
+              "selector": ".page__head, .workspace-hero, .page .hero",
+              "pseudo": "::after",
+              "content": "\"\"",
+              "width": "44px",
+              "height": "2px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "cardTitleDetails": {
+              "applicable": true,
+              "titles": [
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                }
+              ],
+              "filterHeaders": [],
+              "present": true
+            },
+            "pillDetails": {
+              "applicable": true,
+              "pills": [
+                {
+                  "node": "span.pill.pill--brand",
+                  "boxShadow": "rgb(86, 35, 102) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--blue",
+                  "boxShadow": "rgb(58, 95, 135) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--amber",
+                  "boxShadow": "rgb(138, 91, 20) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--amber",
+                  "boxShadow": "rgb(138, 91, 20) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--amber",
+                  "boxShadow": "rgb(138, 91, 20) 2px 0px 0px 0px inset"
+                }
+              ],
+              "present": true
+            },
+            "hairlines": {
+              "footer": "1px",
+              "nav": "1px",
+              "card": "1px"
+            },
+            "missing": []
+          },
+          "specimenExcluded": [],
+          "screenshot": "screenshots/routes/lecturer-lecturer-courses-1440.png"
+        },
+        {
+          "route": "lecturer/attendance",
+          "viewport": "desktop",
+          "title": "Attendance · CLU Portal",
+          "hash": "#/lecturer/attendance",
+          "clean": true,
+          "gradients": [],
+          "translucent": [],
+          "glossy": [],
+          "pillControls": [],
+          "oversizedRadii": [],
+          "navTruncated": [],
+          "overflow": {
+            "document": 0,
+            "page": 0,
+            "lab": 0
+          },
+          "details": {
+            "eyebrowRule": {
+              "selector": ".eyebrow",
+              "pseudo": "::before",
+              "content": "\"\"",
+              "width": "14px",
+              "height": "1px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "sectionRule": {
+              "selector": ".page__head, .workspace-hero, .page .hero",
+              "pseudo": "::after",
+              "content": "\"\"",
+              "width": "44px",
+              "height": "2px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "cardTitleDetails": {
+              "applicable": true,
+              "titles": [
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                }
+              ],
+              "filterHeaders": [],
+              "present": true
+            },
+            "pillDetails": {
+              "applicable": true,
+              "pills": [
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                }
+              ],
+              "present": true
+            },
+            "hairlines": {
+              "footer": "1px",
+              "nav": "1px",
+              "card": "1px"
+            },
+            "missing": []
+          },
+          "specimenExcluded": [],
+          "screenshot": "screenshots/routes/lecturer-lecturer-attendance-1440.png"
+        },
+        {
+          "route": "lecturer",
+          "viewport": "phone",
+          "title": "Teaching overview · CLU Portal",
+          "hash": "#/lecturer",
+          "clean": true,
+          "gradients": [],
+          "translucent": [],
+          "glossy": [],
+          "pillControls": [],
+          "oversizedRadii": [],
+          "navTruncated": [],
+          "overflow": {
+            "document": 0,
+            "page": 0,
+            "lab": 0
+          },
+          "details": {
+            "eyebrowRule": {
+              "selector": ".eyebrow",
+              "pseudo": "::before",
+              "content": "\"\"",
+              "width": "14px",
+              "height": "1px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "sectionRule": {
+              "selector": ".page__head, .workspace-hero, .page .hero",
+              "pseudo": "::after",
+              "content": "\"\"",
+              "width": "44px",
+              "height": "2px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "cardTitleDetails": {
+              "applicable": true,
+              "titles": [
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                },
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                },
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                }
+              ],
+              "filterHeaders": [],
+              "present": true
+            },
+            "pillDetails": {
+              "applicable": true,
+              "pills": [
+                {
+                  "node": "span.pill.pill--outline",
+                  "boxShadow": "rgb(118, 107, 121) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--outline",
+                  "boxShadow": "rgb(118, 107, 121) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                }
+              ],
+              "present": true
+            },
+            "hairlines": {
+              "footer": "1px",
+              "nav": "1px",
+              "card": "1px"
+            },
+            "missing": []
+          },
+          "specimenExcluded": [],
+          "screenshot": "screenshots/routes/lecturer-lecturer-390.png"
+        },
+        {
+          "route": "lecturer/courses",
+          "viewport": "phone",
+          "title": "My courses · CLU Portal",
+          "hash": "#/lecturer/courses",
+          "clean": true,
+          "gradients": [],
+          "translucent": [],
+          "glossy": [],
+          "pillControls": [],
+          "oversizedRadii": [],
+          "navTruncated": [],
+          "overflow": {
+            "document": 0,
+            "page": 0,
+            "lab": 0
+          },
+          "details": {
+            "eyebrowRule": {
+              "selector": ".eyebrow",
+              "pseudo": "::before",
+              "content": "\"\"",
+              "width": "14px",
+              "height": "1px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "sectionRule": {
+              "selector": ".page__head, .workspace-hero, .page .hero",
+              "pseudo": "::after",
+              "content": "\"\"",
+              "width": "44px",
+              "height": "2px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "cardTitleDetails": {
+              "applicable": true,
+              "titles": [
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                }
+              ],
+              "filterHeaders": [],
+              "present": true
+            },
+            "pillDetails": {
+              "applicable": true,
+              "pills": [
+                {
+                  "node": "span.pill.pill--brand",
+                  "boxShadow": "rgb(86, 35, 102) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--blue",
+                  "boxShadow": "rgb(58, 95, 135) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--amber",
+                  "boxShadow": "rgb(138, 91, 20) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--amber",
+                  "boxShadow": "rgb(138, 91, 20) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--amber",
+                  "boxShadow": "rgb(138, 91, 20) 2px 0px 0px 0px inset"
+                }
+              ],
+              "present": true
+            },
+            "hairlines": {
+              "footer": "1px",
+              "nav": "1px",
+              "card": "1px"
+            },
+            "missing": []
+          },
+          "specimenExcluded": [],
+          "screenshot": "screenshots/routes/lecturer-lecturer-courses-390.png"
+        },
+        {
+          "route": "lecturer/attendance",
+          "viewport": "phone",
+          "title": "Attendance · CLU Portal",
+          "hash": "#/lecturer/attendance",
+          "clean": true,
+          "gradients": [],
+          "translucent": [],
+          "glossy": [],
+          "pillControls": [],
+          "oversizedRadii": [],
+          "navTruncated": [],
+          "overflow": {
+            "document": 0,
+            "page": 0,
+            "lab": 0
+          },
+          "details": {
+            "eyebrowRule": {
+              "selector": ".eyebrow",
+              "pseudo": "::before",
+              "content": "\"\"",
+              "width": "14px",
+              "height": "1px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "sectionRule": {
+              "selector": ".page__head, .workspace-hero, .page .hero",
+              "pseudo": "::after",
+              "content": "\"\"",
+              "width": "44px",
+              "height": "2px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "cardTitleDetails": {
+              "applicable": true,
+              "titles": [
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                }
+              ],
+              "filterHeaders": [],
+              "present": true
+            },
+            "pillDetails": {
+              "applicable": true,
+              "pills": [
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                }
+              ],
+              "present": true
+            },
+            "hairlines": {
+              "footer": "1px",
+              "nav": "1px",
+              "card": "1px"
+            },
+            "missing": []
+          },
+          "specimenExcluded": [],
+          "screenshot": "screenshots/routes/lecturer-lecturer-attendance-390.png"
+        }
+      ],
+      "routeSummary": {
+        "checks": 6,
+        "clean": 6,
+        "failed": 0,
+        "screenshots": [
+          "screenshots/routes/lecturer-lecturer-1440.png",
+          "screenshots/routes/lecturer-lecturer-courses-1440.png",
+          "screenshots/routes/lecturer-lecturer-attendance-1440.png",
+          "screenshots/routes/lecturer-lecturer-390.png",
+          "screenshots/routes/lecturer-lecturer-courses-390.png",
+          "screenshots/routes/lecturer-lecturer-attendance-390.png"
+        ]
+      },
+      "designDetails": {
+        "eyebrowRule": {
+          "width": "14px",
+          "height": "1px",
+          "background": "rgb(197, 111, 71)",
+          "borderLeft": "0px",
+          "boxShadow": "none"
+        },
+        "sectionRule": {
+          "width": "44px",
+          "height": "2px",
+          "background": "rgb(197, 111, 71)",
+          "borderLeft": "0px",
+          "boxShadow": "none"
+        },
+        "cardTitleRule": {
+          "width": "666.328px",
+          "height": "16.25px",
+          "background": "rgba(0, 0, 0, 0)",
+          "borderLeft": "2px",
+          "boxShadow": "none"
+        },
+        "filterHeaderRule": null,
+        "footerRule": {
+          "width": "34px",
+          "height": "1px",
+          "background": "rgb(197, 111, 71)",
+          "borderLeft": "0px",
+          "boxShadow": "none"
+        },
+        "subnavRule": {
+          "width": "16px",
+          "height": "1px",
+          "background": "rgb(197, 111, 71)",
+          "borderLeft": "0px",
+          "boxShadow": "none"
+        },
+        "pillSpine": {
+          "width": "114px",
+          "height": "21px",
+          "background": "rgba(0, 0, 0, 0)",
+          "borderLeft": "1px",
+          "boxShadow": "rgb(118, 107, 121) 2px 0px 0px 0px inset"
+        },
+        "dashboardHero": false
+      },
+      "signOut": {
+        "reachedSignIn": true,
+        "portalVisible": false,
+        "hash": "#/signin",
+        "persistentSession": null,
+        "tabSession": null,
+        "inAppRoleSwitchRemoved": true
+      },
+      "back": {
+        "url": "http://127.0.0.1:3000/#/signin",
+        "renderedSignIn": true,
+        "renderedPortal": false,
+        "hash": "#/signin"
+      },
+      "reloadAfterSignOut": {
+        "renderedSignIn": true,
+        "renderedPortal": false
+      },
+      "consoleErrors": []
+    },
+    {
+      "role": "bursar",
+      "label": "Bursar",
+      "identity": {
+        "name": "Mrs. Folake Adekunle",
+        "email": "f.adekunle@chrislanduniversity.edu.ng",
+        "detail": "Chief Finance Officer"
+      },
+      "freshContext": {
+        "directHash": "#/bursar/ledger",
+        "cleanStorage": true,
+        "renderedSignIn": true,
+        "renderedPortal": false,
+        "gateHash": "#/signin",
+        "roleButtonCount": 6
+      },
+      "signIn": {
+        "selectedIdentity": "MF\nMrs. Folake Adekunle\nBursar · Chief Finance Officer",
+        "email": "f.adekunle@chrislanduniversity.edu.ng",
+        "desktop": {
+          "viewport": 1440,
+          "overflow": 0,
+          "gradients": [],
+          "screenshot": "screenshots/auth/bursar-signin-1440.png"
+        },
+        "phone": {
+          "viewport": 390,
+          "overflow": 0,
+          "screenshot": "screenshots/auth/bursar-signin-390.png"
+        }
+      },
+      "landing": {
+        "home": "#/bursar",
+        "title": "Finance overview · CLU Portal",
+        "nav": [
+          "Finance"
+        ],
+        "account": {
+          "name": "Mrs. Folake Adekunle",
+          "detail": "Chief Finance Officer"
+        },
+        "phone": {
+          "subtitle": "Bursar portal",
+          "tabs": [
+            "Overview",
+            "Ledger",
+            "Fees",
+            "More"
+          ],
+          "overflow": 0
+        },
+        "desktop": {
+          "overflow": 0,
+          "gradients": []
+        },
+        "session": "active",
+        "screenshots": {
+          "homeDesktop": "screenshots/auth/bursar-home-1440.png",
+          "homePhone": "screenshots/auth/bursar-home-390.png"
+        }
+      },
+      "routes": [
+        {
+          "route": "bursar",
+          "viewport": "desktop",
+          "title": "Finance overview · CLU Portal",
+          "hash": "#/bursar",
+          "clean": true,
+          "gradients": [],
+          "translucent": [],
+          "glossy": [],
+          "pillControls": [],
+          "oversizedRadii": [],
+          "navTruncated": [],
+          "overflow": {
+            "document": 0,
+            "page": 0,
+            "lab": 0
+          },
+          "details": {
+            "eyebrowRule": {
+              "selector": ".eyebrow",
+              "pseudo": "::before",
+              "content": "\"\"",
+              "width": "14px",
+              "height": "1px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "sectionRule": {
+              "selector": ".page__head, .workspace-hero, .page .hero",
+              "pseudo": "::after",
+              "content": "\"\"",
+              "width": "44px",
+              "height": "2px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "cardTitleDetails": {
+              "applicable": true,
+              "titles": [
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                },
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                },
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                }
+              ],
+              "filterHeaders": [],
+              "present": true
+            },
+            "pillDetails": {
+              "applicable": true,
+              "pills": [
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--amber",
+                  "boxShadow": "rgb(138, 91, 20) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--amber",
+                  "boxShadow": "rgb(138, 91, 20) 2px 0px 0px 0px inset"
+                }
+              ],
+              "present": true
+            },
+            "hairlines": {
+              "footer": "1px",
+              "nav": "1px",
+              "card": "1px"
+            },
+            "missing": []
+          },
+          "specimenExcluded": [],
+          "screenshot": "screenshots/routes/bursar-bursar-1440.png"
+        },
+        {
+          "route": "bursar/ledger",
+          "viewport": "desktop",
+          "title": "Payments ledger · CLU Portal",
+          "hash": "#/bursar/ledger",
+          "clean": true,
+          "gradients": [],
+          "translucent": [],
+          "glossy": [],
+          "pillControls": [],
+          "oversizedRadii": [],
+          "navTruncated": [],
+          "overflow": {
+            "document": 0,
+            "page": 0,
+            "lab": 0
+          },
+          "details": {
+            "eyebrowRule": {
+              "selector": ".eyebrow",
+              "pseudo": "::before",
+              "content": "\"\"",
+              "width": "14px",
+              "height": "1px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "sectionRule": {
+              "selector": ".page__head, .workspace-hero, .page .hero",
+              "pseudo": "::after",
+              "content": "\"\"",
+              "width": "44px",
+              "height": "2px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "cardTitleDetails": {
+              "applicable": true,
+              "titles": [],
+              "filterHeaders": [
+                {
+                  "node": "div.card__hd.card__hd--filters",
+                  "ruleWidth": "2px"
+                }
+              ],
+              "present": true
+            },
+            "pillDetails": {
+              "applicable": true,
+              "pills": [
+                {
+                  "node": "span.pill.pill--outline",
+                  "boxShadow": "rgb(118, 107, 121) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--outline",
+                  "boxShadow": "rgb(118, 107, 121) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--outline",
+                  "boxShadow": "rgb(118, 107, 121) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--amber",
+                  "boxShadow": "rgb(138, 91, 20) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--outline",
+                  "boxShadow": "rgb(118, 107, 121) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--outline",
+                  "boxShadow": "rgb(118, 107, 121) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--outline",
+                  "boxShadow": "rgb(118, 107, 121) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--amber",
+                  "boxShadow": "rgb(138, 91, 20) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--outline",
+                  "boxShadow": "rgb(118, 107, 121) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--outline",
+                  "boxShadow": "rgb(118, 107, 121) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--outline",
+                  "boxShadow": "rgb(118, 107, 121) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--red",
+                  "boxShadow": "rgb(163, 58, 67) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--outline",
+                  "boxShadow": "rgb(118, 107, 121) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--outline",
+                  "boxShadow": "rgb(118, 107, 121) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--outline",
+                  "boxShadow": "rgb(118, 107, 121) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                }
+              ],
+              "present": true
+            },
+            "hairlines": {
+              "footer": "1px",
+              "nav": "1px",
+              "card": "1px"
+            },
+            "missing": []
+          },
+          "specimenExcluded": [],
+          "screenshot": "screenshots/routes/bursar-bursar-ledger-1440.png"
+        },
+        {
+          "route": "bursar/fees",
+          "viewport": "desktop",
+          "title": "Fee schedule · CLU Portal",
+          "hash": "#/bursar/fees",
+          "clean": true,
+          "gradients": [],
+          "translucent": [],
+          "glossy": [],
+          "pillControls": [],
+          "oversizedRadii": [],
+          "navTruncated": [],
+          "overflow": {
+            "document": 0,
+            "page": 0,
+            "lab": 0
+          },
+          "details": {
+            "eyebrowRule": {
+              "selector": ".eyebrow",
+              "pseudo": "::before",
+              "content": "\"\"",
+              "width": "14px",
+              "height": "1px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "sectionRule": {
+              "selector": ".page__head, .workspace-hero, .page .hero",
+              "pseudo": "::after",
+              "content": "\"\"",
+              "width": "44px",
+              "height": "2px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "cardTitleDetails": {
+              "applicable": true,
+              "titles": [
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                }
+              ],
+              "filterHeaders": [],
+              "present": true
+            },
+            "pillDetails": {
+              "applicable": true,
+              "pills": [
+                {
+                  "node": "span.pill.pill--brand",
+                  "boxShadow": "rgb(86, 35, 102) 2px 0px 0px 0px inset"
+                }
+              ],
+              "present": true
+            },
+            "hairlines": {
+              "footer": "1px",
+              "nav": "1px",
+              "card": "1px"
+            },
+            "missing": []
+          },
+          "specimenExcluded": [],
+          "screenshot": "screenshots/routes/bursar-bursar-fees-1440.png"
+        },
+        {
+          "route": "bursar",
+          "viewport": "phone",
+          "title": "Finance overview · CLU Portal",
+          "hash": "#/bursar",
+          "clean": true,
+          "gradients": [],
+          "translucent": [],
+          "glossy": [],
+          "pillControls": [],
+          "oversizedRadii": [],
+          "navTruncated": [],
+          "overflow": {
+            "document": 0,
+            "page": 0,
+            "lab": 0
+          },
+          "details": {
+            "eyebrowRule": {
+              "selector": ".eyebrow",
+              "pseudo": "::before",
+              "content": "\"\"",
+              "width": "14px",
+              "height": "1px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "sectionRule": {
+              "selector": ".page__head, .workspace-hero, .page .hero",
+              "pseudo": "::after",
+              "content": "\"\"",
+              "width": "44px",
+              "height": "2px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "cardTitleDetails": {
+              "applicable": true,
+              "titles": [
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                },
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                },
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                }
+              ],
+              "filterHeaders": [],
+              "present": true
+            },
+            "pillDetails": {
+              "applicable": true,
+              "pills": [
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--amber",
+                  "boxShadow": "rgb(138, 91, 20) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--amber",
+                  "boxShadow": "rgb(138, 91, 20) 2px 0px 0px 0px inset"
+                }
+              ],
+              "present": true
+            },
+            "hairlines": {
+              "footer": "1px",
+              "nav": "1px",
+              "card": "1px"
+            },
+            "missing": []
+          },
+          "specimenExcluded": [],
+          "screenshot": "screenshots/routes/bursar-bursar-390.png"
+        },
+        {
+          "route": "bursar/ledger",
+          "viewport": "phone",
+          "title": "Payments ledger · CLU Portal",
+          "hash": "#/bursar/ledger",
+          "clean": true,
+          "gradients": [],
+          "translucent": [],
+          "glossy": [],
+          "pillControls": [],
+          "oversizedRadii": [],
+          "navTruncated": [],
+          "overflow": {
+            "document": 0,
+            "page": 0,
+            "lab": 0
+          },
+          "details": {
+            "eyebrowRule": {
+              "selector": ".eyebrow",
+              "pseudo": "::before",
+              "content": "\"\"",
+              "width": "14px",
+              "height": "1px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "sectionRule": {
+              "selector": ".page__head, .workspace-hero, .page .hero",
+              "pseudo": "::after",
+              "content": "\"\"",
+              "width": "44px",
+              "height": "2px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "cardTitleDetails": {
+              "applicable": true,
+              "titles": [],
+              "filterHeaders": [
+                {
+                  "node": "div.card__hd.card__hd--filters",
+                  "ruleWidth": "2px"
+                }
+              ],
+              "present": true
+            },
+            "pillDetails": {
+              "applicable": true,
+              "pills": [
+                {
+                  "node": "span.pill.pill--outline",
+                  "boxShadow": "rgb(118, 107, 121) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--outline",
+                  "boxShadow": "rgb(118, 107, 121) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--outline",
+                  "boxShadow": "rgb(118, 107, 121) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--amber",
+                  "boxShadow": "rgb(138, 91, 20) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--outline",
+                  "boxShadow": "rgb(118, 107, 121) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--outline",
+                  "boxShadow": "rgb(118, 107, 121) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--outline",
+                  "boxShadow": "rgb(118, 107, 121) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--amber",
+                  "boxShadow": "rgb(138, 91, 20) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--outline",
+                  "boxShadow": "rgb(118, 107, 121) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--outline",
+                  "boxShadow": "rgb(118, 107, 121) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--outline",
+                  "boxShadow": "rgb(118, 107, 121) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--red",
+                  "boxShadow": "rgb(163, 58, 67) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--outline",
+                  "boxShadow": "rgb(118, 107, 121) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--outline",
+                  "boxShadow": "rgb(118, 107, 121) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--outline",
+                  "boxShadow": "rgb(118, 107, 121) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                }
+              ],
+              "present": true
+            },
+            "hairlines": {
+              "footer": "1px",
+              "nav": "1px",
+              "card": "1px"
+            },
+            "missing": []
+          },
+          "specimenExcluded": [],
+          "screenshot": "screenshots/routes/bursar-bursar-ledger-390.png"
+        },
+        {
+          "route": "bursar/fees",
+          "viewport": "phone",
+          "title": "Fee schedule · CLU Portal",
+          "hash": "#/bursar/fees",
+          "clean": true,
+          "gradients": [],
+          "translucent": [],
+          "glossy": [],
+          "pillControls": [],
+          "oversizedRadii": [],
+          "navTruncated": [],
+          "overflow": {
+            "document": 0,
+            "page": 0,
+            "lab": 0
+          },
+          "details": {
+            "eyebrowRule": {
+              "selector": ".eyebrow",
+              "pseudo": "::before",
+              "content": "\"\"",
+              "width": "14px",
+              "height": "1px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "sectionRule": {
+              "selector": ".page__head, .workspace-hero, .page .hero",
+              "pseudo": "::after",
+              "content": "\"\"",
+              "width": "44px",
+              "height": "2px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "cardTitleDetails": {
+              "applicable": true,
+              "titles": [
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                }
+              ],
+              "filterHeaders": [],
+              "present": true
+            },
+            "pillDetails": {
+              "applicable": true,
+              "pills": [
+                {
+                  "node": "span.pill.pill--brand",
+                  "boxShadow": "rgb(86, 35, 102) 2px 0px 0px 0px inset"
+                }
+              ],
+              "present": true
+            },
+            "hairlines": {
+              "footer": "1px",
+              "nav": "1px",
+              "card": "1px"
+            },
+            "missing": []
+          },
+          "specimenExcluded": [],
+          "screenshot": "screenshots/routes/bursar-bursar-fees-390.png"
+        }
+      ],
+      "routeSummary": {
+        "checks": 6,
+        "clean": 6,
+        "failed": 0,
+        "screenshots": [
+          "screenshots/routes/bursar-bursar-1440.png",
+          "screenshots/routes/bursar-bursar-ledger-1440.png",
+          "screenshots/routes/bursar-bursar-fees-1440.png",
+          "screenshots/routes/bursar-bursar-390.png",
+          "screenshots/routes/bursar-bursar-ledger-390.png",
+          "screenshots/routes/bursar-bursar-fees-390.png"
+        ]
+      },
+      "designDetails": {
+        "eyebrowRule": {
+          "width": "14px",
+          "height": "1px",
+          "background": "rgb(197, 111, 71)",
+          "borderLeft": "0px",
+          "boxShadow": "none"
+        },
+        "sectionRule": {
+          "width": "44px",
+          "height": "2px",
+          "background": "rgb(197, 111, 71)",
+          "borderLeft": "0px",
+          "boxShadow": "none"
+        },
+        "cardTitleRule": {
+          "width": "579.328px",
+          "height": "16.25px",
+          "background": "rgba(0, 0, 0, 0)",
+          "borderLeft": "2px",
+          "boxShadow": "none"
+        },
+        "filterHeaderRule": null,
+        "footerRule": {
+          "width": "34px",
+          "height": "1px",
+          "background": "rgb(197, 111, 71)",
+          "borderLeft": "0px",
+          "boxShadow": "none"
+        },
+        "subnavRule": {
+          "width": "16px",
+          "height": "1px",
+          "background": "rgb(197, 111, 71)",
+          "borderLeft": "0px",
+          "boxShadow": "none"
+        },
+        "pillSpine": {
+          "width": "68px",
+          "height": "21px",
+          "background": "rgb(231, 240, 233)",
+          "borderLeft": "1px",
+          "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+        },
+        "dashboardHero": false
+      },
+      "signOut": {
+        "reachedSignIn": true,
+        "portalVisible": false,
+        "hash": "#/signin",
+        "persistentSession": null,
+        "tabSession": null,
+        "inAppRoleSwitchRemoved": true
+      },
+      "back": {
+        "url": "http://127.0.0.1:3000/#/signin",
+        "renderedSignIn": true,
+        "renderedPortal": false,
+        "hash": "#/signin"
+      },
+      "reloadAfterSignOut": {
+        "renderedSignIn": true,
+        "renderedPortal": false
+      },
+      "consoleErrors": []
+    },
+    {
+      "role": "ict",
+      "label": "ICT personnel",
+      "identity": {
+        "name": "Mr. Tochukwu Okafor",
+        "email": "t.okafor@chrislanduniversity.edu.ng",
+        "detail": "Directorate of ICT"
+      },
+      "freshContext": {
+        "directHash": "#/ict/users",
+        "cleanStorage": true,
+        "renderedSignIn": true,
+        "renderedPortal": false,
+        "gateHash": "#/signin",
+        "roleButtonCount": 6
+      },
+      "signIn": {
+        "selectedIdentity": "MT\nMr. Tochukwu Okafor\nICT personnel · Directorate of ICT",
+        "email": "t.okafor@chrislanduniversity.edu.ng",
+        "desktop": {
+          "viewport": 1440,
+          "overflow": 0,
+          "gradients": [],
+          "screenshot": "screenshots/auth/ict-signin-1440.png"
+        },
+        "phone": {
+          "viewport": 390,
+          "overflow": 0,
+          "screenshot": "screenshots/auth/ict-signin-390.png"
+        }
+      },
+      "landing": {
+        "home": "#/ict",
+        "title": "Systems overview · CLU Portal",
+        "nav": [
+          "Systems"
+        ],
+        "account": {
+          "name": "Mr. Tochukwu Okafor",
+          "detail": "Directorate of ICT"
+        },
+        "phone": {
+          "subtitle": "ICT portal",
+          "tabs": [
+            "Overview",
+            "Users",
+            "Audit",
+            "More"
+          ],
+          "overflow": 0
+        },
+        "desktop": {
+          "overflow": 0,
+          "gradients": []
+        },
+        "session": "active",
+        "screenshots": {
+          "homeDesktop": "screenshots/auth/ict-home-1440.png",
+          "homePhone": "screenshots/auth/ict-home-390.png"
+        }
+      },
+      "routes": [
+        {
+          "route": "ict",
+          "viewport": "desktop",
+          "title": "Systems overview · CLU Portal",
+          "hash": "#/ict",
+          "clean": true,
+          "gradients": [],
+          "translucent": [],
+          "glossy": [],
+          "pillControls": [],
+          "oversizedRadii": [],
+          "navTruncated": [],
+          "overflow": {
+            "document": 0,
+            "page": 0,
+            "lab": 0
+          },
+          "details": {
+            "eyebrowRule": {
+              "selector": ".eyebrow",
+              "pseudo": "::before",
+              "content": "\"\"",
+              "width": "14px",
+              "height": "1px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "sectionRule": {
+              "selector": ".page__head, .workspace-hero, .page .hero",
+              "pseudo": "::after",
+              "content": "\"\"",
+              "width": "44px",
+              "height": "2px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "cardTitleDetails": {
+              "applicable": true,
+              "titles": [
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                },
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                },
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                }
+              ],
+              "filterHeaders": [],
+              "present": true
+            },
+            "pillDetails": {
+              "applicable": true,
+              "pills": [
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--amber",
+                  "boxShadow": "rgb(138, 91, 20) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--amber",
+                  "boxShadow": "rgb(138, 91, 20) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--red",
+                  "boxShadow": "rgb(163, 58, 67) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                }
+              ],
+              "present": true
+            },
+            "hairlines": {
+              "footer": "1px",
+              "nav": "1px",
+              "card": "1px"
+            },
+            "missing": []
+          },
+          "specimenExcluded": [],
+          "screenshot": "screenshots/routes/ict-ict-1440.png"
+        },
+        {
+          "route": "ict/users",
+          "viewport": "desktop",
+          "title": "User accounts · CLU Portal",
+          "hash": "#/ict/users",
+          "clean": true,
+          "gradients": [],
+          "translucent": [],
+          "glossy": [],
+          "pillControls": [],
+          "oversizedRadii": [],
+          "navTruncated": [],
+          "overflow": {
+            "document": 0,
+            "page": 0,
+            "lab": 0
+          },
+          "details": {
+            "eyebrowRule": {
+              "selector": ".eyebrow",
+              "pseudo": "::before",
+              "content": "\"\"",
+              "width": "14px",
+              "height": "1px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "sectionRule": {
+              "selector": ".page__head, .workspace-hero, .page .hero",
+              "pseudo": "::after",
+              "content": "\"\"",
+              "width": "44px",
+              "height": "2px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "cardTitleDetails": {
+              "applicable": true,
+              "titles": [],
+              "filterHeaders": [
+                {
+                  "node": "div.card__hd.card__hd--filters",
+                  "ruleWidth": "2px"
+                }
+              ],
+              "present": true
+            },
+            "pillDetails": {
+              "applicable": true,
+              "pills": [
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--red",
+                  "boxShadow": "rgb(163, 58, 67) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--red",
+                  "boxShadow": "rgb(163, 58, 67) 2px 0px 0px 0px inset"
+                }
+              ],
+              "present": true
+            },
+            "hairlines": {
+              "footer": "1px",
+              "nav": "1px",
+              "card": "1px"
+            },
+            "missing": []
+          },
+          "specimenExcluded": [],
+          "screenshot": "screenshots/routes/ict-ict-users-1440.png"
+        },
+        {
+          "route": "ict/audit",
+          "viewport": "desktop",
+          "title": "Audit log · CLU Portal",
+          "hash": "#/ict/audit",
+          "clean": true,
+          "gradients": [],
+          "translucent": [],
+          "glossy": [],
+          "pillControls": [],
+          "oversizedRadii": [],
+          "navTruncated": [],
+          "overflow": {
+            "document": 0,
+            "page": 0,
+            "lab": 0
+          },
+          "details": {
+            "eyebrowRule": {
+              "selector": ".eyebrow",
+              "pseudo": "::before",
+              "content": "\"\"",
+              "width": "14px",
+              "height": "1px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "sectionRule": {
+              "selector": ".page__head, .workspace-hero, .page .hero",
+              "pseudo": "::after",
+              "content": "\"\"",
+              "width": "44px",
+              "height": "2px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "cardTitleDetails": {
+              "applicable": true,
+              "titles": [
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                }
+              ],
+              "filterHeaders": [],
+              "present": true
+            },
+            "pillDetails": {
+              "applicable": true,
+              "pills": [
+                {
+                  "node": "span.pill.pill--outline",
+                  "boxShadow": "rgb(118, 107, 121) 2px 0px 0px 0px inset"
+                }
+              ],
+              "present": true
+            },
+            "hairlines": {
+              "footer": "1px",
+              "nav": "1px",
+              "card": "1px"
+            },
+            "missing": []
+          },
+          "specimenExcluded": [],
+          "screenshot": "screenshots/routes/ict-ict-audit-1440.png"
+        },
+        {
+          "route": "ict",
+          "viewport": "phone",
+          "title": "Systems overview · CLU Portal",
+          "hash": "#/ict",
+          "clean": true,
+          "gradients": [],
+          "translucent": [],
+          "glossy": [],
+          "pillControls": [],
+          "oversizedRadii": [],
+          "navTruncated": [],
+          "overflow": {
+            "document": 0,
+            "page": 0,
+            "lab": 0
+          },
+          "details": {
+            "eyebrowRule": {
+              "selector": ".eyebrow",
+              "pseudo": "::before",
+              "content": "\"\"",
+              "width": "14px",
+              "height": "1px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "sectionRule": {
+              "selector": ".page__head, .workspace-hero, .page .hero",
+              "pseudo": "::after",
+              "content": "\"\"",
+              "width": "44px",
+              "height": "2px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "cardTitleDetails": {
+              "applicable": true,
+              "titles": [
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                },
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                },
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                }
+              ],
+              "filterHeaders": [],
+              "present": true
+            },
+            "pillDetails": {
+              "applicable": true,
+              "pills": [
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--amber",
+                  "boxShadow": "rgb(138, 91, 20) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--amber",
+                  "boxShadow": "rgb(138, 91, 20) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--red",
+                  "boxShadow": "rgb(163, 58, 67) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                }
+              ],
+              "present": true
+            },
+            "hairlines": {
+              "footer": "1px",
+              "nav": "1px",
+              "card": "1px"
+            },
+            "missing": []
+          },
+          "specimenExcluded": [],
+          "screenshot": "screenshots/routes/ict-ict-390.png"
+        },
+        {
+          "route": "ict/users",
+          "viewport": "phone",
+          "title": "User accounts · CLU Portal",
+          "hash": "#/ict/users",
+          "clean": true,
+          "gradients": [],
+          "translucent": [],
+          "glossy": [],
+          "pillControls": [],
+          "oversizedRadii": [],
+          "navTruncated": [],
+          "overflow": {
+            "document": 0,
+            "page": 0,
+            "lab": 0
+          },
+          "details": {
+            "eyebrowRule": {
+              "selector": ".eyebrow",
+              "pseudo": "::before",
+              "content": "\"\"",
+              "width": "14px",
+              "height": "1px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "sectionRule": {
+              "selector": ".page__head, .workspace-hero, .page .hero",
+              "pseudo": "::after",
+              "content": "\"\"",
+              "width": "44px",
+              "height": "2px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "cardTitleDetails": {
+              "applicable": true,
+              "titles": [],
+              "filterHeaders": [
+                {
+                  "node": "div.card__hd.card__hd--filters",
+                  "ruleWidth": "2px"
+                }
+              ],
+              "present": true
+            },
+            "pillDetails": {
+              "applicable": true,
+              "pills": [
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--red",
+                  "boxShadow": "rgb(163, 58, 67) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--red",
+                  "boxShadow": "rgb(163, 58, 67) 2px 0px 0px 0px inset"
+                }
+              ],
+              "present": true
+            },
+            "hairlines": {
+              "footer": "1px",
+              "nav": "1px",
+              "card": "1px"
+            },
+            "missing": []
+          },
+          "specimenExcluded": [],
+          "screenshot": "screenshots/routes/ict-ict-users-390.png"
+        },
+        {
+          "route": "ict/audit",
+          "viewport": "phone",
+          "title": "Audit log · CLU Portal",
+          "hash": "#/ict/audit",
+          "clean": true,
+          "gradients": [],
+          "translucent": [],
+          "glossy": [],
+          "pillControls": [],
+          "oversizedRadii": [],
+          "navTruncated": [],
+          "overflow": {
+            "document": 0,
+            "page": 0,
+            "lab": 0
+          },
+          "details": {
+            "eyebrowRule": {
+              "selector": ".eyebrow",
+              "pseudo": "::before",
+              "content": "\"\"",
+              "width": "14px",
+              "height": "1px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "sectionRule": {
+              "selector": ".page__head, .workspace-hero, .page .hero",
+              "pseudo": "::after",
+              "content": "\"\"",
+              "width": "44px",
+              "height": "2px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "cardTitleDetails": {
+              "applicable": true,
+              "titles": [
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                }
+              ],
+              "filterHeaders": [],
+              "present": true
+            },
+            "pillDetails": {
+              "applicable": true,
+              "pills": [
+                {
+                  "node": "span.pill.pill--outline",
+                  "boxShadow": "rgb(118, 107, 121) 2px 0px 0px 0px inset"
+                }
+              ],
+              "present": true
+            },
+            "hairlines": {
+              "footer": "1px",
+              "nav": "1px",
+              "card": "1px"
+            },
+            "missing": []
+          },
+          "specimenExcluded": [],
+          "screenshot": "screenshots/routes/ict-ict-audit-390.png"
+        }
+      ],
+      "routeSummary": {
+        "checks": 6,
+        "clean": 6,
+        "failed": 0,
+        "screenshots": [
+          "screenshots/routes/ict-ict-1440.png",
+          "screenshots/routes/ict-ict-users-1440.png",
+          "screenshots/routes/ict-ict-audit-1440.png",
+          "screenshots/routes/ict-ict-390.png",
+          "screenshots/routes/ict-ict-users-390.png",
+          "screenshots/routes/ict-ict-audit-390.png"
+        ]
+      },
+      "designDetails": {
+        "eyebrowRule": {
+          "width": "14px",
+          "height": "1px",
+          "background": "rgb(197, 111, 71)",
+          "borderLeft": "0px",
+          "boxShadow": "none"
+        },
+        "sectionRule": {
+          "width": "44px",
+          "height": "2px",
+          "background": "rgb(197, 111, 71)",
+          "borderLeft": "0px",
+          "boxShadow": "none"
+        },
+        "cardTitleRule": {
+          "width": "666.328px",
+          "height": "16.25px",
+          "background": "rgba(0, 0, 0, 0)",
+          "borderLeft": "2px",
+          "boxShadow": "none"
+        },
+        "filterHeaderRule": null,
+        "footerRule": {
+          "width": "34px",
+          "height": "1px",
+          "background": "rgb(197, 111, 71)",
+          "borderLeft": "0px",
+          "boxShadow": "none"
+        },
+        "subnavRule": {
+          "width": "16px",
+          "height": "1px",
+          "background": "rgb(197, 111, 71)",
+          "borderLeft": "0px",
+          "boxShadow": "none"
+        },
+        "pillSpine": {
+          "width": "82px",
+          "height": "21px",
+          "background": "rgb(231, 240, 233)",
+          "borderLeft": "1px",
+          "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+        },
+        "dashboardHero": false
+      },
+      "signOut": {
+        "reachedSignIn": true,
+        "portalVisible": false,
+        "hash": "#/signin",
+        "persistentSession": null,
+        "tabSession": null,
+        "inAppRoleSwitchRemoved": true
+      },
+      "back": {
+        "url": "http://127.0.0.1:3000/#/signin",
+        "renderedSignIn": true,
+        "renderedPortal": false,
+        "hash": "#/signin"
+      },
+      "reloadAfterSignOut": {
+        "renderedSignIn": true,
+        "renderedPortal": false
+      },
+      "consoleErrors": []
+    },
+    {
+      "role": "vc",
+      "label": "Vice Chancellor",
+      "identity": {
+        "name": "Prof. Chinedu Eze",
+        "email": "c.eze@chrislanduniversity.edu.ng",
+        "detail": "Office of the Vice Chancellor"
+      },
+      "freshContext": {
+        "directHash": "#/vc/approvals",
+        "cleanStorage": true,
+        "renderedSignIn": true,
+        "renderedPortal": false,
+        "gateHash": "#/signin",
+        "roleButtonCount": 6
+      },
+      "signIn": {
+        "selectedIdentity": "PC\nProf. Chinedu Eze\nVice Chancellor · Office of the Vice Chancellor",
+        "email": "c.eze@chrislanduniversity.edu.ng",
+        "desktop": {
+          "viewport": 1440,
+          "overflow": 0,
+          "gradients": [],
+          "screenshot": "screenshots/auth/vc-signin-1440.png"
+        },
+        "phone": {
+          "viewport": 390,
+          "overflow": 0,
+          "screenshot": "screenshots/auth/vc-signin-390.png"
+        }
+      },
+      "landing": {
+        "home": "#/vc",
+        "title": "Institution overview · CLU Portal",
+        "nav": [
+          "Executive"
+        ],
+        "account": {
+          "name": "Prof. Chinedu Eze",
+          "detail": "Office of the Vice Chancellor"
+        },
+        "phone": {
+          "subtitle": "VC portal",
+          "tabs": [
+            "Institution",
+            "Approvals",
+            "More"
+          ],
+          "overflow": 0
+        },
+        "desktop": {
+          "overflow": 0,
+          "gradients": []
+        },
+        "session": "active",
+        "screenshots": {
+          "homeDesktop": "screenshots/auth/vc-home-1440.png",
+          "homePhone": "screenshots/auth/vc-home-390.png"
+        }
+      },
+      "routes": [
+        {
+          "route": "vc",
+          "viewport": "desktop",
+          "title": "Institution overview · CLU Portal",
+          "hash": "#/vc",
+          "clean": true,
+          "gradients": [],
+          "translucent": [],
+          "glossy": [],
+          "pillControls": [],
+          "oversizedRadii": [],
+          "navTruncated": [],
+          "overflow": {
+            "document": 0,
+            "page": 0,
+            "lab": 0
+          },
+          "details": {
+            "eyebrowRule": {
+              "selector": ".eyebrow",
+              "pseudo": "::before",
+              "content": "\"\"",
+              "width": "14px",
+              "height": "1px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "sectionRule": {
+              "selector": ".page__head, .workspace-hero, .page .hero",
+              "pseudo": "::after",
+              "content": "\"\"",
+              "width": "44px",
+              "height": "2px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "cardTitleDetails": {
+              "applicable": true,
+              "titles": [
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                },
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                },
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                }
+              ],
+              "filterHeaders": [],
+              "present": true
+            },
+            "pillDetails": {
+              "applicable": true,
+              "pills": [
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--brand",
+                  "boxShadow": "rgb(86, 35, 102) 2px 0px 0px 0px inset"
+                }
+              ],
+              "present": true
+            },
+            "hairlines": {
+              "footer": "1px",
+              "nav": "1px",
+              "card": "1px"
+            },
+            "missing": []
+          },
+          "specimenExcluded": [],
+          "screenshot": "screenshots/routes/vc-vc-1440.png"
+        },
+        {
+          "route": "vc/approvals",
+          "viewport": "desktop",
+          "title": "Approvals · CLU Portal",
+          "hash": "#/vc/approvals",
+          "clean": true,
+          "gradients": [],
+          "translucent": [],
+          "glossy": [],
+          "pillControls": [],
+          "oversizedRadii": [],
+          "navTruncated": [],
+          "overflow": {
+            "document": 0,
+            "page": 0,
+            "lab": 0
+          },
+          "details": {
+            "eyebrowRule": {
+              "selector": ".eyebrow",
+              "pseudo": "::before",
+              "content": "\"\"",
+              "width": "14px",
+              "height": "1px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "sectionRule": {
+              "selector": ".page__head, .workspace-hero, .page .hero",
+              "pseudo": "::after",
+              "content": "\"\"",
+              "width": "44px",
+              "height": "2px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "cardTitleDetails": {
+              "applicable": true,
+              "titles": [],
+              "filterHeaders": [
+                {
+                  "node": "div.card__hd.card__hd--filters",
+                  "ruleWidth": "2px"
+                }
+              ],
+              "present": true
+            },
+            "pillDetails": {
+              "applicable": true,
+              "pills": [
+                {
+                  "node": "span.pill.pill--amber",
+                  "boxShadow": "rgb(138, 91, 20) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--amber",
+                  "boxShadow": "rgb(138, 91, 20) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--amber",
+                  "boxShadow": "rgb(138, 91, 20) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--amber",
+                  "boxShadow": "rgb(138, 91, 20) 2px 0px 0px 0px inset"
+                }
+              ],
+              "present": true
+            },
+            "hairlines": {
+              "footer": "1px",
+              "nav": "1px",
+              "card": "1px"
+            },
+            "missing": []
+          },
+          "specimenExcluded": [],
+          "screenshot": "screenshots/routes/vc-vc-approvals-1440.png"
+        },
+        {
+          "route": "vc",
+          "viewport": "phone",
+          "title": "Institution overview · CLU Portal",
+          "hash": "#/vc",
+          "clean": true,
+          "gradients": [],
+          "translucent": [],
+          "glossy": [],
+          "pillControls": [],
+          "oversizedRadii": [],
+          "navTruncated": [],
+          "overflow": {
+            "document": 0,
+            "page": 0,
+            "lab": 0
+          },
+          "details": {
+            "eyebrowRule": {
+              "selector": ".eyebrow",
+              "pseudo": "::before",
+              "content": "\"\"",
+              "width": "14px",
+              "height": "1px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "sectionRule": {
+              "selector": ".page__head, .workspace-hero, .page .hero",
+              "pseudo": "::after",
+              "content": "\"\"",
+              "width": "44px",
+              "height": "2px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "cardTitleDetails": {
+              "applicable": true,
+              "titles": [
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                },
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                },
+                {
+                  "node": "div.card__title",
+                  "borderLeftWidth": "2px"
+                }
+              ],
+              "filterHeaders": [],
+              "present": true
+            },
+            "pillDetails": {
+              "applicable": true,
+              "pills": [
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--brand",
+                  "boxShadow": "rgb(86, 35, 102) 2px 0px 0px 0px inset"
+                }
+              ],
+              "present": true
+            },
+            "hairlines": {
+              "footer": "1px",
+              "nav": "1px",
+              "card": "1px"
+            },
+            "missing": []
+          },
+          "specimenExcluded": [],
+          "screenshot": "screenshots/routes/vc-vc-390.png"
+        },
+        {
+          "route": "vc/approvals",
+          "viewport": "phone",
+          "title": "Approvals · CLU Portal",
+          "hash": "#/vc/approvals",
+          "clean": true,
+          "gradients": [],
+          "translucent": [],
+          "glossy": [],
+          "pillControls": [],
+          "oversizedRadii": [],
+          "navTruncated": [],
+          "overflow": {
+            "document": 0,
+            "page": 0,
+            "lab": 0
+          },
+          "details": {
+            "eyebrowRule": {
+              "selector": ".eyebrow",
+              "pseudo": "::before",
+              "content": "\"\"",
+              "width": "14px",
+              "height": "1px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "sectionRule": {
+              "selector": ".page__head, .workspace-hero, .page .hero",
+              "pseudo": "::after",
+              "content": "\"\"",
+              "width": "44px",
+              "height": "2px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "cardTitleDetails": {
+              "applicable": true,
+              "titles": [],
+              "filterHeaders": [
+                {
+                  "node": "div.card__hd.card__hd--filters",
+                  "ruleWidth": "2px"
+                }
+              ],
+              "present": true
+            },
+            "pillDetails": {
+              "applicable": true,
+              "pills": [
+                {
+                  "node": "span.pill.pill--amber",
+                  "boxShadow": "rgb(138, 91, 20) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--amber",
+                  "boxShadow": "rgb(138, 91, 20) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--amber",
+                  "boxShadow": "rgb(138, 91, 20) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--amber",
+                  "boxShadow": "rgb(138, 91, 20) 2px 0px 0px 0px inset"
+                }
+              ],
+              "present": true
+            },
+            "hairlines": {
+              "footer": "1px",
+              "nav": "1px",
+              "card": "1px"
+            },
+            "missing": []
+          },
+          "specimenExcluded": [],
+          "screenshot": "screenshots/routes/vc-vc-approvals-390.png"
+        }
+      ],
+      "routeSummary": {
+        "checks": 4,
+        "clean": 4,
+        "failed": 0,
+        "screenshots": [
+          "screenshots/routes/vc-vc-1440.png",
+          "screenshots/routes/vc-vc-approvals-1440.png",
+          "screenshots/routes/vc-vc-390.png",
+          "screenshots/routes/vc-vc-approvals-390.png"
+        ]
+      },
+      "designDetails": {
+        "eyebrowRule": {
+          "width": "14px",
+          "height": "1px",
+          "background": "rgb(197, 111, 71)",
+          "borderLeft": "0px",
+          "boxShadow": "none"
+        },
+        "sectionRule": {
+          "width": "44px",
+          "height": "2px",
+          "background": "rgb(197, 111, 71)",
+          "borderLeft": "0px",
+          "boxShadow": "none"
+        },
+        "cardTitleRule": {
+          "width": "666.328px",
+          "height": "16.25px",
+          "background": "rgba(0, 0, 0, 0)",
+          "borderLeft": "2px",
+          "boxShadow": "none"
+        },
+        "filterHeaderRule": null,
+        "footerRule": {
+          "width": "34px",
+          "height": "1px",
+          "background": "rgb(197, 111, 71)",
+          "borderLeft": "0px",
+          "boxShadow": "none"
+        },
+        "subnavRule": {
+          "width": "16px",
+          "height": "1px",
+          "background": "rgb(197, 111, 71)",
+          "borderLeft": "0px",
+          "boxShadow": "none"
+        },
+        "pillSpine": {
+          "width": "79px",
+          "height": "21px",
+          "background": "rgb(231, 240, 233)",
+          "borderLeft": "1px",
+          "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+        },
+        "dashboardHero": false
+      },
+      "signOut": {
+        "reachedSignIn": true,
+        "portalVisible": false,
+        "hash": "#/signin",
+        "persistentSession": null,
+        "tabSession": null,
+        "inAppRoleSwitchRemoved": true
+      },
+      "back": {
+        "url": "http://127.0.0.1:3000/#/signin",
+        "renderedSignIn": true,
+        "renderedPortal": false,
+        "hash": "#/signin"
+      },
+      "reloadAfterSignOut": {
+        "renderedSignIn": true,
+        "renderedPortal": false
+      },
+      "consoleErrors": []
+    },
+    {
+      "role": "registrar",
+      "label": "Registrar",
+      "identity": {
+        "name": "Dr. Maryam Bello",
+        "email": "m.bello@chrislanduniversity.edu.ng",
+        "detail": "Registry · Academic Affairs"
+      },
+      "freshContext": {
+        "directHash": "#/registrar",
+        "cleanStorage": true,
+        "renderedSignIn": true,
+        "renderedPortal": false,
+        "gateHash": "#/signin",
+        "roleButtonCount": 6
+      },
+      "signIn": {
+        "selectedIdentity": "DM\nDr. Maryam Bello\nRegistrar · Registry · Academic Affairs",
+        "email": "m.bello@chrislanduniversity.edu.ng",
+        "desktop": {
+          "viewport": 1440,
+          "overflow": 0,
+          "gradients": [],
+          "screenshot": "screenshots/auth/registrar-signin-1440.png"
+        },
+        "phone": {
+          "viewport": 390,
+          "overflow": 0,
+          "screenshot": "screenshots/auth/registrar-signin-390.png"
+        }
+      },
+      "landing": {
+        "home": "#/registrar",
+        "title": "Request queue · CLU Portal",
+        "nav": [
+          "Registry"
+        ],
+        "account": {
+          "name": "Dr. Maryam Bello",
+          "detail": "Registry · Academic Affairs"
+        },
+        "phone": {
+          "subtitle": "Registrar portal",
+          "tabs": [
+            "Queue",
+            "More"
+          ],
+          "overflow": 0
+        },
+        "desktop": {
+          "overflow": 0,
+          "gradients": []
+        },
+        "session": "active",
+        "screenshots": {
+          "homeDesktop": "screenshots/auth/registrar-home-1440.png",
+          "homePhone": "screenshots/auth/registrar-home-390.png"
+        }
+      },
+      "routes": [
+        {
+          "route": "registrar",
+          "viewport": "desktop",
+          "title": "Request queue · CLU Portal",
+          "hash": "#/registrar",
+          "clean": true,
+          "gradients": [],
+          "translucent": [],
+          "glossy": [],
+          "pillControls": [],
+          "oversizedRadii": [],
+          "navTruncated": [],
+          "overflow": {
+            "document": 0,
+            "page": 0,
+            "lab": 0
+          },
+          "details": {
+            "eyebrowRule": {
+              "selector": ".eyebrow",
+              "pseudo": "::before",
+              "content": "\"\"",
+              "width": "14px",
+              "height": "1px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "sectionRule": {
+              "selector": ".page__head, .workspace-hero, .page .hero",
+              "pseudo": "::after",
+              "content": "\"\"",
+              "width": "44px",
+              "height": "2px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "cardTitleDetails": {
+              "applicable": true,
+              "titles": [],
+              "filterHeaders": [
+                {
+                  "node": "div.card__hd.card__hd--filters",
+                  "ruleWidth": "2px"
+                }
+              ],
+              "present": true
+            },
+            "pillDetails": {
+              "applicable": true,
+              "pills": [
+                {
+                  "node": "span.pill.pill--amber",
+                  "boxShadow": "rgb(138, 91, 20) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--blue",
+                  "boxShadow": "rgb(58, 95, 135) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--amber",
+                  "boxShadow": "rgb(138, 91, 20) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--blue",
+                  "boxShadow": "rgb(58, 95, 135) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                }
+              ],
+              "present": true
+            },
+            "hairlines": {
+              "footer": "1px",
+              "nav": "1px",
+              "card": "1px"
+            },
+            "missing": []
+          },
+          "specimenExcluded": [],
+          "screenshot": "screenshots/routes/registrar-registrar-1440.png"
+        },
+        {
+          "route": "registrar",
+          "viewport": "phone",
+          "title": "Request queue · CLU Portal",
+          "hash": "#/registrar",
+          "clean": true,
+          "gradients": [],
+          "translucent": [],
+          "glossy": [],
+          "pillControls": [],
+          "oversizedRadii": [],
+          "navTruncated": [],
+          "overflow": {
+            "document": 0,
+            "page": 0,
+            "lab": 0
+          },
+          "details": {
+            "eyebrowRule": {
+              "selector": ".eyebrow",
+              "pseudo": "::before",
+              "content": "\"\"",
+              "width": "14px",
+              "height": "1px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "sectionRule": {
+              "selector": ".page__head, .workspace-hero, .page .hero",
+              "pseudo": "::after",
+              "content": "\"\"",
+              "width": "44px",
+              "height": "2px",
+              "background": "rgb(197, 111, 71)",
+              "borderLeftWidth": "0px",
+              "boxShadow": "none"
+            },
+            "cardTitleDetails": {
+              "applicable": true,
+              "titles": [],
+              "filterHeaders": [
+                {
+                  "node": "div.card__hd.card__hd--filters",
+                  "ruleWidth": "2px"
+                }
+              ],
+              "present": true
+            },
+            "pillDetails": {
+              "applicable": true,
+              "pills": [
+                {
+                  "node": "span.pill.pill--amber",
+                  "boxShadow": "rgb(138, 91, 20) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--blue",
+                  "boxShadow": "rgb(58, 95, 135) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--amber",
+                  "boxShadow": "rgb(138, 91, 20) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--blue",
+                  "boxShadow": "rgb(58, 95, 135) 2px 0px 0px 0px inset"
+                },
+                {
+                  "node": "span.pill.pill--green",
+                  "boxShadow": "rgb(46, 106, 78) 2px 0px 0px 0px inset"
+                }
+              ],
+              "present": true
+            },
+            "hairlines": {
+              "footer": "1px",
+              "nav": "1px",
+              "card": "1px"
+            },
+            "missing": []
+          },
+          "specimenExcluded": [],
+          "screenshot": "screenshots/routes/registrar-registrar-390.png"
+        }
+      ],
+      "routeSummary": {
+        "checks": 2,
+        "clean": 2,
+        "failed": 0,
+        "screenshots": [
+          "screenshots/routes/registrar-registrar-1440.png",
+          "screenshots/routes/registrar-registrar-390.png"
+        ]
+      },
+      "designDetails": {
+        "eyebrowRule": {
+          "width": "14px",
+          "height": "1px",
+          "background": "rgb(197, 111, 71)",
+          "borderLeft": "0px",
+          "boxShadow": "none"
+        },
+        "sectionRule": {
+          "width": "44px",
+          "height": "2px",
+          "background": "rgb(197, 111, 71)",
+          "borderLeft": "0px",
+          "boxShadow": "none"
+        },
+        "cardTitleRule": {
+          "width": "2px",
+          "height": "15px",
+          "background": "rgb(197, 111, 71)",
+          "borderLeft": "0px",
+          "boxShadow": "none"
+        },
+        "filterHeaderRule": {
+          "width": "2px",
+          "height": "15px",
+          "background": "rgb(197, 111, 71)",
+          "borderLeft": "0px",
+          "boxShadow": "none"
+        },
+        "footerRule": {
+          "width": "34px",
+          "height": "1px",
+          "background": "rgb(197, 111, 71)",
+          "borderLeft": "0px",
+          "boxShadow": "none"
+        },
+        "subnavRule": {
+          "width": "16px",
+          "height": "1px",
+          "background": "rgb(197, 111, 71)",
+          "borderLeft": "0px",
+          "boxShadow": "none"
+        },
+        "pillSpine": {
+          "width": "46px",
+          "height": "21px",
+          "background": "rgb(247, 237, 220)",
+          "borderLeft": "1px",
+          "boxShadow": "rgb(138, 91, 20) 2px 0px 0px 0px inset"
+        },
+        "dashboardHero": false
+      },
+      "signOut": {
+        "reachedSignIn": true,
+        "portalVisible": false,
+        "hash": "#/signin",
+        "persistentSession": null,
+        "tabSession": null,
+        "inAppRoleSwitchRemoved": true
+      },
+      "back": {
+        "url": "http://127.0.0.1:3000/#/signin",
+        "renderedSignIn": true,
+        "renderedPortal": false,
+        "hash": "#/signin"
+      },
+      "reloadAfterSignOut": {
+        "renderedSignIn": true,
+        "renderedPortal": false
+      },
+      "consoleErrors": []
+    }
+  ],
+  "designCoverage": {
+    "rolesWithEyebrowRule": 6,
+    "rolesWithSectionRule": 6,
+    "rolesWithCardTitleRule": 6,
+    "rolesWithFilterHeaderRule": 1,
+    "rolesWithFooterRule": 6,
+    "rolesWithSubnavRule": 6,
+    "rolesWithPillSpine": 6
+  },
+  "failures": [],
+  "passed": true
+}
+AUDIT PASSED: 6 roles, clean gates, screenshots and audit JSON written to screenshots/auth

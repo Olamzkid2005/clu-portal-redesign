@@ -1,0 +1,2258 @@
+{
+  "output": "screenshots/routes/pre-fix-findings.json",
+  "capture": false,
+  "summary": {
+    "totalChecks": 58,
+    "cleanChecks": 0,
+    "failedChecks": 58,
+    "cleanRoutes": 0,
+    "failedRoutes": [
+      "student:dashboard",
+      "student:timetable",
+      "student:courses",
+      "student:results",
+      "student:assignments",
+      "student:attendance",
+      "student:payments",
+      "student:accommodation",
+      "student:requests/transcript",
+      "student:requests/proficiency",
+      "student:requests/verification",
+      "student:evaluation",
+      "student:medicals",
+      "student:feedback",
+      "student:profile",
+      "student:settings",
+      "lecturer:lecturer",
+      "lecturer:lecturer/courses",
+      "lecturer:lecturer/attendance",
+      "bursar:bursar",
+      "bursar:bursar/ledger",
+      "bursar:bursar/fees",
+      "ict:ict",
+      "ict:ict/users",
+      "ict:ict/audit",
+      "vc:vc",
+      "vc:vc/approvals",
+      "registrar:registrar",
+      "global:designs"
+    ]
+  },
+  "roleChecks": [
+    {
+      "role": "student",
+      "routeCount": 16,
+      "clean": 0,
+      "total": 32,
+      "consoleErrors": []
+    },
+    {
+      "role": "lecturer",
+      "routeCount": 3,
+      "clean": 0,
+      "total": 6,
+      "consoleErrors": []
+    },
+    {
+      "role": "bursar",
+      "routeCount": 3,
+      "clean": 0,
+      "total": 6,
+      "consoleErrors": []
+    },
+    {
+      "role": "ict",
+      "routeCount": 3,
+      "clean": 0,
+      "total": 6,
+      "consoleErrors": []
+    },
+    {
+      "role": "vc",
+      "routeCount": 2,
+      "clean": 0,
+      "total": 4,
+      "consoleErrors": []
+    },
+    {
+      "role": "registrar",
+      "routeCount": 1,
+      "clean": 0,
+      "total": 2,
+      "consoleErrors": []
+    }
+  ],
+  "designStudy": [
+    {
+      "viewport": "desktop",
+      "clean": false,
+      "gradients": 0,
+      "translucent": 0,
+      "glossy": 0,
+      "pills": 0,
+      "oversized": 0,
+      "truncated": 0,
+      "overflow": {
+        "document": 0,
+        "page": 0,
+        "lab": 0
+      },
+      "missing": [
+        "section rule",
+        "card-title rule",
+        "status-chip spine",
+        "footer hairline"
+      ],
+      "specimenExcluded": 2
+    },
+    {
+      "viewport": "phone",
+      "clean": false,
+      "gradients": 0,
+      "translucent": 0,
+      "glossy": 0,
+      "pills": 0,
+      "oversized": 0,
+      "truncated": 0,
+      "overflow": {
+        "document": 0,
+        "page": 0,
+        "lab": 0
+      },
+      "missing": [
+        "section rule",
+        "card-title rule",
+        "status-chip spine",
+        "footer hairline"
+      ],
+      "specimenExcluded": 2
+    }
+  ],
+  "failedChecks": [
+    {
+      "role": "student",
+      "route": "dashboard",
+      "viewport": "desktop",
+      "gradients": [],
+      "translucent": [],
+      "glossy": [],
+      "pillControls": [],
+      "oversizedRadii": [],
+      "navTruncated": [],
+      "overflow": {
+        "document": 0,
+        "page": 0,
+        "lab": 0
+      },
+      "missing": [
+        "section rule",
+        "status-chip spine",
+        "nav hairline"
+      ]
+    },
+    {
+      "role": "student",
+      "route": "timetable",
+      "viewport": "desktop",
+      "gradients": [],
+      "translucent": [],
+      "glossy": [],
+      "pillControls": [],
+      "oversizedRadii": [],
+      "navTruncated": [],
+      "overflow": {
+        "document": 0,
+        "page": 0,
+        "lab": 0
+      },
+      "missing": [
+        "nav hairline"
+      ]
+    },
+    {
+      "role": "student",
+      "route": "courses",
+      "viewport": "desktop",
+      "gradients": [],
+      "translucent": [],
+      "glossy": [],
+      "pillControls": [],
+      "oversizedRadii": [],
+      "navTruncated": [],
+      "overflow": {
+        "document": 0,
+        "page": 0,
+        "lab": 0
+      },
+      "missing": [
+        "status-chip spine",
+        "nav hairline"
+      ]
+    },
+    {
+      "role": "student",
+      "route": "results",
+      "viewport": "desktop",
+      "gradients": [],
+      "translucent": [],
+      "glossy": [],
+      "pillControls": [],
+      "oversizedRadii": [],
+      "navTruncated": [],
+      "overflow": {
+        "document": 0,
+        "page": 0,
+        "lab": 0
+      },
+      "missing": [
+        "nav hairline"
+      ]
+    },
+    {
+      "role": "student",
+      "route": "assignments",
+      "viewport": "desktop",
+      "gradients": [],
+      "translucent": [],
+      "glossy": [],
+      "pillControls": [],
+      "oversizedRadii": [],
+      "navTruncated": [],
+      "overflow": {
+        "document": 0,
+        "page": 0,
+        "lab": 0
+      },
+      "missing": [
+        "nav hairline"
+      ]
+    },
+    {
+      "role": "student",
+      "route": "attendance",
+      "viewport": "desktop",
+      "gradients": [],
+      "translucent": [],
+      "glossy": [],
+      "pillControls": [],
+      "oversizedRadii": [],
+      "navTruncated": [],
+      "overflow": {
+        "document": 0,
+        "page": 0,
+        "lab": 0
+      },
+      "missing": [
+        "nav hairline"
+      ]
+    },
+    {
+      "role": "student",
+      "route": "payments",
+      "viewport": "desktop",
+      "gradients": [],
+      "translucent": [],
+      "glossy": [],
+      "pillControls": [],
+      "oversizedRadii": [],
+      "navTruncated": [],
+      "overflow": {
+        "document": 0,
+        "page": 0,
+        "lab": 0
+      },
+      "missing": [
+        "status-chip spine",
+        "nav hairline"
+      ]
+    },
+    {
+      "role": "student",
+      "route": "accommodation",
+      "viewport": "desktop",
+      "gradients": [],
+      "translucent": [],
+      "glossy": [],
+      "pillControls": [],
+      "oversizedRadii": [],
+      "navTruncated": [],
+      "overflow": {
+        "document": 0,
+        "page": 0,
+        "lab": 0
+      },
+      "missing": [
+        "status-chip spine",
+        "nav hairline"
+      ]
+    },
+    {
+      "role": "student",
+      "route": "requests/transcript",
+      "viewport": "desktop",
+      "gradients": [],
+      "translucent": [],
+      "glossy": [],
+      "pillControls": [],
+      "oversizedRadii": [],
+      "navTruncated": [],
+      "overflow": {
+        "document": 0,
+        "page": 0,
+        "lab": 0
+      },
+      "missing": [
+        "nav hairline"
+      ]
+    },
+    {
+      "role": "student",
+      "route": "requests/proficiency",
+      "viewport": "desktop",
+      "gradients": [],
+      "translucent": [],
+      "glossy": [],
+      "pillControls": [],
+      "oversizedRadii": [],
+      "navTruncated": [],
+      "overflow": {
+        "document": 0,
+        "page": 0,
+        "lab": 0
+      },
+      "missing": [
+        "nav hairline"
+      ]
+    },
+    {
+      "role": "student",
+      "route": "requests/verification",
+      "viewport": "desktop",
+      "gradients": [],
+      "translucent": [],
+      "glossy": [],
+      "pillControls": [],
+      "oversizedRadii": [],
+      "navTruncated": [],
+      "overflow": {
+        "document": 0,
+        "page": 0,
+        "lab": 0
+      },
+      "missing": [
+        "nav hairline"
+      ]
+    },
+    {
+      "role": "student",
+      "route": "evaluation",
+      "viewport": "desktop",
+      "gradients": [],
+      "translucent": [],
+      "glossy": [],
+      "pillControls": [],
+      "oversizedRadii": [],
+      "navTruncated": [],
+      "overflow": {
+        "document": 0,
+        "page": 0,
+        "lab": 0
+      },
+      "missing": [
+        "nav hairline"
+      ]
+    },
+    {
+      "role": "student",
+      "route": "medicals",
+      "viewport": "desktop",
+      "gradients": [],
+      "translucent": [],
+      "glossy": [],
+      "pillControls": [],
+      "oversizedRadii": [],
+      "navTruncated": [],
+      "overflow": {
+        "document": 0,
+        "page": 0,
+        "lab": 0
+      },
+      "missing": [
+        "nav hairline"
+      ]
+    },
+    {
+      "role": "student",
+      "route": "feedback",
+      "viewport": "desktop",
+      "gradients": [],
+      "translucent": [],
+      "glossy": [],
+      "pillControls": [],
+      "oversizedRadii": [],
+      "navTruncated": [],
+      "overflow": {
+        "document": 0,
+        "page": 0,
+        "lab": 0
+      },
+      "missing": [
+        "nav hairline"
+      ]
+    },
+    {
+      "role": "student",
+      "route": "profile",
+      "viewport": "desktop",
+      "gradients": [],
+      "translucent": [],
+      "glossy": [],
+      "pillControls": [],
+      "oversizedRadii": [],
+      "navTruncated": [],
+      "overflow": {
+        "document": 0,
+        "page": 0,
+        "lab": 0
+      },
+      "missing": [
+        "status-chip spine",
+        "nav hairline"
+      ]
+    },
+    {
+      "role": "student",
+      "route": "settings",
+      "viewport": "desktop",
+      "gradients": [],
+      "translucent": [],
+      "glossy": [],
+      "pillControls": [],
+      "oversizedRadii": [],
+      "navTruncated": [],
+      "overflow": {
+        "document": 0,
+        "page": 0,
+        "lab": 0
+      },
+      "missing": [
+        "nav hairline"
+      ]
+    },
+    {
+      "role": "student",
+      "route": "dashboard",
+      "viewport": "phone",
+      "gradients": [],
+      "translucent": [],
+      "glossy": [],
+      "pillControls": [
+        {
+          "node": "button.mobilebar__me",
+          "width": 30,
+          "height": 30,
+          "radius": [
+            "50%",
+            "50%",
+            "50%",
+            "50%"
+          ]
+        }
+      ],
+      "oversizedRadii": [
+        {
+          "node": "button.iconbtn",
+          "kind": "control",
+          "width": 32,
+          "height": 32,
+          "radius": [
+            "10px",
+            "10px",
+            "10px",
+            "10px"
+          ]
+        },
+        {
+          "node": "button.iconbtn",
+          "kind": "control",
+          "width": 32,
+          "height": 32,
+          "radius": [
+            "10px",
+            "10px",
+            "10px",
+            "10px"
+          ]
+        }
+      ],
+      "navTruncated": [],
+      "overflow": {
+        "document": 0,
+        "page": 0,
+        "lab": 0
+      },
+      "missing": [
+        "section rule",
+        "status-chip spine"
+      ]
+    },
+    {
+      "role": "student",
+      "route": "timetable",
+      "viewport": "phone",
+      "gradients": [],
+      "translucent": [],
+      "glossy": [],
+      "pillControls": [
+        {
+          "node": "button.mobilebar__me",
+          "width": 30,
+          "height": 30,
+          "radius": [
+            "50%",
+            "50%",
+            "50%",
+            "50%"
+          ]
+        }
+      ],
+      "oversizedRadii": [
+        {
+          "node": "button.iconbtn",
+          "kind": "control",
+          "width": 32,
+          "height": 32,
+          "radius": [
+            "10px",
+            "10px",
+            "10px",
+            "10px"
+          ]
+        },
+        {
+          "node": "button.iconbtn",
+          "kind": "control",
+          "width": 32,
+          "height": 32,
+          "radius": [
+            "10px",
+            "10px",
+            "10px",
+            "10px"
+          ]
+        }
+      ],
+      "navTruncated": [],
+      "overflow": {
+        "document": 0,
+        "page": 0,
+        "lab": 0
+      },
+      "missing": []
+    },
+    {
+      "role": "student",
+      "route": "courses",
+      "viewport": "phone",
+      "gradients": [],
+      "translucent": [],
+      "glossy": [],
+      "pillControls": [
+        {
+          "node": "button.mobilebar__me",
+          "width": 30,
+          "height": 30,
+          "radius": [
+            "50%",
+            "50%",
+            "50%",
+            "50%"
+          ]
+        }
+      ],
+      "oversizedRadii": [
+        {
+          "node": "button.iconbtn",
+          "kind": "control",
+          "width": 32,
+          "height": 32,
+          "radius": [
+            "10px",
+            "10px",
+            "10px",
+            "10px"
+          ]
+        },
+        {
+          "node": "button.iconbtn",
+          "kind": "control",
+          "width": 32,
+          "height": 32,
+          "radius": [
+            "10px",
+            "10px",
+            "10px",
+            "10px"
+          ]
+        }
+      ],
+      "navTruncated": [],
+      "overflow": {
+        "document": 0,
+        "page": 0,
+        "lab": 0
+      },
+      "missing": [
+        "status-chip spine"
+      ]
+    },
+    {
+      "role": "student",
+      "route": "results",
+      "viewport": "phone",
+      "gradients": [],
+      "translucent": [],
+      "glossy": [],
+      "pillControls": [
+        {
+          "node": "button.mobilebar__me",
+          "width": 30,
+          "height": 30,
+          "radius": [
+            "50%",
+            "50%",
+            "50%",
+            "50%"
+          ]
+        }
+      ],
+      "oversizedRadii": [
+        {
+          "node": "button.iconbtn",
+          "kind": "control",
+          "width": 32,
+          "height": 32,
+          "radius": [
+            "10px",
+            "10px",
+            "10px",
+            "10px"
+          ]
+        },
+        {
+          "node": "button.iconbtn",
+          "kind": "control",
+          "width": 32,
+          "height": 32,
+          "radius": [
+            "10px",
+            "10px",
+            "10px",
+            "10px"
+          ]
+        }
+      ],
+      "navTruncated": [],
+      "overflow": {
+        "document": 0,
+        "page": 0,
+        "lab": 0
+      },
+      "missing": []
+    },
+    {
+      "role": "student",
+      "route": "assignments",
+      "viewport": "phone",
+      "gradients": [],
+      "translucent": [],
+      "glossy": [],
+      "pillControls": [
+        {
+          "node": "button.mobilebar__me",
+          "width": 30,
+          "height": 30,
+          "radius": [
+            "50%",
+            "50%",
+            "50%",
+            "50%"
+          ]
+        }
+      ],
+      "oversizedRadii": [
+        {
+          "node": "button.iconbtn",
+          "kind": "control",
+          "width": 32,
+          "height": 32,
+          "radius": [
+            "10px",
+            "10px",
+            "10px",
+            "10px"
+          ]
+        },
+        {
+          "node": "button.iconbtn",
+          "kind": "control",
+          "width": 32,
+          "height": 32,
+          "radius": [
+            "10px",
+            "10px",
+            "10px",
+            "10px"
+          ]
+        }
+      ],
+      "navTruncated": [],
+      "overflow": {
+        "document": 0,
+        "page": 0,
+        "lab": 0
+      },
+      "missing": []
+    },
+    {
+      "role": "student",
+      "route": "attendance",
+      "viewport": "phone",
+      "gradients": [],
+      "translucent": [],
+      "glossy": [],
+      "pillControls": [
+        {
+          "node": "button.mobilebar__me",
+          "width": 30,
+          "height": 30,
+          "radius": [
+            "50%",
+            "50%",
+            "50%",
+            "50%"
+          ]
+        }
+      ],
+      "oversizedRadii": [
+        {
+          "node": "button.iconbtn",
+          "kind": "control",
+          "width": 32,
+          "height": 32,
+          "radius": [
+            "10px",
+            "10px",
+            "10px",
+            "10px"
+          ]
+        },
+        {
+          "node": "button.iconbtn",
+          "kind": "control",
+          "width": 32,
+          "height": 32,
+          "radius": [
+            "10px",
+            "10px",
+            "10px",
+            "10px"
+          ]
+        }
+      ],
+      "navTruncated": [],
+      "overflow": {
+        "document": 0,
+        "page": 0,
+        "lab": 0
+      },
+      "missing": []
+    },
+    {
+      "role": "student",
+      "route": "payments",
+      "viewport": "phone",
+      "gradients": [],
+      "translucent": [],
+      "glossy": [],
+      "pillControls": [
+        {
+          "node": "button.mobilebar__me",
+          "width": 30,
+          "height": 30,
+          "radius": [
+            "50%",
+            "50%",
+            "50%",
+            "50%"
+          ]
+        }
+      ],
+      "oversizedRadii": [
+        {
+          "node": "button.iconbtn",
+          "kind": "control",
+          "width": 32,
+          "height": 32,
+          "radius": [
+            "10px",
+            "10px",
+            "10px",
+            "10px"
+          ]
+        },
+        {
+          "node": "button.iconbtn",
+          "kind": "control",
+          "width": 32,
+          "height": 32,
+          "radius": [
+            "10px",
+            "10px",
+            "10px",
+            "10px"
+          ]
+        }
+      ],
+      "navTruncated": [],
+      "overflow": {
+        "document": 0,
+        "page": 0,
+        "lab": 0
+      },
+      "missing": [
+        "status-chip spine"
+      ]
+    },
+    {
+      "role": "student",
+      "route": "accommodation",
+      "viewport": "phone",
+      "gradients": [],
+      "translucent": [],
+      "glossy": [],
+      "pillControls": [
+        {
+          "node": "button.mobilebar__me",
+          "width": 30,
+          "height": 30,
+          "radius": [
+            "50%",
+            "50%",
+            "50%",
+            "50%"
+          ]
+        }
+      ],
+      "oversizedRadii": [
+        {
+          "node": "button.iconbtn",
+          "kind": "control",
+          "width": 32,
+          "height": 32,
+          "radius": [
+            "10px",
+            "10px",
+            "10px",
+            "10px"
+          ]
+        },
+        {
+          "node": "button.iconbtn",
+          "kind": "control",
+          "width": 32,
+          "height": 32,
+          "radius": [
+            "10px",
+            "10px",
+            "10px",
+            "10px"
+          ]
+        }
+      ],
+      "navTruncated": [],
+      "overflow": {
+        "document": 0,
+        "page": 0,
+        "lab": 0
+      },
+      "missing": [
+        "status-chip spine"
+      ]
+    },
+    {
+      "role": "student",
+      "route": "requests/transcript",
+      "viewport": "phone",
+      "gradients": [],
+      "translucent": [],
+      "glossy": [],
+      "pillControls": [
+        {
+          "node": "button.mobilebar__me",
+          "width": 30,
+          "height": 30,
+          "radius": [
+            "50%",
+            "50%",
+            "50%",
+            "50%"
+          ]
+        }
+      ],
+      "oversizedRadii": [
+        {
+          "node": "button.iconbtn",
+          "kind": "control",
+          "width": 32,
+          "height": 32,
+          "radius": [
+            "10px",
+            "10px",
+            "10px",
+            "10px"
+          ]
+        },
+        {
+          "node": "button.iconbtn",
+          "kind": "control",
+          "width": 32,
+          "height": 32,
+          "radius": [
+            "10px",
+            "10px",
+            "10px",
+            "10px"
+          ]
+        }
+      ],
+      "navTruncated": [],
+      "overflow": {
+        "document": 0,
+        "page": 0,
+        "lab": 0
+      },
+      "missing": []
+    },
+    {
+      "role": "student",
+      "route": "requests/proficiency",
+      "viewport": "phone",
+      "gradients": [],
+      "translucent": [],
+      "glossy": [],
+      "pillControls": [
+        {
+          "node": "button.mobilebar__me",
+          "width": 30,
+          "height": 30,
+          "radius": [
+            "50%",
+            "50%",
+            "50%",
+            "50%"
+          ]
+        }
+      ],
+      "oversizedRadii": [
+        {
+          "node": "button.iconbtn",
+          "kind": "control",
+          "width": 32,
+          "height": 32,
+          "radius": [
+            "10px",
+            "10px",
+            "10px",
+            "10px"
+          ]
+        },
+        {
+          "node": "button.iconbtn",
+          "kind": "control",
+          "width": 32,
+          "height": 32,
+          "radius": [
+            "10px",
+            "10px",
+            "10px",
+            "10px"
+          ]
+        }
+      ],
+      "navTruncated": [],
+      "overflow": {
+        "document": 0,
+        "page": 0,
+        "lab": 0
+      },
+      "missing": []
+    },
+    {
+      "role": "student",
+      "route": "requests/verification",
+      "viewport": "phone",
+      "gradients": [],
+      "translucent": [],
+      "glossy": [],
+      "pillControls": [
+        {
+          "node": "button.mobilebar__me",
+          "width": 30,
+          "height": 30,
+          "radius": [
+            "50%",
+            "50%",
+            "50%",
+            "50%"
+          ]
+        }
+      ],
+      "oversizedRadii": [
+        {
+          "node": "button.iconbtn",
+          "kind": "control",
+          "width": 32,
+          "height": 32,
+          "radius": [
+            "10px",
+            "10px",
+            "10px",
+            "10px"
+          ]
+        },
+        {
+          "node": "button.iconbtn",
+          "kind": "control",
+          "width": 32,
+          "height": 32,
+          "radius": [
+            "10px",
+            "10px",
+            "10px",
+            "10px"
+          ]
+        }
+      ],
+      "navTruncated": [],
+      "overflow": {
+        "document": 0,
+        "page": 0,
+        "lab": 0
+      },
+      "missing": []
+    },
+    {
+      "role": "student",
+      "route": "evaluation",
+      "viewport": "phone",
+      "gradients": [],
+      "translucent": [],
+      "glossy": [],
+      "pillControls": [
+        {
+          "node": "button.mobilebar__me",
+          "width": 30,
+          "height": 30,
+          "radius": [
+            "50%",
+            "50%",
+            "50%",
+            "50%"
+          ]
+        }
+      ],
+      "oversizedRadii": [
+        {
+          "node": "button.iconbtn",
+          "kind": "control",
+          "width": 32,
+          "height": 32,
+          "radius": [
+            "10px",
+            "10px",
+            "10px",
+            "10px"
+          ]
+        },
+        {
+          "node": "button.iconbtn",
+          "kind": "control",
+          "width": 32,
+          "height": 32,
+          "radius": [
+            "10px",
+            "10px",
+            "10px",
+            "10px"
+          ]
+        }
+      ],
+      "navTruncated": [],
+      "overflow": {
+        "document": 0,
+        "page": 0,
+        "lab": 0
+      },
+      "missing": []
+    },
+    {
+      "role": "student",
+      "route": "medicals",
+      "viewport": "phone",
+      "gradients": [],
+      "translucent": [],
+      "glossy": [],
+      "pillControls": [
+        {
+          "node": "button.mobilebar__me",
+          "width": 30,
+          "height": 30,
+          "radius": [
+            "50%",
+            "50%",
+            "50%",
+            "50%"
+          ]
+        }
+      ],
+      "oversizedRadii": [
+        {
+          "node": "button.iconbtn",
+          "kind": "control",
+          "width": 32,
+          "height": 32,
+          "radius": [
+            "10px",
+            "10px",
+            "10px",
+            "10px"
+          ]
+        },
+        {
+          "node": "button.iconbtn",
+          "kind": "control",
+          "width": 32,
+          "height": 32,
+          "radius": [
+            "10px",
+            "10px",
+            "10px",
+            "10px"
+          ]
+        }
+      ],
+      "navTruncated": [],
+      "overflow": {
+        "document": 0,
+        "page": 0,
+        "lab": 0
+      },
+      "missing": []
+    },
+    {
+      "role": "student",
+      "route": "feedback",
+      "viewport": "phone",
+      "gradients": [],
+      "translucent": [],
+      "glossy": [],
+      "pillControls": [
+        {
+          "node": "button.mobilebar__me",
+          "width": 30,
+          "height": 30,
+          "radius": [
+            "50%",
+            "50%",
+            "50%",
+            "50%"
+          ]
+        }
+      ],
+      "oversizedRadii": [
+        {
+          "node": "button.iconbtn",
+          "kind": "control",
+          "width": 32,
+          "height": 32,
+          "radius": [
+            "10px",
+            "10px",
+            "10px",
+            "10px"
+          ]
+        },
+        {
+          "node": "button.iconbtn",
+          "kind": "control",
+          "width": 32,
+          "height": 32,
+          "radius": [
+            "10px",
+            "10px",
+            "10px",
+            "10px"
+          ]
+        }
+      ],
+      "navTruncated": [],
+      "overflow": {
+        "document": 0,
+        "page": 0,
+        "lab": 0
+      },
+      "missing": []
+    },
+    {
+      "role": "student",
+      "route": "profile",
+      "viewport": "phone",
+      "gradients": [],
+      "translucent": [],
+      "glossy": [],
+      "pillControls": [
+        {
+          "node": "button.mobilebar__me",
+          "width": 30,
+          "height": 30,
+          "radius": [
+            "50%",
+            "50%",
+            "50%",
+            "50%"
+          ]
+        }
+      ],
+      "oversizedRadii": [
+        {
+          "node": "button.iconbtn",
+          "kind": "control",
+          "width": 32,
+          "height": 32,
+          "radius": [
+            "10px",
+            "10px",
+            "10px",
+            "10px"
+          ]
+        },
+        {
+          "node": "button.iconbtn",
+          "kind": "control",
+          "width": 32,
+          "height": 32,
+          "radius": [
+            "10px",
+            "10px",
+            "10px",
+            "10px"
+          ]
+        }
+      ],
+      "navTruncated": [],
+      "overflow": {
+        "document": 0,
+        "page": 0,
+        "lab": 0
+      },
+      "missing": [
+        "status-chip spine"
+      ]
+    },
+    {
+      "role": "student",
+      "route": "settings",
+      "viewport": "phone",
+      "gradients": [],
+      "translucent": [],
+      "glossy": [],
+      "pillControls": [
+        {
+          "node": "button.mobilebar__me",
+          "width": 30,
+          "height": 30,
+          "radius": [
+            "50%",
+            "50%",
+            "50%",
+            "50%"
+          ]
+        }
+      ],
+      "oversizedRadii": [
+        {
+          "node": "button.iconbtn",
+          "kind": "control",
+          "width": 32,
+          "height": 32,
+          "radius": [
+            "10px",
+            "10px",
+            "10px",
+            "10px"
+          ]
+        },
+        {
+          "node": "button.iconbtn",
+          "kind": "control",
+          "width": 32,
+          "height": 32,
+          "radius": [
+            "10px",
+            "10px",
+            "10px",
+            "10px"
+          ]
+        }
+      ],
+      "navTruncated": [],
+      "overflow": {
+        "document": 0,
+        "page": 0,
+        "lab": 0
+      },
+      "missing": []
+    },
+    {
+      "role": "lecturer",
+      "route": "lecturer",
+      "viewport": "desktop",
+      "gradients": [],
+      "translucent": [],
+      "glossy": [],
+      "pillControls": [],
+      "oversizedRadii": [],
+      "navTruncated": [],
+      "overflow": {
+        "document": 0,
+        "page": 0,
+        "lab": 0
+      },
+      "missing": [
+        "status-chip spine",
+        "nav hairline"
+      ]
+    },
+    {
+      "role": "lecturer",
+      "route": "lecturer/courses",
+      "viewport": "desktop",
+      "gradients": [],
+      "translucent": [],
+      "glossy": [],
+      "pillControls": [],
+      "oversizedRadii": [],
+      "navTruncated": [],
+      "overflow": {
+        "document": 0,
+        "page": 0,
+        "lab": 0
+      },
+      "missing": [
+        "nav hairline"
+      ]
+    },
+    {
+      "role": "lecturer",
+      "route": "lecturer/attendance",
+      "viewport": "desktop",
+      "gradients": [],
+      "translucent": [],
+      "glossy": [],
+      "pillControls": [],
+      "oversizedRadii": [],
+      "navTruncated": [],
+      "overflow": {
+        "document": 0,
+        "page": 0,
+        "lab": 0
+      },
+      "missing": [
+        "nav hairline"
+      ]
+    },
+    {
+      "role": "lecturer",
+      "route": "lecturer",
+      "viewport": "phone",
+      "gradients": [],
+      "translucent": [],
+      "glossy": [],
+      "pillControls": [
+        {
+          "node": "button.mobilebar__me",
+          "width": 30,
+          "height": 30,
+          "radius": [
+            "50%",
+            "50%",
+            "50%",
+            "50%"
+          ]
+        }
+      ],
+      "oversizedRadii": [
+        {
+          "node": "button.iconbtn",
+          "kind": "control",
+          "width": 32,
+          "height": 32,
+          "radius": [
+            "10px",
+            "10px",
+            "10px",
+            "10px"
+          ]
+        },
+        {
+          "node": "button.iconbtn",
+          "kind": "control",
+          "width": 32,
+          "height": 32,
+          "radius": [
+            "10px",
+            "10px",
+            "10px",
+            "10px"
+          ]
+        }
+      ],
+      "navTruncated": [],
+      "overflow": {
+        "document": 0,
+        "page": 0,
+        "lab": 0
+      },
+      "missing": [
+        "status-chip spine"
+      ]
+    },
+    {
+      "role": "lecturer",
+      "route": "lecturer/courses",
+      "viewport": "phone",
+      "gradients": [],
+      "translucent": [],
+      "glossy": [],
+      "pillControls": [
+        {
+          "node": "button.mobilebar__me",
+          "width": 30,
+          "height": 30,
+          "radius": [
+            "50%",
+            "50%",
+            "50%",
+            "50%"
+          ]
+        }
+      ],
+      "oversizedRadii": [
+        {
+          "node": "button.iconbtn",
+          "kind": "control",
+          "width": 32,
+          "height": 32,
+          "radius": [
+            "10px",
+            "10px",
+            "10px",
+            "10px"
+          ]
+        },
+        {
+          "node": "button.iconbtn",
+          "kind": "control",
+          "width": 32,
+          "height": 32,
+          "radius": [
+            "10px",
+            "10px",
+            "10px",
+            "10px"
+          ]
+        }
+      ],
+      "navTruncated": [],
+      "overflow": {
+        "document": 0,
+        "page": 0,
+        "lab": 0
+      },
+      "missing": []
+    },
+    {
+      "role": "lecturer",
+      "route": "lecturer/attendance",
+      "viewport": "phone",
+      "gradients": [],
+      "translucent": [],
+      "glossy": [],
+      "pillControls": [
+        {
+          "node": "button.mobilebar__me",
+          "width": 30,
+          "height": 30,
+          "radius": [
+            "50%",
+            "50%",
+            "50%",
+            "50%"
+          ]
+        }
+      ],
+      "oversizedRadii": [
+        {
+          "node": "button.iconbtn",
+          "kind": "control",
+          "width": 32,
+          "height": 32,
+          "radius": [
+            "10px",
+            "10px",
+            "10px",
+            "10px"
+          ]
+        },
+        {
+          "node": "button.iconbtn",
+          "kind": "control",
+          "width": 32,
+          "height": 32,
+          "radius": [
+            "10px",
+            "10px",
+            "10px",
+            "10px"
+          ]
+        }
+      ],
+      "navTruncated": [],
+      "overflow": {
+        "document": 0,
+        "page": 0,
+        "lab": 0
+      },
+      "missing": []
+    },
+    {
+      "role": "bursar",
+      "route": "bursar",
+      "viewport": "desktop",
+      "gradients": [],
+      "translucent": [],
+      "glossy": [],
+      "pillControls": [],
+      "oversizedRadii": [],
+      "navTruncated": [],
+      "overflow": {
+        "document": 0,
+        "page": 0,
+        "lab": 0
+      },
+      "missing": [
+        "nav hairline"
+      ]
+    },
+    {
+      "role": "bursar",
+      "route": "bursar/ledger",
+      "viewport": "desktop",
+      "gradients": [],
+      "translucent": [],
+      "glossy": [],
+      "pillControls": [],
+      "oversizedRadii": [],
+      "navTruncated": [],
+      "overflow": {
+        "document": 0,
+        "page": 0,
+        "lab": 0
+      },
+      "missing": [
+        "card-title rule",
+        "status-chip spine",
+        "nav hairline"
+      ]
+    },
+    {
+      "role": "bursar",
+      "route": "bursar/fees",
+      "viewport": "desktop",
+      "gradients": [],
+      "translucent": [],
+      "glossy": [],
+      "pillControls": [],
+      "oversizedRadii": [],
+      "navTruncated": [],
+      "overflow": {
+        "document": 0,
+        "page": 0,
+        "lab": 0
+      },
+      "missing": [
+        "nav hairline"
+      ]
+    },
+    {
+      "role": "bursar",
+      "route": "bursar",
+      "viewport": "phone",
+      "gradients": [],
+      "translucent": [],
+      "glossy": [],
+      "pillControls": [
+        {
+          "node": "button.mobilebar__me",
+          "width": 30,
+          "height": 30,
+          "radius": [
+            "50%",
+            "50%",
+            "50%",
+            "50%"
+          ]
+        }
+      ],
+      "oversizedRadii": [
+        {
+          "node": "button.iconbtn",
+          "kind": "control",
+          "width": 32,
+          "height": 32,
+          "radius": [
+            "10px",
+            "10px",
+            "10px",
+            "10px"
+          ]
+        },
+        {
+          "node": "button.iconbtn",
+          "kind": "control",
+          "width": 32,
+          "height": 32,
+          "radius": [
+            "10px",
+            "10px",
+            "10px",
+            "10px"
+          ]
+        }
+      ],
+      "navTruncated": [],
+      "overflow": {
+        "document": 0,
+        "page": 0,
+        "lab": 0
+      },
+      "missing": []
+    },
+    {
+      "role": "bursar",
+      "route": "bursar/ledger",
+      "viewport": "phone",
+      "gradients": [],
+      "translucent": [],
+      "glossy": [],
+      "pillControls": [
+        {
+          "node": "button.mobilebar__me",
+          "width": 30,
+          "height": 30,
+          "radius": [
+            "50%",
+            "50%",
+            "50%",
+            "50%"
+          ]
+        }
+      ],
+      "oversizedRadii": [
+        {
+          "node": "button.iconbtn",
+          "kind": "control",
+          "width": 32,
+          "height": 32,
+          "radius": [
+            "10px",
+            "10px",
+            "10px",
+            "10px"
+          ]
+        },
+        {
+          "node": "button.iconbtn",
+          "kind": "control",
+          "width": 32,
+          "height": 32,
+          "radius": [
+            "10px",
+            "10px",
+            "10px",
+            "10px"
+          ]
+        }
+      ],
+      "navTruncated": [],
+      "overflow": {
+        "document": 0,
+        "page": 0,
+        "lab": 0
+      },
+      "missing": [
+        "card-title rule",
+        "status-chip spine"
+      ]
+    },
+    {
+      "role": "bursar",
+      "route": "bursar/fees",
+      "viewport": "phone",
+      "gradients": [],
+      "translucent": [],
+      "glossy": [],
+      "pillControls": [
+        {
+          "node": "button.mobilebar__me",
+          "width": 30,
+          "height": 30,
+          "radius": [
+            "50%",
+            "50%",
+            "50%",
+            "50%"
+          ]
+        }
+      ],
+      "oversizedRadii": [
+        {
+          "node": "button.iconbtn",
+          "kind": "control",
+          "width": 32,
+          "height": 32,
+          "radius": [
+            "10px",
+            "10px",
+            "10px",
+            "10px"
+          ]
+        },
+        {
+          "node": "button.iconbtn",
+          "kind": "control",
+          "width": 32,
+          "height": 32,
+          "radius": [
+            "10px",
+            "10px",
+            "10px",
+            "10px"
+          ]
+        }
+      ],
+      "navTruncated": [],
+      "overflow": {
+        "document": 0,
+        "page": 0,
+        "lab": 0
+      },
+      "missing": []
+    },
+    {
+      "role": "ict",
+      "route": "ict",
+      "viewport": "desktop",
+      "gradients": [],
+      "translucent": [],
+      "glossy": [],
+      "pillControls": [],
+      "oversizedRadii": [],
+      "navTruncated": [],
+      "overflow": {
+        "document": 0,
+        "page": 0,
+        "lab": 0
+      },
+      "missing": [
+        "nav hairline"
+      ]
+    },
+    {
+      "role": "ict",
+      "route": "ict/users",
+      "viewport": "desktop",
+      "gradients": [],
+      "translucent": [],
+      "glossy": [],
+      "pillControls": [],
+      "oversizedRadii": [],
+      "navTruncated": [],
+      "overflow": {
+        "document": 0,
+        "page": 0,
+        "lab": 0
+      },
+      "missing": [
+        "card-title rule",
+        "nav hairline"
+      ]
+    },
+    {
+      "role": "ict",
+      "route": "ict/audit",
+      "viewport": "desktop",
+      "gradients": [],
+      "translucent": [],
+      "glossy": [],
+      "pillControls": [],
+      "oversizedRadii": [],
+      "navTruncated": [],
+      "overflow": {
+        "document": 0,
+        "page": 0,
+        "lab": 0
+      },
+      "missing": [
+        "status-chip spine",
+        "nav hairline"
+      ]
+    },
+    {
+      "role": "ict",
+      "route": "ict",
+      "viewport": "phone",
+      "gradients": [],
+      "translucent": [],
+      "glossy": [],
+      "pillControls": [
+        {
+          "node": "button.mobilebar__me",
+          "width": 30,
+          "height": 30,
+          "radius": [
+            "50%",
+            "50%",
+            "50%",
+            "50%"
+          ]
+        }
+      ],
+      "oversizedRadii": [
+        {
+          "node": "button.iconbtn",
+          "kind": "control",
+          "width": 32,
+          "height": 32,
+          "radius": [
+            "10px",
+            "10px",
+            "10px",
+            "10px"
+          ]
+        },
+        {
+          "node": "button.iconbtn",
+          "kind": "control",
+          "width": 32,
+          "height": 32,
+          "radius": [
+            "10px",
+            "10px",
+            "10px",
+            "10px"
+          ]
+        }
+      ],
+      "navTruncated": [],
+      "overflow": {
+        "document": 0,
+        "page": 0,
+        "lab": 0
+      },
+      "missing": []
+    },
+    {
+      "role": "ict",
+      "route": "ict/users",
+      "viewport": "phone",
+      "gradients": [],
+      "translucent": [],
+      "glossy": [],
+      "pillControls": [
+        {
+          "node": "button.mobilebar__me",
+          "width": 30,
+          "height": 30,
+          "radius": [
+            "50%",
+            "50%",
+            "50%",
+            "50%"
+          ]
+        }
+      ],
+      "oversizedRadii": [
+        {
+          "node": "button.iconbtn",
+          "kind": "control",
+          "width": 32,
+          "height": 32,
+          "radius": [
+            "10px",
+            "10px",
+            "10px",
+            "10px"
+          ]
+        },
+        {
+          "node": "button.iconbtn",
+          "kind": "control",
+          "width": 32,
+          "height": 32,
+          "radius": [
+            "10px",
+            "10px",
+            "10px",
+            "10px"
+          ]
+        }
+      ],
+      "navTruncated": [],
+      "overflow": {
+        "document": 0,
+        "page": 0,
+        "lab": 0
+      },
+      "missing": [
+        "card-title rule"
+      ]
+    },
+    {
+      "role": "ict",
+      "route": "ict/audit",
+      "viewport": "phone",
+      "gradients": [],
+      "translucent": [],
+      "glossy": [],
+      "pillControls": [
+        {
+          "node": "button.mobilebar__me",
+          "width": 30,
+          "height": 30,
+          "radius": [
+            "50%",
+            "50%",
+            "50%",
+            "50%"
+          ]
+        }
+      ],
+      "oversizedRadii": [
+        {
+          "node": "button.iconbtn",
+          "kind": "control",
+          "width": 32,
+          "height": 32,
+          "radius": [
+            "10px",
+            "10px",
+            "10px",
+            "10px"
+          ]
+        },
+        {
+          "node": "button.iconbtn",
+          "kind": "control",
+          "width": 32,
+          "height": 32,
+          "radius": [
+            "10px",
+            "10px",
+            "10px",
+            "10px"
+          ]
+        }
+      ],
+      "navTruncated": [],
+      "overflow": {
+        "document": 0,
+        "page": 0,
+        "lab": 0
+      },
+      "missing": [
+        "status-chip spine"
+      ]
+    },
+    {
+      "role": "vc",
+      "route": "vc",
+      "viewport": "desktop",
+      "gradients": [],
+      "translucent": [],
+      "glossy": [],
+      "pillControls": [],
+      "oversizedRadii": [],
+      "navTruncated": [],
+      "overflow": {
+        "document": 0,
+        "page": 0,
+        "lab": 0
+      },
+      "missing": [
+        "nav hairline"
+      ]
+    },
+    {
+      "role": "vc",
+      "route": "vc/approvals",
+      "viewport": "desktop",
+      "gradients": [],
+      "translucent": [],
+      "glossy": [],
+      "pillControls": [],
+      "oversizedRadii": [],
+      "navTruncated": [],
+      "overflow": {
+        "document": 0,
+        "page": 0,
+        "lab": 0
+      },
+      "missing": [
+        "card-title rule",
+        "nav hairline"
+      ]
+    },
+    {
+      "role": "vc",
+      "route": "vc",
+      "viewport": "phone",
+      "gradients": [],
+      "translucent": [],
+      "glossy": [],
+      "pillControls": [
+        {
+          "node": "button.mobilebar__me",
+          "width": 30,
+          "height": 30,
+          "radius": [
+            "50%",
+            "50%",
+            "50%",
+            "50%"
+          ]
+        }
+      ],
+      "oversizedRadii": [
+        {
+          "node": "button.iconbtn",
+          "kind": "control",
+          "width": 32,
+          "height": 32,
+          "radius": [
+            "10px",
+            "10px",
+            "10px",
+            "10px"
+          ]
+        },
+        {
+          "node": "button.iconbtn",
+          "kind": "control",
+          "width": 32,
+          "height": 32,
+          "radius": [
+            "10px",
+            "10px",
+            "10px",
+            "10px"
+          ]
+        }
+      ],
+      "navTruncated": [],
+      "overflow": {
+        "document": 0,
+        "page": 0,
+        "lab": 0
+      },
+      "missing": []
+    },
+    {
+      "role": "vc",
+      "route": "vc/approvals",
+      "viewport": "phone",
+      "gradients": [],
+      "translucent": [],
+      "glossy": [],
+      "pillControls": [
+        {
+          "node": "button.mobilebar__me",
+          "width": 30,
+          "height": 30,
+          "radius": [
+            "50%",
+            "50%",
+            "50%",
+            "50%"
+          ]
+        }
+      ],
+      "oversizedRadii": [
+        {
+          "node": "button.iconbtn",
+          "kind": "control",
+          "width": 32,
+          "height": 32,
+          "radius": [
+            "10px",
+            "10px",
+            "10px",
+            "10px"
+          ]
+        },
+        {
+          "node": "button.iconbtn",
+          "kind": "control",
+          "width": 32,
+          "height": 32,
+          "radius": [
+            "10px",
+            "10px",
+            "10px",
+            "10px"
+          ]
+        }
+      ],
+      "navTruncated": [],
+      "overflow": {
+        "document": 0,
+        "page": 0,
+        "lab": 0
+      },
+      "missing": [
+        "card-title rule"
+      ]
+    },
+    {
+      "role": "registrar",
+      "route": "registrar",
+      "viewport": "desktop",
+      "gradients": [],
+      "translucent": [],
+      "glossy": [],
+      "pillControls": [],
+      "oversizedRadii": [],
+      "navTruncated": [],
+      "overflow": {
+        "document": 0,
+        "page": 0,
+        "lab": 0
+      },
+      "missing": [
+        "card-title rule",
+        "nav hairline"
+      ]
+    },
+    {
+      "role": "registrar",
+      "route": "registrar",
+      "viewport": "phone",
+      "gradients": [],
+      "translucent": [],
+      "glossy": [],
+      "pillControls": [
+        {
+          "node": "button.mobilebar__me",
+          "width": 30,
+          "height": 30,
+          "radius": [
+            "50%",
+            "50%",
+            "50%",
+            "50%"
+          ]
+        }
+      ],
+      "oversizedRadii": [
+        {
+          "node": "button.iconbtn",
+          "kind": "control",
+          "width": 32,
+          "height": 32,
+          "radius": [
+            "10px",
+            "10px",
+            "10px",
+            "10px"
+          ]
+        },
+        {
+          "node": "button.iconbtn",
+          "kind": "control",
+          "width": 32,
+          "height": 32,
+          "radius": [
+            "10px",
+            "10px",
+            "10px",
+            "10px"
+          ]
+        }
+      ],
+      "navTruncated": [],
+      "overflow": {
+        "document": 0,
+        "page": 0,
+        "lab": 0
+      },
+      "missing": [
+        "card-title rule"
+      ]
+    },
+    {
+      "role": "global",
+      "route": "designs",
+      "viewport": "desktop",
+      "gradients": [],
+      "translucent": [],
+      "glossy": [],
+      "pillControls": [],
+      "oversizedRadii": [],
+      "navTruncated": [],
+      "overflow": {
+        "document": 0,
+        "page": 0,
+        "lab": 0
+      },
+      "missing": [
+        "section rule",
+        "card-title rule",
+        "status-chip spine",
+        "footer hairline"
+      ]
+    },
+    {
+      "role": "global",
+      "route": "designs",
+      "viewport": "phone",
+      "gradients": [],
+      "translucent": [],
+      "glossy": [],
+      "pillControls": [],
+      "oversizedRadii": [],
+      "navTruncated": [],
+      "overflow": {
+        "document": 0,
+        "page": 0,
+        "lab": 0
+      },
+      "missing": [
+        "section rule",
+        "card-title rule",
+        "status-chip spine",
+        "footer hairline"
+      ]
+    }
+  ]
+}
