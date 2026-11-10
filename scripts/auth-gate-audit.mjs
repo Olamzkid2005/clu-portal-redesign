@@ -26,7 +26,7 @@ const roles = [
     deep: "results",
     inner: "timetable",
     mobileSub: "Student portal",
-    groups: ["Study", "Money & campus", "Services", "Account"],
+    groups: ["Classes", "Money", "Services", "Account"],
     tabs: ["Overview", "Timetable", "Results", "Payments", "More"],
   },
   {

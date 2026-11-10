@@ -2920,7 +2920,7 @@ a.lab__choose {
   text-overflow: ellipsis;
 }
 
-.student-pass__person span {
+.student-pass__person > div > span {
   display: block;
   margin-top: 4px;
   overflow: hidden;
@@ -2928,6 +2928,20 @@ a.lab__choose {
   font-size: 10.5px;
   line-height: 1.4;
   text-overflow: ellipsis;
+}
+
+.student-pass .avatar__initials {
+  visibility: visible;
+}
+
+@media (min-width: 981px) {
+  .student-pass .avatar__photo {
+    display: block;
+  }
+
+  .student-pass .avatar__initials {
+    visibility: hidden;
+  }
 }
 
 .student-pass .avatar {

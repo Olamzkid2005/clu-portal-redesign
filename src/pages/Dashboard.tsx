@@ -170,7 +170,7 @@ export default function Dashboard() {
           <ChevronRight />
         </button>
         <button className="attentionitem" onClick={() => go("profile")}>
-          <span className="attentionitem__status attentionitem__status--green">Exams</span>
+          <span className="attentionitem__status attentionitem__status--amber">Exams</span>
           <span className="attentionitem__title">Exam card opens after registration</span>
           <span className="attentionitem__meta">Exams begin 1 Dec</span>
           <ChevronRight />
