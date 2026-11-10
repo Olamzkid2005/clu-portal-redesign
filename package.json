@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc --noEmit && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "audit": "node scripts/auth-gate-audit.mjs",
+    "audit:routes": "node scripts/route-scan.mjs"
   },
   "dependencies": {
     "lucide-react": "^0.468.0",
@@ -17,6 +19,7 @@
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "@vitejs/plugin-react": "^4.3.4",
+    "playwright": "^1.65.0",
     "typescript": "^5.6.3",
     "vite": "^6.0.5"
   }

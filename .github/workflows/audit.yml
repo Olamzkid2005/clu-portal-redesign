@@ -1,0 +1,79 @@
+name: Design and access audit
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: audit-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  audit:
+    name: Build and audit
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Build
+        run: npm run build
+
+      - name: Start preview server
+        run: |
+          nohup npm run preview -- --host 127.0.0.1 --port 3000 --strictPort > /tmp/preview.log 2>&1 &
+          echo $! > /tmp/preview.pid
+          for attempt in $(seq 1 60); do
+            if curl -fsS http://127.0.0.1:3000/ > /dev/null; then
+              echo "Preview server ready"
+              exit 0
+            fi
+            sleep 1
+          done
+          echo "Preview server did not become ready"
+          cat /tmp/preview.log
+          exit 1
+
+      - name: Run six-role audit
+        run: npm run audit
+
+      - name: Upload audit report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: portal-audit
+          path: |
+            screenshots/auth/audit.json
+            screenshots/auth/*.png
+            screenshots/routes/*.png
+          if-no-files-found: warn
+          retention-days: 14
+
+      - name: Stop preview server
+        if: always()
+        run: |
+          if [ -f /tmp/preview.pid ]; then
+            PREVIEW_PID=$(cat /tmp/preview.pid)
+            pkill -P "$PREVIEW_PID" 2>/dev/null || true
+            kill "$PREVIEW_PID" 2>/dev/null || true
+          fi
+          cat /tmp/preview.log 2>/dev/null || true
