@@ -134,10 +134,7 @@ export default function Dashboard() {
           </div>
           <h1>
             {greeting},<br />
-            <span>{student.firstName}!</span>{" "}
-            <span className="student-hero__wave" role="img" aria-label="waving hand">
-              👋
-            </span>
+            <span>{student.firstName}!</span>
           </h1>
           <p className="student-hero__lede">Keep pushing. You&apos;re doing great!</p>
           <p className="student-hero__day">
@@ -160,7 +157,7 @@ export default function Dashboard() {
 
       <section className="student-quickrow" aria-label="At a glance">
         <button className="quickcard" onClick={() => go("timetable")}>
-          <span className="quickcard__icon quickcard__icon--purple">
+          <span className="quickcard__icon quickcard__icon--brand">
             <CalendarDays />
           </span>
           <span className="quickcard__copy">
@@ -176,7 +173,7 @@ export default function Dashboard() {
         </button>
 
         <button className="quickcard" onClick={() => go("payments")}>
-          <span className="quickcard__icon quickcard__icon--purple">
+          <span className="quickcard__icon quickcard__icon--sage">
             <CreditCard />
           </span>
           <span className="quickcard__copy">
@@ -190,7 +187,7 @@ export default function Dashboard() {
         </button>
 
         <button className="quickcard" onClick={() => hrefFor("announcements")}>
-          <span className="quickcard__icon quickcard__icon--purple">
+          <span className="quickcard__icon quickcard__icon--blush">
             <Megaphone />
           </span>
           <span className="quickcard__copy">
