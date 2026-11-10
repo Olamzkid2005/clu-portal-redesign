@@ -2935,11 +2935,11 @@ a.lab__choose {
 }
 
 @media (min-width: 981px) {
-  .student-pass .avatar__photo {
+  .student-pass .avatar--photo .avatar__photo {
     display: block;
   }
 
-  .student-pass .avatar__initials {
+  .student-pass .avatar--photo .avatar__initials {
     visibility: hidden;
   }
 }

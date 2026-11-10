@@ -69,7 +69,7 @@ export const student = {
   phone: "+234 803 555 0142",
   address: "Block C, Room 214, Chrisland University, Abeokuta",
   guardian: { name: "Mr. Emeka Okonkwo", email: "e.okonkwo@example.com", phone: "+234 805 555 0119", address: "12 Awka Road, Onitsha, Anambra" },
-  photo: "",
+  photo: "/student-avatar.jpg",
 };
 
 export const fees = {
