@@ -1,0 +1,1150 @@
+/* ==========================================================================
+   CLU workspace — refinement layer
+   A warmer, more editorial dashboard: layered surfaces, clearer hierarchy,
+   softer depth, restrained motion and a living hero.
+   ========================================================================== */
+
+.shell--workspace {
+  --line: #eadbd6;
+  --line-2: #f3e8e3;
+  --surface: #fffdfb;
+  --surface-2: #fcf6f2;
+  --surface-3: #f6ebe5;
+  --radius: 20px;
+  --shadow-sm:
+    0 1px 2px rgba(67, 39, 46, 0.04),
+    0 18px 42px -30px rgba(91, 49, 62, 0.36);
+  --shadow-md:
+    0 2px 5px rgba(67, 39, 46, 0.04),
+    0 34px 80px -52px rgba(91, 49, 62, 0.55);
+  background:
+    radial-gradient(1200px 700px at 88% -18%, rgba(191, 135, 146, 0.12), transparent 60%),
+    radial-gradient(900px 560px at -10% 48%, rgba(104, 141, 121, 0.08), transparent 62%),
+    var(--canvas);
+  background-attachment: fixed;
+}
+
+.shell--workspace :focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--brand) 72%, #fff);
+  outline-offset: 3px;
+}
+
+/* ------------------------------ rail ------------------------------ */
+
+.portal-rail {
+  padding: 26px 14px 18px;
+}
+
+/* The rail itself is one viewport tall and sticky. Paint its grid column for
+   the full document so long pages never expose a bare gutter beneath it. */
+@media (min-width: 981px) {
+  .shell--workspace {
+    box-shadow: inset 248px 0 0 0 var(--rail-deep);
+  }
+}
+
+.portal-rail__brand {
+  padding: 0 10px 20px;
+}
+
+.portal-rail__brandcopy small {
+  margin-top: 3px;
+  color: #c7b0b1;
+  font-size: 12.5px;
+  letter-spacing: 0.015em;
+}
+
+.portal-rail__group-label {
+  padding: 0 12px;
+  margin: 12px 0 5px;
+  color: #c4a5a7;
+  font-size: 10.5px;
+  letter-spacing: 0.16em;
+}
+
+.portal-rail__link {
+  position: relative;
+  padding: 10px 12px;
+  color: #e2d0ce;
+  font-size: 13.5px;
+  transition:
+    background 180ms var(--ease),
+    color 180ms var(--ease),
+    transform 180ms var(--ease);
+}
+
+.portal-rail__link:hover {
+  transform: translateX(2px);
+}
+
+.portal-rail__link.is-active {
+  background: linear-gradient(135deg, #faeee8, #f2dfd8);
+  color: #482432;
+  box-shadow:
+    0 12px 26px -20px rgba(0, 0, 0, 0.55),
+    inset 0 1px 0 rgba(255, 255, 255, 0.65);
+}
+
+.portal-rail__link.is-active::before {
+  content: "";
+  position: absolute;
+  left: -14px;
+  top: 11px;
+  bottom: 11px;
+  width: 3px;
+  border-radius: 0 4px 4px 0;
+  background: #e8c7bf;
+}
+
+.portal-rail__promo {
+  padding: 18px;
+  margin-top: 18px;
+  border-radius: 20px;
+}
+
+.portal-rail__promo b {
+  font-size: 15px;
+}
+
+.portal-rail__promo small {
+  margin-top: 10px;
+  font-size: 12px;
+}
+
+/* ------------------------------ top bar ------------------------------ */
+
+.shell--workspace .quadhead {
+  background: linear-gradient(180deg, rgba(247, 241, 238, 0.96), rgba(247, 241, 238, 0.82));
+  box-shadow: 0 1px 0 rgba(109, 59, 77, 0.05);
+}
+
+.shell--workspace .quadbar .search__input {
+  height: 46px;
+  border-radius: 16px;
+  background: rgba(255, 253, 251, 0.92);
+  box-shadow:
+    inset 0 1px 0 #fff,
+    0 8px 22px -18px rgba(67, 39, 46, 0.4);
+}
+
+.shell--workspace .quadbar .user {
+  height: 48px;
+}
+
+/* ------------------------------ page ------------------------------ */
+
+.shell--workspace .page__title {
+  font-weight: 700;
+  letter-spacing: -0.04em;
+}
+
+.shell--workspace .page__sub {
+  font-size: 13.5px;
+}
+
+.shell--workspace .eyebrow {
+  color: var(--brand-2);
+  font-size: 10.5px;
+  letter-spacing: 0.16em;
+  opacity: 0.9;
+}
+
+/* ------------------------------ hero ------------------------------ */
+
+.student-hero {
+  min-height: 360px;
+  padding: 38px 40px;
+  border-color: rgba(109, 59, 77, 0.14);
+  border-radius: 30px;
+  isolation: isolate;
+  background:
+    radial-gradient(820px 420px at 89% -2%, rgba(211, 167, 163, 0.5), transparent 56%),
+    radial-gradient(680px 430px at 58% 108%, rgba(174, 199, 182, 0.44), transparent 54%),
+    linear-gradient(112deg, #fcf2ec 0%, #fffaf5 50%, #eef7f0 100%);
+  box-shadow:
+    0 2px 4px rgba(66, 38, 45, 0.04),
+    0 44px 96px -68px rgba(66, 38, 45, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.72);
+}
+
+.student-hero::before,
+.student-hero::after {
+  z-index: 0;
+}
+
+.student-hero__ambient {
+  position: absolute;
+  z-index: 0;
+  inset: -22% -12% -22% 32%;
+  overflow: hidden;
+  opacity: 0.72;
+  filter: blur(28px) saturate(1.12);
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+
+.student-hero__ambient > div,
+.student-hero__ambient svg {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.student-hero__copy {
+  padding: 8px 0;
+}
+
+.student-hero__eyebrow {
+  padding: 7px 12px;
+  border-color: rgba(109, 59, 77, 0.18);
+  background: rgba(255, 252, 248, 0.78);
+  color: var(--brand-ink);
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.student-hero__pip {
+  animation: clu-pip 2.8s ease-out infinite;
+}
+
+.student-hero h1 {
+  max-width: 640px;
+  margin-top: 19px;
+  font-size: clamp(42px, 4.6vw, 62px);
+  font-weight: 780;
+  line-height: 0.98;
+  letter-spacing: -0.062em;
+}
+
+.student-hero h1 > span {
+  display: inline-block;
+  margin-top: 2px;
+  color: var(--brand);
+  font-family: "Instrument Serif", "Iowan Old Style", Georgia, serif;
+  font-size: 1.12em;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 0.88;
+  letter-spacing: -0.025em;
+}
+
+.student-hero__lede {
+  margin-top: 15px;
+  color: #655055;
+  font-size: 15px;
+  letter-spacing: -0.005em;
+}
+
+.student-hero__day {
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+  max-width: 640px;
+  margin-top: 9px;
+  color: var(--muted);
+  font-size: 13px;
+  text-wrap: pretty;
+}
+
+.student-hero__day svg {
+  flex: none;
+  width: 14px;
+  height: 14px;
+  margin-top: 2px;
+  color: var(--brand);
+  opacity: 0.75;
+}
+
+.student-hero__actions {
+  gap: 10px;
+  margin-top: 26px;
+}
+
+.student-hero__actions .btn {
+  height: 46px;
+  padding: 0 19px;
+  border-radius: 14px;
+}
+
+.student-hero__actions .btn--primary {
+  border-color: #5b2e3e;
+  background: linear-gradient(135deg, #7b4457, #5b2e3e);
+  box-shadow:
+    0 18px 32px -20px rgba(74, 38, 51, 0.95),
+    inset 0 1px 0 rgba(255, 255, 255, 0.16);
+}
+
+.student-hero__actions .btn--primary:hover {
+  background: linear-gradient(135deg, #8a4e62, #663646);
+}
+
+.student-hero__actions .btn--primary svg {
+  transition: transform 200ms var(--ease);
+}
+
+.student-hero__actions .btn--primary:hover svg {
+  transform: translateX(3px);
+}
+
+.student-hero__figure img {
+  width: min(100%, 330px);
+  animation: clu-float 8s ease-in-out infinite;
+}
+
+.student-hero__level {
+  padding: 8px 12px;
+  border-color: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 252, 248, 0.84);
+  font-size: 12.5px;
+}
+
+/* ------------------------------ quick status ------------------------------ */
+
+.student-quickrow {
+  gap: 16px;
+}
+
+.quickcard {
+  position: relative;
+  overflow: hidden;
+  padding: 18px;
+  border-color: #ebdcd7;
+  border-radius: 20px;
+  background: linear-gradient(180deg, #fffefd 0%, #fffaf7 100%);
+  box-shadow:
+    0 1px 2px rgba(67, 39, 46, 0.04),
+    0 18px 38px -30px rgba(91, 49, 62, 0.42);
+}
+
+.quickcard::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  pointer-events: none;
+}
+
+.quickcard:hover {
+  border-color: #e2c7c8;
+  box-shadow:
+    0 2px 4px rgba(67, 39, 46, 0.04),
+    0 30px 52px -34px rgba(91, 49, 62, 0.56);
+  transform: translateY(-3px);
+}
+
+.quickcard__icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 15px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.72);
+}
+
+.quickcard__copy small {
+  color: var(--muted);
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.quickcard__copy b {
+  margin-top: 4px;
+  font-size: 17px;
+  letter-spacing: -0.025em;
+}
+
+.quickcard__copy em {
+  margin-top: 3px;
+  color: var(--muted);
+  font-size: 12.5px;
+}
+
+.quickcard__copy .quickcard__ok {
+  padding: 4px 10px;
+  font-size: 13px;
+  letter-spacing: 0.01em;
+  text-transform: none;
+}
+
+.quickcard > svg {
+  box-sizing: border-box;
+  width: 30px;
+  height: 30px;
+  padding: 8px;
+  border-radius: 50%;
+  background: var(--surface-2);
+  color: var(--brand);
+  transition:
+    background 180ms var(--ease),
+    transform 180ms var(--ease);
+}
+
+.quickcard:hover > svg {
+  background: var(--brand-soft);
+  transform: translateX(2px);
+}
+
+/* ------------------------------ panels ------------------------------ */
+
+.student-grid {
+  gap: 20px;
+}
+
+.student-panel {
+  border-color: #ecded9;
+  border-radius: 21px;
+  background: linear-gradient(180deg, #fffefd 0%, #fffcf9 100%);
+  transition:
+    border-color 220ms var(--ease),
+    box-shadow 220ms var(--ease);
+}
+
+.student-panel:hover {
+  border-color: #e4cfc9;
+  box-shadow: var(--shadow-md);
+}
+
+.student-panel__head {
+  min-height: 72px;
+  padding: 16px 20px;
+  gap: 14px;
+  background: linear-gradient(180deg, rgba(252, 246, 242, 0.72), rgba(255, 253, 251, 0));
+}
+
+.student-panel__title {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  min-width: 0;
+}
+
+.student-panel__icon {
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+  background: linear-gradient(145deg, #f8e9e8, #f1dfdb);
+  color: var(--brand);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.75);
+}
+
+.student-panel__icon svg {
+  width: 17px;
+  height: 17px;
+  stroke-width: 1.9;
+}
+
+.student-panel__head h2 {
+  font-size: 15px;
+}
+
+.student-panel__sub {
+  margin: 2px 0 0;
+  overflow: hidden;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.35;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.student-panel__link {
+  padding: 6px 8px;
+  border-radius: 9px;
+  font-size: 12.5px;
+  transition:
+    background 180ms var(--ease),
+    color 180ms var(--ease);
+}
+
+.student-panel__link:hover {
+  background: var(--brand-soft);
+}
+
+.student-panel__link svg {
+  transition: transform 180ms var(--ease);
+}
+
+.student-panel__link:hover svg {
+  transform: translateX(2px);
+}
+
+.student-panel__count {
+  font-size: 12px;
+  letter-spacing: 0.02em;
+}
+
+/* classes */
+
+.student-class {
+  padding: 14px 20px;
+}
+
+.student-class__date {
+  min-width: 42px;
+  border: 1px solid #f0e0d9;
+  background: linear-gradient(180deg, #fffaf6, #f7eae4);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+.student-class__tag {
+  font-size: 12px;
+  box-shadow: inset 0 0 0 1px rgba(109, 59, 77, 0.06);
+}
+
+.student-class:hover .student-class__body b {
+  color: var(--brand);
+}
+
+/* overview */
+
+.student-overview {
+  gap: 22px;
+  padding: 22px;
+}
+
+.student-overview .ring {
+  filter: drop-shadow(0 10px 18px rgba(109, 59, 77, 0.16));
+}
+
+.student-legend li {
+  font-size: 13.5px;
+}
+
+.student-cgpa {
+  padding: 12px 14px;
+  margin-top: 16px;
+  border: 1px solid var(--line-2);
+  border-radius: 14px;
+  background: var(--surface-2);
+}
+
+.student-cgpa b {
+  font-size: 23px;
+}
+
+/* lower cards */
+
+.student-task {
+  padding: 13px 20px;
+}
+
+.student-task > svg {
+  transition:
+    transform 180ms var(--ease),
+    color 180ms var(--ease);
+}
+
+.student-task:hover > svg {
+  color: var(--brand);
+  transform: translateX(2px);
+}
+
+.student-note {
+  padding: 13px 20px 14px;
+  border-top: 1px solid var(--line-2);
+  background: var(--surface-2);
+  color: var(--muted);
+}
+
+.student-announcement {
+  padding: 16px 20px;
+  transition: background 180ms var(--ease);
+}
+
+.student-announcement:hover {
+  background: var(--surface-2);
+}
+
+.student-announcement__meta {
+  color: var(--muted);
+  font-size: 10.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.student-announcement h3 {
+  font-size: 14px;
+}
+
+.student-announcement p {
+  font-size: 13px;
+}
+
+/* services */
+
+.student-panel--services .student-services {
+  background: var(--line-2);
+}
+
+.student-service {
+  padding: 16px 18px;
+  font-size: 13.5px;
+  font-weight: 600;
+  transition:
+    background 180ms var(--ease),
+    color 180ms var(--ease);
+}
+
+.student-service > span {
+  width: 34px;
+  height: 34px;
+  border-radius: 11px;
+  background: linear-gradient(145deg, #f8e9e7, #f1dfda);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.75);
+}
+
+.student-service > svg {
+  transition:
+    transform 180ms var(--ease),
+    color 180ms var(--ease),
+    opacity 180ms var(--ease);
+  opacity: 0.7;
+}
+
+.student-service:hover > svg {
+  color: var(--brand);
+  opacity: 1;
+  transform: translateX(2px);
+}
+
+/* ------------------------------ shared primitives ------------------------------ */
+
+.shell--workspace .card {
+  border-radius: 20px;
+  background: linear-gradient(180deg, #fffefd, #fffcf9);
+  box-shadow: var(--shadow-sm);
+}
+
+.shell--workspace .card__hd {
+  padding: 18px 22px;
+}
+
+.shell--workspace .card__title {
+  font-size: 14.5px;
+}
+
+.shell--workspace .btn {
+  border-radius: 14px;
+  font-weight: 600;
+  transition:
+    background 180ms var(--ease),
+    border-color 180ms var(--ease),
+    color 180ms var(--ease),
+    box-shadow 180ms var(--ease),
+    transform 180ms var(--ease);
+}
+
+.shell--workspace .btn:hover {
+  transform: translateY(-1px);
+}
+
+.shell--workspace .btn:active {
+  transform: translateY(0);
+}
+
+.shell--workspace .btn--primary {
+  border-color: #5b2e3e;
+  background: linear-gradient(135deg, #7b4457, #5b2e3e);
+  box-shadow:
+    0 14px 28px -18px rgba(84, 43, 59, 0.9),
+    inset 0 1px 0 rgba(255, 255, 255, 0.16);
+}
+
+.shell--workspace .btn--primary:hover {
+  border-color: #663646;
+  background: linear-gradient(135deg, #8a4e62, #663646);
+}
+
+.shell--workspace .pill {
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 650;
+  letter-spacing: 0.02em;
+}
+
+.shell--workspace .input,
+.shell--workspace .select,
+.shell--workspace .textarea {
+  border-radius: 13px;
+  background: var(--surface-2);
+}
+
+.shell--workspace .input:focus,
+.shell--workspace .select:focus,
+.shell--workspace .textarea:focus {
+  border-color: #cda7b0;
+  outline: 3px solid rgba(109, 59, 77, 0.11);
+  background: var(--surface);
+}
+
+.shell--workspace .table th {
+  padding: 12px 16px;
+  font-size: 10.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.shell--workspace .table tbody tr {
+  transition: background 160ms var(--ease);
+}
+
+.shell--workspace .stat {
+  border-radius: 18px;
+  background: linear-gradient(180deg, #fffefd, #fffbf8);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ------------------------------ motion ------------------------------ */
+
+@keyframes clu-rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes clu-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+@keyframes clu-pip {
+  0% {
+    box-shadow: 0 0 0 0 rgba(124, 69, 88, 0.28);
+  }
+  70% {
+    box-shadow: 0 0 0 7px rgba(124, 69, 88, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(124, 69, 88, 0);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .student-home > * {
+    animation: clu-rise 620ms var(--ease) both;
+  }
+
+  .student-home > :nth-child(2) {
+    animation-delay: 70ms;
+  }
+
+  .student-home > :nth-child(3) {
+    animation-delay: 140ms;
+  }
+
+  .student-home > :nth-child(4) {
+    animation-delay: 210ms;
+  }
+
+  .student-home > :nth-child(5) {
+    animation-delay: 280ms;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .student-hero__ambient {
+    display: none;
+  }
+
+  .student-hero__figure img,
+  .student-hero__pip,
+  .student-home > * {
+    animation: none !important;
+  }
+
+  .quickcard,
+  .btn,
+  .student-panel,
+  .student-panel__link,
+  .student-task > svg,
+  .student-service > svg,
+  .portal-rail__link {
+    transition: none !important;
+  }
+}
+
+/* ------------------------------ dark theme ------------------------------ */
+
+[data-theme="dark"] .shell--workspace {
+  --line: #433136;
+  --line-2: #38272d;
+  --surface: #241c21;
+  --surface-2: #2a2025;
+  --surface-3: #33262c;
+  --shadow-sm:
+    0 1px 2px rgba(0, 0, 0, 0.28),
+    0 18px 42px -30px rgba(0, 0, 0, 0.75);
+  --shadow-md:
+    0 2px 5px rgba(0, 0, 0, 0.3),
+    0 34px 80px -52px rgba(0, 0, 0, 0.9);
+  background:
+    radial-gradient(1100px 680px at 88% -18%, rgba(208, 160, 173, 0.08), transparent 60%),
+    radial-gradient(900px 540px at -10% 48%, rgba(148, 191, 168, 0.06), transparent 62%),
+    var(--canvas);
+}
+
+[data-theme="dark"] .portal-rail__link.is-active {
+  background: rgba(208, 160, 173, 0.16);
+  color: #f8e9e6;
+}
+
+[data-theme="dark"] .portal-rail__link.is-active::before {
+  background: #d0a0ad;
+}
+
+[data-theme="dark"] .shell--workspace .quadhead {
+  background: linear-gradient(180deg, rgba(27, 21, 25, 0.96), rgba(27, 21, 25, 0.82));
+}
+
+[data-theme="dark"] .shell--workspace .quadbar .search__input {
+  background: var(--surface);
+}
+
+[data-theme="dark"] .student-hero {
+  border-color: #463238;
+  background:
+    radial-gradient(820px 430px at 88% -2%, rgba(208, 160, 173, 0.2), transparent 55%),
+    radial-gradient(680px 430px at 58% 108%, rgba(148, 191, 168, 0.14), transparent 54%),
+    linear-gradient(112deg, #2b1d22 0%, #21171c 52%, #251b20 100%);
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.2),
+    0 44px 96px -68px rgba(0, 0, 0, 0.9),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+[data-theme="dark"] .student-hero__ambient {
+  opacity: 0.55;
+  mix-blend-mode: screen;
+}
+
+[data-theme="dark"] .student-hero__lede {
+  color: #d8c7c3;
+}
+
+[data-theme="dark"] .quickcard,
+[data-theme="dark"] .student-panel,
+[data-theme="dark"] .shell--workspace .card,
+[data-theme="dark"] .shell--workspace .stat {
+  background: linear-gradient(180deg, #261d22, #241c21);
+}
+
+[data-theme="dark"] .student-panel__head {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.025), transparent);
+}
+
+[data-theme="dark"] .student-panel__icon,
+[data-theme="dark"] .student-service > span {
+  background: linear-gradient(145deg, #3b2a31, #33252b);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+[data-theme="dark"] .student-class__date {
+  border-color: #46343a;
+  background: linear-gradient(180deg, #33262c, #2a2025);
+}
+
+[data-theme="dark"] .student-cgpa {
+  background: var(--surface-2);
+}
+
+[data-theme="dark"] .quickcard__copy .quickcard__ok {
+  background: var(--ok-soft);
+}
+
+/* ------------------------------ light mode: borderless surfaces ------------------------------ */
+
+/* Every neutral container edge becomes transparent; depth is carried by
+   background contrast and soft shadows. Dark mode keeps its borders. */
+:root:not([data-theme="dark"]) .shell--workspace .card,
+:root:not([data-theme="dark"]) .shell--workspace .student-panel,
+:root:not([data-theme="dark"]) .shell--workspace .quickcard,
+:root:not([data-theme="dark"]) .shell--workspace .stat,
+:root:not([data-theme="dark"]) .shell--workspace .tablewrap,
+:root:not([data-theme="dark"]) .shell--workspace .student-hero,
+:root:not([data-theme="dark"]) .shell--workspace .workspace-hero,
+:root:not([data-theme="dark"]) .shell--workspace .student-cgpa,
+:root:not([data-theme="dark"]) .shell--workspace .portal-rail,
+:root:not([data-theme="dark"]) .shell--workspace .portal-rail__promo,
+:root:not([data-theme="dark"]) .shell--workspace .quadbar .search__input,
+:root:not([data-theme="dark"]) .shell--workspace .quadbar .iconbtn,
+:root:not([data-theme="dark"]) .shell--workspace .quadbar .user,
+:root:not([data-theme="dark"]) .shell--workspace .search__panel,
+:root:not([data-theme="dark"]) .shell--workspace .menupanel,
+:root:not([data-theme="dark"]) .shell--workspace .modal,
+:root:not([data-theme="dark"]) .shell--workspace .input,
+:root:not([data-theme="dark"]) .shell--workspace .select,
+:root:not([data-theme="dark"]) .shell--workspace .textarea,
+:root:not([data-theme="dark"]) .shell--workspace .searchfield__input,
+:root:not([data-theme="dark"]) .shell--workspace .seg,
+:root:not([data-theme="dark"]) .shell--workspace .slotcard,
+:root:not([data-theme="dark"]) .shell--workspace .alert,
+:root:not([data-theme="dark"]) .shell--workspace .signal,
+:root:not([data-theme="dark"]) .shell--workspace .kv,
+:root:not([data-theme="dark"]) .shell--workspace .unitbar,
+:root:not([data-theme="dark"]) .shell--workspace .weekmini__day,
+:root:not([data-theme="dark"]) .shell--workspace .weekmini__day.has-class,
+:root:not([data-theme="dark"]) .shell--workspace .btn,
+:root:not([data-theme="dark"]) .shell--workspace .student-hero__eyebrow,
+:root:not([data-theme="dark"]) .shell--workspace .student-hero__level,
+:root:not([data-theme="dark"]) .shell--workspace .student-class__date,
+:root:not([data-theme="dark"]) .shell--workspace .pill--outline,
+:root:not([data-theme="dark"]) .shell--workspace .foot,
+:root:not([data-theme="dark"]) .shell--workspace .mobilebar,
+:root:not([data-theme="dark"]) .shell--workspace .tabbar,
+:root:not([data-theme="dark"]) .shell--workspace .drawerpanel {
+  border-color: transparent;
+}
+
+:root:not([data-theme="dark"]) .shell--workspace .quickcard:hover,
+:root:not([data-theme="dark"]) .shell--workspace .student-panel:hover,
+:root:not([data-theme="dark"]) .shell--workspace .stat:hover,
+:root:not([data-theme="dark"]) .shell--workspace .slotcard:hover,
+:root:not([data-theme="dark"]) .shell--workspace .slotcard--now {
+  border-color: transparent;
+}
+
+/* Remove every light inset highlight that reads as a thin edge. */
+:root:not([data-theme="dark"]) .shell--workspace .quickcard::after,
+:root:not([data-theme="dark"]) .shell--workspace .student-panel__icon,
+:root:not([data-theme="dark"]) .shell--workspace .quickcard__icon,
+:root:not([data-theme="dark"]) .shell--workspace .student-class__date,
+:root:not([data-theme="dark"]) .shell--workspace .student-class__tag,
+:root:not([data-theme="dark"]) .shell--workspace .student-service > span {
+  box-shadow: none;
+}
+
+:root:not([data-theme="dark"]) .shell--workspace .portal-rail__link.is-active {
+  box-shadow: 0 12px 26px -20px rgba(0, 0, 0, 0.55);
+}
+
+:root:not([data-theme="dark"]) .shell--workspace .portal-rail__promo {
+  box-shadow: 0 18px 38px -30px rgba(25, 13, 18, 0.7);
+}
+
+:root:not([data-theme="dark"]) .shell--workspace .quadhead {
+  box-shadow: 0 12px 34px -32px rgba(67, 39, 46, 0.55);
+}
+
+:root:not([data-theme="dark"]) .shell--workspace .quadbar .search__input {
+  box-shadow: 0 3px 10px -7px rgba(67, 39, 46, 0.35);
+}
+
+:root:not([data-theme="dark"]) .shell--workspace .quadbar .iconbtn,
+:root:not([data-theme="dark"]) .shell--workspace .quadbar .user,
+:root:not([data-theme="dark"]) .shell--workspace .input,
+:root:not([data-theme="dark"]) .shell--workspace .select,
+:root:not([data-theme="dark"]) .shell--workspace .textarea,
+:root:not([data-theme="dark"]) .shell--workspace .searchfield__input {
+  box-shadow: 0 1px 3px rgba(67, 39, 46, 0.06);
+}
+
+:root:not([data-theme="dark"]) .shell--workspace .pill--outline {
+  background: var(--surface-2);
+}
+
+/* Primary buttons keep their gradient and lift, without the inset hairline. */
+:root:not([data-theme="dark"]) .shell--workspace .btn--primary {
+  box-shadow: 0 14px 28px -18px rgba(84, 43, 59, 0.9);
+}
+
+:root:not([data-theme="dark"]) .shell--workspace .student-hero {
+  box-shadow:
+    0 2px 4px rgba(66, 38, 45, 0.04),
+    0 44px 96px -68px rgba(66, 38, 45, 0.6);
+}
+
+:root:not([data-theme="dark"]) .shell--workspace .signal {
+  background: var(--surface-2);
+  box-shadow: 0 1px 3px rgba(67, 39, 46, 0.06);
+}
+
+/* Sign-in sits outside the workspace shell, so it gets the same treatment. */
+:root:not([data-theme="dark"]) .signin .signin__panel,
+:root:not([data-theme="dark"]) .signin .signin__role,
+:root:not([data-theme="dark"]) .signin .btn,
+:root:not([data-theme="dark"]) .signin .signin__field > input,
+:root:not([data-theme="dark"]) .signin .signin__password input {
+  border-color: transparent;
+}
+
+:root:not([data-theme="dark"]) .signin .btn:hover {
+  border-color: transparent;
+}
+
+:root:not([data-theme="dark"]) .signin .signin__role:hover,
+:root:not([data-theme="dark"]) .signin .signin__role.is-active {
+  border-color: transparent;
+}
+
+:root:not([data-theme="dark"]) .signin .signin__top,
+:root:not([data-theme="dark"]) .signin .signin__foot {
+  border-color: transparent;
+}
+
+:root:not([data-theme="dark"]) .signin .signin__reveal {
+  border-left-color: transparent;
+}
+
+:root:not([data-theme="dark"]) .signin .signin__role,
+:root:not([data-theme="dark"]) .signin .signin__field > input,
+:root:not([data-theme="dark"]) .signin .signin__password input {
+  box-shadow: 0 1px 3px rgba(67, 39, 46, 0.05);
+}
+
+:root:not([data-theme="dark"]) .signin .signin__panel {
+  box-shadow: 0 34px 80px -52px rgba(74, 38, 51, 0.5);
+}
+
+/* ------------------------------ responsive ------------------------------ */
+
+@media (max-width: 1240px) {
+  .student-hero {
+    padding: 32px;
+  }
+}
+
+@media (max-width: 1120px) {
+  .student-panel__head {
+    padding: 15px 18px;
+  }
+
+  .student-overview {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 980px) {
+  .student-hero {
+    padding: 28px;
+    border-radius: 24px;
+  }
+
+  .student-hero h1 {
+    font-size: clamp(38px, 7vw, 50px);
+  }
+
+  .student-overview {
+    padding: 18px;
+  }
+}
+
+@media (max-width: 720px) {
+  .student-hero {
+    padding: 24px 20px 0;
+    border-radius: 22px;
+  }
+
+  .student-hero__ambient {
+    inset: -10% -25% 0 0;
+  }
+
+  .student-hero h1 {
+    font-size: clamp(37px, 11vw, 46px);
+  }
+
+  .student-panel__head {
+    min-height: 66px;
+    padding: 14px 16px;
+  }
+
+  .student-panel__icon {
+    width: 33px;
+    height: 33px;
+    border-radius: 11px;
+  }
+
+  .student-panel__sub {
+    display: none;
+  }
+
+  .student-class {
+    padding: 13px 16px;
+  }
+
+  .student-service {
+    padding: 14px 16px;
+  }
+
+  .quickcard {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 420px) {
+  .student-hero {
+    padding: 20px 16px 0;
+  }
+
+  .student-hero__eyebrow {
+    font-size: 9.5px;
+  }
+
+  .student-hero__level {
+    font-size: 11.5px;
+  }
+}
+
+/* Tablets and narrow desktops use labelled rows instead of squeezing every
+   column into a horizontally scrolling table. */
+@media (max-width: 1100px) {
+  .table--stack thead {
+    display: none;
+  }
+
+  .table--stack tbody tr {
+    display: block;
+    padding: 12px 14px;
+    border-bottom: 1px solid var(--line-2);
+  }
+
+  .table--stack tbody tr:hover {
+    background: transparent;
+  }
+
+  .table--stack td {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 14px;
+    padding: 3px 0;
+    border: 0;
+    text-align: right;
+  }
+
+  .table--stack td::before {
+    content: attr(data-label);
+    flex: none;
+    color: var(--muted);
+    font-size: 11px;
+    font-weight: 500;
+    text-align: left;
+  }
+
+  .table--stack td:first-child {
+    display: block;
+    padding-bottom: 7px;
+  }
+
+  .table--stack td:first-child::before {
+    display: none;
+  }
+
+  .table--stack td:first-child .table__strong {
+    font-size: 14px;
+  }
+}
