@@ -589,7 +589,7 @@ export function SettingsPage() {
       </div>
 
       <div className="bento">
-        <Card className="s7">
+        <Card className="s7 card--hug">
           <CardHead title="Change password" sub="Use a password you do not use elsewhere" />
           <div className="card__bd">
             <div className="form">

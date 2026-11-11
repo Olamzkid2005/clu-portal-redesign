@@ -862,6 +862,10 @@
   gap: 18px;
 }
 
+.bento > .card--hug {
+  align-self: start;
+}
+
 .student-hero {
   position: relative;
   display: grid;
@@ -1245,8 +1249,20 @@
   font-weight: 650;
 }
 
+.student-panel--classes {
+  display: flex;
+  flex-direction: column;
+}
+
 .student-classlist {
-  padding: 4px 0;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  padding: 4px 0 0;
+}
+
+.student-panel--classes .student-class {
+  flex: 1 1 auto;
 }
 
 .student-class {
@@ -1360,8 +1376,14 @@
   color: #a16207;
 }
 
+.student-panel--overview {
+  display: flex;
+  flex-direction: column;
+}
+
 .student-overview {
   display: flex;
+  flex: 1 1 auto;
   align-items: center;
   gap: 23px;
   padding: 19px 21px 21px;
@@ -1516,8 +1538,23 @@
   line-height: 1.5;
 }
 
+.student-panel--announcements {
+  display: flex;
+  flex-direction: column;
+}
+
 .student-announcements {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
   padding: 3px 0;
+}
+
+.student-panel--announcements .student-announcement {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .student-announcement {

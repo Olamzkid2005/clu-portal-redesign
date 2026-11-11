@@ -305,7 +305,7 @@ export default function Dashboard() {
           </div>
         </section>
 
-        <section className="student-panel" id="announcements">
+        <section className="student-panel student-panel--announcements" id="announcements">
           <div className="student-panel__head">
             <h2>Announcements</h2>
             <span className="student-panel__count">{announcements.length} new</span>

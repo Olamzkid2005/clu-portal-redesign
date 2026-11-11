@@ -328,7 +328,7 @@ export function AttendancePage() {
       </div>
 
       <div className="bento">
-        <Card className="s4">
+        <Card className="s4 card--hug">
           <CardHead title="Overall" sub="All registered courses" />
           <div
             className="card__bd"

@@ -83,7 +83,7 @@ export function PaymentsPage() {
       </div>
 
       <div className="bento">
-        <Card className="s7">
+        <Card className="s7 card--hug">
           <CardHead
             title="Account balance"
             sub={`${student.session} session`}

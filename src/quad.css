@@ -2828,7 +2828,7 @@ a.lab__choose {
 /* ============================== student home ============================== */
 
 .student-home {
-  align-items: start;
+  align-items: stretch;
 }
 
 .dayhead {

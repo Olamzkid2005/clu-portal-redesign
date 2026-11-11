@@ -361,7 +361,7 @@ export function CoursesPage() {
           </div>
         </Card>
 
-        <Card className="s5" flush>
+        <Card className="s5 card--hug" flush>
           <CardHead
             title="Available courses"
             sub="Electives and carry-over units"
