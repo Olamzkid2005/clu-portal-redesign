@@ -7,6 +7,9 @@ import "./designs.css";
 import "./quad.css";
 import "./workspace.css";
 import "./refine.css";
+import "./dashboard.css";
+import "./signin.css";
+import "./unify.css";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>

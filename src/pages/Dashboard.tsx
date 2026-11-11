@@ -115,58 +115,57 @@ export default function Dashboard() {
       ? "Tomorrow"
       : nextDate.toLocaleDateString("en-GB", { weekday: "long" });
 
-  const hrefFor = (id: string) => {
-    const target = document.getElementById(id);
-    if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
-    else go(id);
-  };
-
   return (
-    <div className="student-home">
-      <section className="student-hero">
-        <HeroAmbient />
-        <div className="student-hero__copy">
-          <div className="student-hero__topline">
-            <div className="student-hero__eyebrow">
-              <span className="student-hero__pip" />
-              Student dashboard
+    <div className="student-home" id="student-dashboard">
+      <div className="student-hero-stage">
+        <section className="student-hero">
+          <HeroAmbient />
+          <div className="student-hero__copy">
+            <div className="student-hero__topline">
+              <div className="student-hero__eyebrow">
+                <span className="student-hero__pip" />
+                Student dashboard
+              </div>
+              <div className="student-hero__level">
+                <GraduationCap />
+                <b>{student.level} Level</b>
+                <span>•</span>
+                <span>{student.programme}</span>
+              </div>
             </div>
-            <div className="student-hero__level">
-              <GraduationCap />
-              <b>{student.level} Level</b>
-              <span>•</span>
-              <span>{student.programme}</span>
+            <h1>
+              {greeting},<br />
+              <span>{student.firstName}!</span>
+            </h1>
+            <p className="student-hero__lede">Keep pushing. You&apos;re doing great!</p>
+            <p className="student-hero__day">
+              <Clock aria-hidden="true" />
+              <span>
+                {dateLabel} · {dayLine}
+              </span>
+            </p>
+            <div className="student-hero__actions">
+              <Button variant="primary" onClick={() => go("timetable")}>
+                Open timetable <ArrowRight />
+              </Button>
+              <Button onClick={() => go("courses")}>
+                <BookOpen /> My courses
+              </Button>
             </div>
           </div>
-          <h1>
-            {greeting},<br />
-            <span>{student.firstName}!</span>
-          </h1>
-          <p className="student-hero__lede">Keep pushing. You&apos;re doing great!</p>
-          <p className="student-hero__day">
-            <Clock aria-hidden="true" />
-            <span>
-              {dateLabel} · {dayLine}
-            </span>
-          </p>
-          <div className="student-hero__actions">
-            <Button variant="primary" onClick={() => go("timetable")}>
-              Open timetable <ArrowRight />
-            </Button>
-            <Button onClick={() => go("courses")}>
-              <BookOpen /> My courses
-            </Button>
-          </div>
-        </div>
+        </section>
 
         <div className="student-hero__figure">
-          <img src="/student-bitmoji.svg" alt={`Illustration of ${student.firstName} waving`} />
+          <img
+            src="/student-sitting.svg"
+            alt={`Illustration of ${student.firstName} sitting on the edge of the greeting card`}
+          />
         </div>
-      </section>
+      </div>
 
       <section className="student-quickrow" aria-label="At a glance">
         <button className="quickcard" onClick={() => go("timetable")}>
-          <span className="quickcard__icon quickcard__icon--brand">
+          <span className="quickcard__icon">
             <CalendarDays />
           </span>
           <span className="quickcard__copy">
@@ -182,12 +181,12 @@ export default function Dashboard() {
         </button>
 
         <button className="quickcard" onClick={() => go("payments")}>
-          <span className="quickcard__icon quickcard__icon--sage">
+          <span className="quickcard__icon">
             <CreditCard />
           </span>
           <span className="quickcard__copy">
             <small>Fees status</small>
-            <b className={fees.outstanding === 0 ? "quickcard__ok" : "quickcard__due"}>
+            <b className={fees.outstanding === 0 ? undefined : "quickcard__due"}>
               {fees.outstanding === 0 ? "Up to date" : `${naira(fees.outstanding)} due`}
             </b>
             <em>{student.session} session</em>
@@ -195,14 +194,16 @@ export default function Dashboard() {
           <ChevronRight />
         </button>
 
-        <button className="quickcard" onClick={() => hrefFor("announcements")}>
-          <span className="quickcard__icon quickcard__icon--blush">
-            <Megaphone />
+        <button className="quickcard" onClick={() => go("assignments")}>
+          <span className="quickcard__icon">
+            <ClipboardList />
           </span>
           <span className="quickcard__copy">
-            <small>Announcements</small>
-            <b>{announcements.length} new</b>
-            <em>Registry and your department</em>
+            <small>Open work</small>
+            <b>{openAssignments.length} items</b>
+            <em className={overdue ? "quickcard__alert" : undefined}>
+              {overdue ? "1 overdue" : "Nothing overdue"}
+            </em>
           </span>
           <ChevronRight />
         </button>
@@ -271,7 +272,7 @@ export default function Dashboard() {
             </button>
           </div>
           <div className="student-overview">
-            <Ring value={completedPct} size={150} label="Degree progress" text={`${completedPct}%`} />
+            <Ring value={completedPct} size={120} label="Degree progress" text={`${completedPct}%`} />
             <div className="student-overview__body">
               <ul className="student-legend">
                 <li>
@@ -298,20 +299,27 @@ export default function Dashboard() {
       </div>
 
       <div className="student-grid student-grid--lower">
-        <section className="student-panel">
+        <section
+          className={
+            overdue ? "student-panel student-panel--attention" : "student-panel"
+          }
+        >
           <div className="student-panel__head">
             <div className="student-panel__title">
               <span className="student-panel__icon">
                 <ClipboardList />
               </span>
               <div>
-                <h2>Coming up</h2>
-                <p className="student-panel__sub">Open work and deadlines</p>
+                <h2>Deadlines</h2>
+                <p className="student-panel__sub">Open work and due dates</p>
               </div>
             </div>
-            <button className="student-panel__link" onClick={() => go("assignments")}>
-              All assignments <ArrowRight />
-            </button>
+            <div className="student-panel__actions">
+              {overdue && <span className="student-panel__flag">1 overdue</span>}
+              <button className="student-panel__link" onClick={() => go("assignments")}>
+                All assignments <ArrowRight />
+              </button>
+            </div>
           </div>
           <div className="student-tasks">
             {nextAssignments.map((a) => (

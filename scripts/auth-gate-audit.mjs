@@ -200,18 +200,22 @@ const readDesignDetails = (page) =>
       };
     };
 
-    const header = document.querySelector(".page__head, .workspace-hero, .page .hero");
+    const header = document.querySelector(
+      ".page__head, .workspace-hero, .page .hero, .student-hero"
+    );
     const headerSelector = header
       ? header.matches(".page__head")
         ? ".page__head"
         : header.matches(".workspace-hero")
           ? ".workspace-hero"
-          : ".page .hero"
+          : header.matches(".student-hero")
+            ? ".student-hero"
+            : ".page .hero"
       : null;
     const cardTitle = document.querySelector(".card__title");
     const filterHeader = document.querySelector(".card__hd--filters");
     return {
-      eyebrowRule: pseudo(".eyebrow", "::before"),
+      eyebrowRule: pseudo(".eyebrow, .student-hero__eyebrow", "::before"),
       sectionRule: headerSelector ? pseudo(headerSelector, "::after") : null,
       cardTitleRule: cardTitle
         ? pseudo(".card__title", null)

@@ -1,0 +1,211 @@
+/* ==========================================================================
+   Sign-in completion pass — one column, explicit labels, visible states.
+   ========================================================================== */
+
+.signin .signin__form {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 16px;
+}
+
+.signin .signin__field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 0;
+}
+
+.signin .signin__label {
+  display: block;
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 650;
+  line-height: 1.35;
+}
+
+.signin .signin__field > input,
+.signin .signin__password input {
+  width: 100%;
+  height: 48px;
+  padding: 0 14px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface);
+  color: var(--ink);
+  font-size: 14px;
+  transition:
+    border-color 150ms ease,
+    box-shadow 150ms ease,
+    background 150ms ease;
+}
+
+:root .signin .signin__field > input:hover,
+:root .signin .signin__password input:hover {
+  border-color: #d8c1c5;
+}
+
+:root .signin .signin__field > input:focus,
+:root .signin .signin__password input:focus {
+  outline: none;
+  border-color: var(--brand);
+  background: var(--surface);
+  box-shadow: 0 0 0 3px rgba(109, 59, 77, 0.16);
+}
+
+:root .signin .signin__field.signin__field--invalid > input,
+:root .signin .signin__field.signin__field--invalid .signin__password input {
+  border-color: var(--red);
+}
+
+:root .signin .signin__field--invalid > input:focus,
+:root .signin .signin__field--invalid .signin__password input:focus {
+  border-color: var(--red);
+  box-shadow: 0 0 0 3px rgba(169, 47, 66, 0.14);
+}
+
+.signin .signin__field > input:disabled,
+.signin .signin__password input:disabled {
+  background: var(--surface-2);
+  color: var(--muted);
+  cursor: not-allowed;
+  opacity: 1;
+}
+
+.signin .signin__password {
+  border-radius: 10px;
+}
+
+.signin .signin__password input {
+  padding-right: 76px;
+}
+
+.signin .signin__reveal {
+  top: 1px;
+  right: 1px;
+  bottom: 1px;
+  padding: 0 12px;
+  border-radius: 0 9px 9px 0;
+  font-size: 12px;
+}
+
+.signin .signin__reveal:disabled {
+  color: var(--faint);
+  cursor: not-allowed;
+}
+
+.signin .signin__fielderror {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  margin: 1px 0 0;
+  color: var(--red);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.45;
+}
+
+.signin .signin__fielderror svg {
+  flex: 0 0 auto;
+  width: 14px;
+  height: 14px;
+  margin-top: 1px;
+}
+
+.signin .signin__row {
+  margin: 0;
+}
+
+.signin .signin__error {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin: 0;
+  padding: 10px 12px;
+  border: 1px solid rgba(169, 47, 66, 0.18);
+  border-left: 3px solid var(--red);
+  border-radius: 8px;
+  background: var(--red-soft);
+  color: var(--red);
+  font-size: 12.5px;
+  line-height: 1.5;
+}
+
+.signin .signin__error svg {
+  flex: 0 0 auto;
+  width: 15px;
+  height: 15px;
+  margin-top: 1px;
+}
+
+.signin .signin__submit {
+  width: 100%;
+  height: 48px;
+  margin-top: 0;
+  padding: 0 16px;
+  justify-content: space-between;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 650;
+}
+
+.signin .signin__submit:disabled {
+  border-color: color-mix(in srgb, var(--brand) 70%, var(--surface));
+  background: color-mix(in srgb, var(--brand) 70%, var(--surface));
+  color: #fff;
+  cursor: wait;
+  opacity: 1;
+}
+
+.signin .signin__submitlabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.signin .signin__submitmeta {
+  font-size: 12px;
+  font-weight: 500;
+  opacity: 0.82;
+}
+
+.signin .signin__spinner {
+  width: 16px;
+  height: 16px;
+  animation: signin-spin 0.8s linear infinite;
+}
+
+.signin .signin__role:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.signin .signin__reveal:focus-visible,
+.signin .signin__role:focus-visible,
+.signin .signin__submit:focus-visible,
+.signin .signin__help:focus-visible {
+  outline: 3px solid rgba(109, 59, 77, 0.22);
+  outline-offset: 2px;
+}
+
+@keyframes signin-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .signin .signin__spinner {
+    animation-duration: 1.6s;
+  }
+}
+
+@media (max-width: 720px) {
+  .signin .signin__form {
+    gap: 15px;
+  }
+
+  .signin .signin__fielderror,
+  .signin .signin__error {
+    font-size: 12px;
+  }
+}

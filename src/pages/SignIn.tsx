@@ -1,8 +1,37 @@
-import { useState, type FormEvent } from "react";
-import { ArrowRight, ArrowUpRight, Eye, EyeOff } from "lucide-react";
+import { useRef, useState, type FormEvent } from "react";
+import {
+  AlertCircle,
+  ArrowRight,
+  ArrowUpRight,
+  Eye,
+  EyeOff,
+  Loader2,
+} from "lucide-react";
 import { Avatar } from "../components/Avatar";
 import { cx } from "../components/ui";
 import { ROLE_META, ROLE_ORDER, useRole, type Role } from "../roles";
+
+type FieldErrors = {
+  email?: string;
+  password?: string;
+};
+
+const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+const validateEmail = (value: string) => {
+  const email = value.trim();
+  if (!email) return "Enter your university email address.";
+  if (/\s/.test(value)) return "Remove the spaces from your email address.";
+  if (!emailPattern.test(email)) {
+    return "Use the format name@chrislanduniversity.edu.ng.";
+  }
+  return undefined;
+};
+
+const validatePassword = (value: string) => {
+  if (!value) return "Enter your portal password to continue.";
+  return undefined;
+};
 
 export default function SignIn() {
   const { role, signIn } = useRole();
@@ -10,29 +39,62 @@ export default function SignIn() {
   const [email, setEmail] = useState(ROLE_META[role].email);
   const [password, setPassword] = useState("chrisland");
   const [showPassword, setShowPassword] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const [errors, setErrors] = useState<FieldErrors>({});
+  const [formError, setFormError] = useState<string | null>(null);
+  const [status, setStatus] = useState<"idle" | "loading">("idle");
+  const emailRef = useRef<HTMLInputElement>(null);
+  const passwordRef = useRef<HTMLInputElement>(null);
 
   const meta = ROLE_META[selected];
+  const loading = status === "loading";
 
   const chooseRole = (next: Role) => {
+    if (loading) return;
     setSelected(next);
     setEmail(ROLE_META[next].email);
-    setError(null);
+    setErrors({});
+    setFormError(null);
   };
 
-  const submit = (event: FormEvent<HTMLFormElement>) => {
+  const validateOnBlur = (field: "email" | "password") => {
+    setErrors((current) => ({
+      ...current,
+      [field]: field === "email" ? validateEmail(email) : validatePassword(password),
+    }));
+  };
+
+  const submit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim())) {
-      setError("Enter a valid university email address.");
+    if (loading) return;
+
+    const nextErrors: FieldErrors = {
+      email: validateEmail(email),
+      password: validatePassword(password),
+    };
+    setErrors(nextErrors);
+    setFormError(null);
+
+    if (nextErrors.email) {
+      emailRef.current?.focus();
       return;
     }
-    if (password.length === 0) {
-      setError("Enter your portal password.");
+    if (nextErrors.password) {
+      passwordRef.current?.focus();
       return;
     }
-    setError(null);
-    signIn(selected);
-    window.location.hash = `#/${meta.home}`;
+
+    setStatus("loading");
+    try {
+      // Give the loading state one visible beat while the local demo auth resolves.
+      await new Promise<void>((resolve) => window.setTimeout(resolve, 450));
+      signIn(selected);
+      window.location.hash = `#/${meta.home}`;
+    } catch {
+      setStatus("idle");
+      setFormError(
+        "We couldn’t sign you in. Check your email and password, then try again."
+      );
+    }
   };
 
   return (
@@ -93,6 +155,7 @@ export default function SignIn() {
                 aria-selected={selected === item}
                 className={cx("signin__role", selected === item && "is-active")}
                 onClick={() => chooseRole(item)}
+                disabled={loading}
               >
                 <b>{ROLE_META[item].label}</b>
               </button>
@@ -109,40 +172,91 @@ export default function SignIn() {
             </div>
           </div>
 
-          <form className="signin__form" onSubmit={submit} noValidate>
-            <label className="signin__field">
-              <span>University email</span>
+          <form
+            className="signin__form"
+            onSubmit={submit}
+            noValidate
+            aria-busy={loading}
+          >
+            <div className={cx("signin__field", errors.email && "signin__field--invalid")}>
+              <label className="signin__label" htmlFor="signin-email">
+                University email
+              </label>
               <input
+                ref={emailRef}
+                id="signin-email"
                 type="email"
                 name="email"
                 autoComplete="username"
+                inputMode="email"
+                autoCapitalize="none"
+                spellCheck={false}
                 value={email}
-                onChange={(event) => setEmail(event.target.value)}
-                aria-invalid={!!error}
+                onChange={(event) => {
+                  setEmail(event.target.value);
+                  setFormError(null);
+                }}
+                onBlur={() => validateOnBlur("email")}
+                aria-invalid={Boolean(errors.email)}
+                aria-describedby={errors.email ? "signin-email-error" : undefined}
+                aria-required="true"
+                disabled={loading}
+                required
               />
-            </label>
+              {errors.email && (
+                <p className="signin__fielderror" id="signin-email-error" role="alert">
+                  <AlertCircle aria-hidden="true" />
+                  <span>{errors.email}</span>
+                </p>
+              )}
+            </div>
 
-            <label className="signin__field">
-              <span>Password</span>
+            <div
+              className={cx(
+                "signin__field",
+                errors.password && "signin__field--invalid"
+              )}
+            >
+              <label className="signin__label" htmlFor="signin-password">
+                Password
+              </label>
               <span className="signin__password">
                 <input
+                  ref={passwordRef}
+                  id="signin-password"
                   type={showPassword ? "text" : "password"}
                   name="password"
                   autoComplete="current-password"
                   value={password}
-                  onChange={(event) => setPassword(event.target.value)}
+                  onChange={(event) => {
+                    setPassword(event.target.value);
+                    setFormError(null);
+                  }}
+                  onBlur={() => validateOnBlur("password")}
+                  aria-invalid={Boolean(errors.password)}
+                  aria-describedby={errors.password ? "signin-password-error" : undefined}
+                  aria-required="true"
+                  disabled={loading}
+                  required
                 />
                 <button
                   type="button"
                   className="signin__reveal"
                   onClick={() => setShowPassword((visible) => !visible)}
                   aria-label={showPassword ? "Hide password" : "Show password"}
+                  disabled={loading}
                 >
                   {showPassword ? <EyeOff /> : <Eye />}
                   {showPassword ? "Hide" : "Show"}
                 </button>
               </span>
-            </label>
+              {errors.password && (
+                <p className="signin__fielderror" id="signin-password-error" role="alert">
+                  <AlertCircle aria-hidden="true" />
+                  <span>{errors.password}</span>
+                </p>
+              )}
+            </div>
 
             <div className="signin__row">
               <span className="signin__sessionnote">Session ends with this tab</span>
@@ -151,15 +265,37 @@ export default function SignIn() {
               </a>
             </div>
 
-            {error && (
+            {formError && (
               <div className="signin__error" role="alert">
-                {error}
+                <AlertCircle aria-hidden="true" />
+                <span>{formError}</span>
               </div>
             )}
 
-            <button className="btn btn--primary signin__submit" type="submit">
-              Sign in as {meta.label.toLowerCase()}
-              <ArrowRight />
+            <button
+              className={cx("btn btn--primary signin__submit", loading && "is-loading")}
+              type="submit"
+              disabled={loading}
+              aria-disabled={loading}
+            >
+              {loading ? (
+                <>
+                  <span className="signin__submitlabel">
+                    <Loader2 className="signin__spinner" aria-hidden="true" />
+                    Signing you in…
+                  </span>
+                  <span className="signin__submitmeta" aria-hidden="true">
+                    Please wait
+                  </span>
+                </>
+              ) : (
+                <>
+                  <span className="signin__submitlabel">
+                    Sign in as {meta.label.toLowerCase()}
+                  </span>
+                  <ArrowRight aria-hidden="true" />
+                </>
+              )}
             </button>
           </form>
 

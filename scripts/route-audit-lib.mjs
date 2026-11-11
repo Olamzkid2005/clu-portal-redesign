@@ -245,10 +245,12 @@ export async function scanRoute(page, { kind = "portal" } = {}) {
       };
     };
 
-    const eyebrowSelector = isDesign ? ".lab__kicker" : ".eyebrow";
+    const eyebrowSelector = isDesign
+      ? ".lab__kicker"
+      : ".eyebrow, .student-hero__eyebrow";
     const headerSelector = isDesign
       ? ".lab__intro"
-      : ".page__head, .workspace-hero, .page .hero";
+      : ".page__head, .workspace-hero, .page .hero, .student-hero";
     const cardTitleSelector = isDesign ? ".lab__barname" : ".card__title";
 
     const eyebrowRule = rule(eyebrowSelector, "::before");

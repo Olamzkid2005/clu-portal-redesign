@@ -19,6 +19,23 @@ import { RegistrarQueue } from "./pages/staff/Registrar";
 import type { RequestKey } from "./data";
 
 const STAFF_BASES = ["lecturer", "bursar", "ict", "vc", "registrar"];
+const KNOWN_BASES = new Set([
+  "dashboard",
+  "timetable",
+  "courses",
+  "results",
+  "assignments",
+  "attendance",
+  "payments",
+  "accommodation",
+  "requests",
+  "evaluation",
+  "medicals",
+  "feedback",
+  "profile",
+  "settings",
+  ...STAFF_BASES,
+]);
 
 const readRoute = () => window.location.hash.replace(/^#\/?/, "") || "dashboard";
 
@@ -39,13 +56,17 @@ export default function App() {
 
   const [requestedBase, param] = route.split("/");
   const showingDesignLab = requestedBase === "designs";
+  const knownBase = showingDesignLab || KNOWN_BASES.has(requestedBase);
   const allowed =
-    showingDesignLab ||
-    (role === "student" ? !STAFF_BASES.includes(requestedBase) : requestedBase === role);
+    knownBase &&
+    (showingDesignLab ||
+      (role === "student" ? !STAFF_BASES.includes(requestedBase) : requestedBase === role));
 
   useEffect(() => {
-    if (signedIn && !showingDesignLab && !allowed) go(ROLE_META[role].home);
-  }, [signedIn, allowed, showingDesignLab, role, go]);
+    if (signedIn && !showingDesignLab && (!knownBase || !allowed)) {
+      go(ROLE_META[role].home);
+    }
+  }, [signedIn, allowed, knownBase, showingDesignLab, role, go]);
 
   useEffect(() => {
     if (!signedIn && window.location.hash !== "#/signin") {
@@ -158,9 +179,19 @@ export default function App() {
 
   return (
     <ToastProvider>
+      <a
+        className="skip-link"
+        href="#main-content"
+        onClick={(event) => {
+          event.preventDefault();
+          document.getElementById("main-content")?.focus();
+        }}
+      >
+        Skip to main content
+      </a>
       <NavContext.Provider value={{ route, go }}>
         <Shell>
-          <main className="page">
+          <main className="page" id="main-content" tabIndex={-1}>
             {page}
             <footer className="foot">
               <span>

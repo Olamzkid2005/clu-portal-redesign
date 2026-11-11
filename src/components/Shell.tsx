@@ -212,9 +212,61 @@ function DrawerNav({
   const pending = assignments.filter(
     (a) => a.status === "pending" || a.status === "overdue"
   ).length;
+  const panelRef = useRef<HTMLElement>(null);
+  const onCloseRef = useRef(onClose);
+  onCloseRef.current = onClose;
+
+  useEffect(() => {
+    const panel = panelRef.current;
+    if (!panel) return;
+
+    const focusables = () =>
+      Array.from(
+        panel.querySelectorAll<HTMLElement>(
+          'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
+        )
+      ).filter((element) => element.getClientRects().length > 0);
+
+    panel.querySelector<HTMLElement>(".drawerpanel__close")?.focus();
+
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        event.preventDefault();
+        onCloseRef.current();
+        return;
+      }
+
+      if (event.key !== "Tab") return;
+      const items = focusables();
+      if (items.length === 0) {
+        event.preventDefault();
+        panel.focus();
+        return;
+      }
+
+      const first = items[0];
+      const last = items[items.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    };
+
+    panel.addEventListener("keydown", onKeyDown);
+    return () => panel.removeEventListener("keydown", onKeyDown);
+  }, []);
 
   return (
     <aside
+      ref={panelRef}
+      id="portal-drawer"
+      role="dialog"
+      aria-modal="true"
+      aria-label={`${meta.label} menu`}
+      tabIndex={-1}
       className={cx("drawerpanel", role === "student" && "drawerpanel--student")}
       onClick={(event) => event.stopPropagation()}
     >
@@ -316,6 +368,7 @@ export default function Shell({ children }: { children: ReactNode }) {
   const [notes, setNotes] = useState(seedNotifications);
   const headerRef = useRef<HTMLElement>(null);
   const searchRef = useRef<HTMLInputElement>(null);
+  const drawerTriggerRef = useRef<HTMLButtonElement | null>(null);
 
   const groups = role === "student" ? studentGroups : staffGroups[role];
 
@@ -335,7 +388,6 @@ export default function Shell({ children }: { children: ReactNode }) {
   useEffect(() => {
     const onKey = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
-        setDrawer(false);
         setMenu(null);
       }
       if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === "k") {
@@ -391,6 +443,16 @@ export default function Shell({ children }: { children: ReactNode }) {
     (a) => a.status === "pending" || a.status === "overdue"
   ).length;
   const toggleTheme = () => setTheme((current) => (current === "dark" ? "light" : "dark"));
+
+  const openDrawer = (trigger: HTMLButtonElement) => {
+    drawerTriggerRef.current = trigger;
+    setDrawer(true);
+  };
+
+  const closeDrawer = () => {
+    setDrawer(false);
+    window.requestAnimationFrame(() => drawerTriggerRef.current?.focus());
+  };
 
   const handleSignOut = () => {
     signOut();
@@ -690,7 +752,13 @@ export default function Shell({ children }: { children: ReactNode }) {
         </header>
 
         <header className="mobilebar">
-          <button className="iconbtn" onClick={() => setDrawer(true)} aria-label="Open menu">
+          <button
+            className="iconbtn"
+            onClick={(event) => openDrawer(event.currentTarget)}
+            aria-label="Open menu"
+            aria-expanded={drawer}
+            aria-controls="portal-drawer"
+          >
             <Menu />
           </button>
           <div className="mobilebar__copy">
@@ -704,8 +772,10 @@ export default function Shell({ children }: { children: ReactNode }) {
           </button>
           <button
             className="mobilebar__me"
-            onClick={() => setDrawer(true)}
+            onClick={(event) => openDrawer(event.currentTarget)}
             aria-label="Open account menu"
+            aria-expanded={drawer}
+            aria-controls="portal-drawer"
           >
             <Avatar name={meta.name} photo={meta.photo} size={28} />
           </button>
@@ -727,7 +797,12 @@ export default function Shell({ children }: { children: ReactNode }) {
               {tab.label}
             </button>
           ))}
-          <button className="tabbar__item" onClick={() => setDrawer(true)}>
+          <button
+            className="tabbar__item"
+            onClick={(event) => openDrawer(event.currentTarget)}
+            aria-expanded={drawer}
+            aria-controls="portal-drawer"
+          >
             <Menu />
             More
           </button>
@@ -735,7 +810,7 @@ export default function Shell({ children }: { children: ReactNode }) {
       </div>
 
       {drawer && (
-        <div className="scrimdrawer" onClick={() => setDrawer(false)}>
+        <div className="scrimdrawer" onClick={closeDrawer}>
           <DrawerNav
             groups={groups}
             route={route}
@@ -745,7 +820,7 @@ export default function Shell({ children }: { children: ReactNode }) {
             theme={theme}
             onToggleTheme={toggleTheme}
             onSignOut={handleSignOut}
-            onClose={() => setDrawer(false)}
+            onClose={closeDrawer}
           />
         </div>
       )}

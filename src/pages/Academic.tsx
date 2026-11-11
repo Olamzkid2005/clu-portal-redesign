@@ -166,7 +166,7 @@ export function ResultsPage() {
                       <tr key={key + "-detail"}>
                         <td colSpan={7} style={{ padding: 0, background: "var(--surface-2)" }}>
                           <div style={{ padding: "4px 18px 16px" }}>
-                            <table className="table table--compact">
+                            <table className="table table--stack table--compact">
                               <thead>
                                 <tr>
                                   <th>Course</th>
@@ -179,10 +179,10 @@ export function ResultsPage() {
                               <tbody>
                                 {r.courses.map((c) => (
                                   <tr key={c.code}>
-                                    <td>{c.title}</td>
-                                    <td className="muted">{c.code}</td>
-                                    <td className="t-right tnum">{c.units}</td>
-                                    <td className="t-right">
+                                    <td data-label="Course">{c.title}</td>
+                                    <td data-label="Code" className="muted">{c.code}</td>
+                                    <td data-label="Units" className="t-right tnum">{c.units}</td>
+                                    <td data-label="Grade" className="t-right">
                                       {c.grade ? (
                                         <span className={cx("grade", `grade--${c.grade.toLowerCase()}`)}>
                                           {c.grade}
@@ -191,7 +191,7 @@ export function ResultsPage() {
                                         <span className="muted tiny">—</span>
                                       )}
                                     </td>
-                                    <td className="t-right tnum">
+                                    <td data-label="Points" className="t-right tnum">
                                       {c.grade ? c.units * GRADE_POINTS[c.grade] : "—"}
                                     </td>
                                   </tr>

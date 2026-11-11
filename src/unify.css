@@ -1,0 +1,351 @@
+/* ==========================================================================
+   Release finish
+   One opaque surface language, one shape scale and the same interaction
+   details across every role. The dashboard keeps its own color tokens; staff
+   roles use the root workspace tokens.
+   ========================================================================== */
+
+.shell--workspace {
+  --u-surface: var(--surface);
+  --u-surface-2: var(--surface-2);
+  --u-canvas: var(--canvas);
+  --u-rail: var(--rail);
+  --u-rail-soft: color-mix(in srgb, var(--accent) 12%, var(--rail));
+  --u-ink: var(--ink);
+  --u-cta: var(--brand-strong);
+  --u-accent: var(--accent);
+  --u-drawer: var(--rail);
+  --u-control-radius: 8px;
+  --u-surface-radius: 12px;
+}
+
+.shell--student {
+  --u-surface: var(--d-surface);
+  --u-surface-2: color-mix(in srgb, var(--d-ink) 4%, var(--d-surface));
+  --u-canvas: var(--d-paper);
+  --u-rail: var(--d-ink);
+  --u-rail-soft: color-mix(in srgb, var(--d-accent) 14%, var(--d-ink));
+  --u-ink: var(--d-ink);
+  --u-cta: var(--d-accent);
+  --u-accent: var(--d-accent);
+  --u-drawer: var(--d-ink);
+}
+
+[data-theme="dark"] .shell--student {
+  --u-drawer: var(--d-surface);
+}
+
+[data-theme="dark"] .shell--workspace:not(.shell--student) {
+  --u-drawer: var(--surface);
+}
+
+/* Flat, opaque chrome and surfaces everywhere in the signed-in product. */
+.shell--workspace,
+.shell--workspace *,
+.shell--workspace *::before,
+.shell--workspace *::after {
+  background-image: none !important;
+}
+
+.shell--workspace,
+.shell--workspace .main,
+.shell--workspace .page {
+  background-color: var(--u-canvas) !important;
+}
+
+.shell--workspace .quadhead,
+.shell--workspace .mobilebar,
+.shell--workspace .tabbar {
+  background-color: var(--u-canvas) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+.shell--workspace .quadhead,
+.shell--workspace .mobilebar {
+  border-bottom: 1px solid var(--line) !important;
+}
+
+.shell--workspace .search__input,
+.shell--workspace .searchfield__input {
+  background-color: var(--u-surface) !important;
+}
+
+.shell--workspace .search__panel,
+.shell--workspace .menupanel {
+  background-color: var(--u-surface) !important;
+}
+
+.shell--workspace .card,
+.shell--workspace .stat,
+.shell--workspace .tablewrap,
+.shell--workspace .workspace-hero,
+.shell--workspace .student-hero,
+.shell--workspace .student-panel,
+.shell--workspace .quickcard,
+.shell--workspace .student-cgpa,
+.shell--workspace .signal,
+.shell--workspace .search__panel,
+.shell--workspace .menupanel,
+.shell--workspace .kv {
+  background-color: var(--u-surface) !important;
+}
+
+/* The rail stays a solid, high-contrast block in every theme. */
+.shell--workspace .portal-rail {
+  background-color: var(--u-rail) !important;
+}
+
+.shell--workspace .portal-rail__promo {
+  background-color: var(--u-rail-soft) !important;
+}
+
+.shell--workspace .portal-rail__mark {
+  background-color: var(--u-cta) !important;
+  color: var(--u-surface) !important;
+}
+
+.shell--workspace .portal-rail__link,
+.shell--workspace .portal-rail__sublink,
+.shell--workspace .drawerlink {
+  background-color: transparent !important;
+}
+
+.shell--workspace .portal-rail__link:hover {
+  background-color: var(--u-rail-soft) !important;
+}
+
+.shell--workspace .portal-rail__link.is-active {
+  background-color: var(--u-surface) !important;
+  color: var(--u-ink) !important;
+  box-shadow: none !important;
+}
+
+.shell--workspace .portal-rail__link.is-active:not(:focus-visible) {
+  box-shadow: none !important;
+}
+
+.shell--workspace .portal-rail__link.is-active::before {
+  display: none !important;
+}
+
+.shell--workspace .portal-rail__link.is-active svg {
+  color: var(--u-accent) !important;
+}
+
+.shell--workspace .portal-rail__sublink.is-active {
+  background-color: var(--u-surface) !important;
+  color: var(--u-ink) !important;
+}
+
+.shell--workspace .drawerpanel {
+  background-color: var(--u-drawer) !important;
+}
+
+.shell--workspace .student-hero__eyebrow,
+.shell--workspace .student-hero__level {
+  background-color: var(--u-surface) !important;
+  backdrop-filter: none !important;
+}
+
+.shell--workspace .student-hero__eyebrow,
+.shell--workspace .student-hero__level {
+  border-radius: var(--u-control-radius) !important;
+}
+
+.shell--workspace .student-hero__eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 1px;
+  flex: 0 0 auto;
+  background: var(--u-accent);
+}
+
+.shell--workspace .student-hero__pip {
+  display: none;
+}
+
+.shell--workspace .student-hero {
+  position: relative;
+}
+
+.shell--workspace .student-hero::after {
+  content: "";
+  position: absolute;
+  left: var(--s-6);
+  bottom: 0;
+  width: var(--s-7);
+  height: 2px;
+  background: var(--u-accent);
+  pointer-events: none;
+}
+
+/* Row fills are opaque so hover and zebra treatments do not introduce
+   translucent bands on large surfaces. */
+.shell--workspace .table tbody tr {
+  background-color: transparent !important;
+}
+
+.shell--workspace .table tbody tr:nth-child(even) {
+  background-color: var(--u-surface-2) !important;
+}
+
+.shell--workspace .table tbody tr:hover {
+  background-color: color-mix(in srgb, var(--u-accent) 6%, var(--u-surface)) !important;
+}
+
+/* One shape scale: controls 8px, surfaces 12px. */
+.shell--workspace :is(
+    button,
+    .btn,
+    .pill,
+    .iconbtn,
+    .user,
+    .tabbar__item,
+    .quadnav__tab,
+    .quadsubnav__link,
+    .portal-rail__link,
+    .portal-rail__sublink,
+    .drawerlink,
+    .drawerpanel__action,
+    .drawerpanel__close,
+    .input,
+    .select,
+    .textarea,
+    .search__input,
+    .searchfield__input,
+    .search__row,
+    .slotcard
+  ) {
+  border-radius: var(--u-control-radius) !important;
+}
+
+.shell--workspace :is(
+    .card,
+    .stat,
+    .tablewrap,
+    .workspace-hero,
+    .student-hero,
+    .student-hero__level,
+    .student-panel,
+    .quickcard,
+    .student-cgpa,
+    .signal,
+    .portal-rail__promo,
+    .search__panel,
+    .menupanel,
+    .kv
+  ) {
+  border-radius: var(--u-surface-radius) !important;
+}
+
+.shell--workspace button.quickcard {
+  border-radius: var(--u-control-radius) !important;
+}
+
+/* Compact text links are not physical controls; 4px keeps them legible
+   without letting their corners turn into a pill at 17px tall. */
+.shell--workspace .foot button,
+.shell--workspace .student-panel__link {
+  border-radius: 4px !important;
+}
+
+/* Solid brand fills replace former gradients. */
+.shell--workspace .btn--primary {
+  background-color: var(--u-cta) !important;
+  color: var(--u-surface) !important;
+  border-color: var(--u-cta) !important;
+}
+
+.shell--workspace .btn--primary:hover {
+  background-color: color-mix(in srgb, var(--u-cta) 88%, var(--u-ink)) !important;
+  border-color: color-mix(in srgb, var(--u-cta) 88%, var(--u-ink)) !important;
+}
+
+.shell--workspace .progress__bar {
+  background-color: var(--u-cta) !important;
+}
+
+.shell--workspace .chartplot__bar {
+  background-color: var(--u-cta) !important;
+}
+
+.shell--workspace .chartplot__bar.is-soft {
+  background-color: color-mix(in srgb, var(--u-cta) 22%, var(--u-surface)) !important;
+}
+
+/* Shared editorial details. */
+.shell--workspace .card__title {
+  padding-left: 8px !important;
+  border-left: 2px solid var(--u-accent) !important;
+  line-height: 1.25;
+}
+
+.shell--workspace .pill {
+  box-shadow: inset 3px 0 0 currentColor !important;
+}
+
+.shell--workspace .page__head::after,
+.shell--workspace .workspace-hero::after,
+.shell--workspace .hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 44px;
+  height: 2px;
+  background: var(--u-accent);
+}
+
+/* Touch targets are a product-wide rule, not a student-only exception. */
+@media (max-width: 980px) {
+  .shell--workspace .mobilebar .iconbtn {
+    width: 44px !important;
+    height: 44px !important;
+  }
+
+  .shell--workspace .mobilebar__me {
+    display: grid;
+    width: 44px !important;
+    height: 44px !important;
+    place-items: center;
+  }
+
+  .shell--workspace .foot button {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 0 4px;
+  }
+
+  .shell--workspace .btn {
+    min-height: 44px;
+  }
+
+  .shell--workspace .drawerpanel button,
+  .shell--workspace .tabbar__item {
+    min-height: 44px;
+  }
+}
+
+/* Keyboard bypass link. */
+.skip-link {
+  position: fixed;
+  top: 8px;
+  left: 8px;
+  z-index: 200;
+  padding: 10px 14px;
+  border: 1px solid var(--brand);
+  border-radius: var(--r-xs);
+  background: var(--surface);
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 600;
+  transform: translateY(-160%);
+  transition: transform 120ms var(--ease);
+}
+
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
