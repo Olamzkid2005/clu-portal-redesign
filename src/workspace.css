@@ -370,8 +370,7 @@
     box-shadow: 0 24px 60px -28px rgba(67, 39, 46, 0.3);
   }
 
-  .shell--workspace .quadbar > .quadbar__menu:first-of-type,
-  .shell--workspace .quadbar__actions > .quadbar__menu:first-of-type {
+  .shell--workspace .quadbar__actions > .quadbar__menu--notify {
     margin-left: auto;
   }
 

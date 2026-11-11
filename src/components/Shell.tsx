@@ -553,7 +553,7 @@ export default function Shell({ children }: { children: ReactNode }) {
                 )}
               </div>
 
-              <div className="quadbar__menu">
+              <div className="quadbar__menu quadbar__menu--notify">
                 <button
                   className="iconbtn"
                   onClick={() => setMenu(menu === "bell" ? null : "bell")}
