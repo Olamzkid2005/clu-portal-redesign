@@ -3,12 +3,16 @@ import {
   BookOpen,
   CalendarDays,
   ChevronRight,
+  ClipboardList,
+  Clock,
   CreditCard,
   FileCheck2,
   FileText,
+  Gauge,
   GraduationCap,
   HeartPulse,
   Megaphone,
+  Sparkles,
 } from "lucide-react";
 import {
   announcements,
@@ -23,6 +27,7 @@ import {
   timetable,
 } from "../data";
 import { Button, Ring } from "../components/ui";
+import HeroAmbient from "../components/HeroAmbient";
 import { useNav } from "../nav";
 
 const DAY_NAMES = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
@@ -119,6 +124,7 @@ export default function Dashboard() {
   return (
     <div className="student-home">
       <section className="student-hero">
+        <HeroAmbient />
         <div className="student-hero__copy">
           <div className="student-hero__topline">
             <div className="student-hero__eyebrow">
@@ -138,7 +144,10 @@ export default function Dashboard() {
           </h1>
           <p className="student-hero__lede">Keep pushing. You&apos;re doing great!</p>
           <p className="student-hero__day">
-            {dateLabel} · {dayLine}
+            <Clock aria-hidden="true" />
+            <span>
+              {dateLabel} · {dayLine}
+            </span>
           </p>
           <div className="student-hero__actions">
             <Button variant="primary" onClick={() => go("timetable")}>
@@ -202,7 +211,15 @@ export default function Dashboard() {
       <div className="student-grid">
         <section className="student-panel student-panel--classes">
           <div className="student-panel__head">
-            <h2>Upcoming classes</h2>
+            <div className="student-panel__title">
+              <span className="student-panel__icon">
+                <CalendarDays />
+              </span>
+              <div>
+                <h2>Upcoming classes</h2>
+                <p className="student-panel__sub">Your next three sessions</p>
+              </div>
+            </div>
             <button className="student-panel__link" onClick={() => go("timetable")}>
               View schedule <ArrowRight />
             </button>
@@ -240,7 +257,15 @@ export default function Dashboard() {
 
         <section className="student-panel student-panel--overview">
           <div className="student-panel__head">
-            <h2>Academic overview</h2>
+            <div className="student-panel__title">
+              <span className="student-panel__icon">
+                <Gauge />
+              </span>
+              <div>
+                <h2>Academic overview</h2>
+                <p className="student-panel__sub">Progress toward your degree</p>
+              </div>
+            </div>
             <button className="student-panel__link" onClick={() => go("results")}>
               Results <ArrowRight />
             </button>
@@ -275,7 +300,15 @@ export default function Dashboard() {
       <div className="student-grid student-grid--lower">
         <section className="student-panel">
           <div className="student-panel__head">
-            <h2>Coming up</h2>
+            <div className="student-panel__title">
+              <span className="student-panel__icon">
+                <ClipboardList />
+              </span>
+              <div>
+                <h2>Coming up</h2>
+                <p className="student-panel__sub">Open work and deadlines</p>
+              </div>
+            </div>
             <button className="student-panel__link" onClick={() => go("assignments")}>
               All assignments <ArrowRight />
             </button>
@@ -307,7 +340,15 @@ export default function Dashboard() {
 
         <section className="student-panel student-panel--announcements" id="announcements">
           <div className="student-panel__head">
-            <h2>Announcements</h2>
+            <div className="student-panel__title">
+              <span className="student-panel__icon">
+                <Megaphone />
+              </span>
+              <div>
+                <h2>Announcements</h2>
+                <p className="student-panel__sub">From registry and your department</p>
+              </div>
+            </div>
             <span className="student-panel__count">{announcements.length} new</span>
           </div>
           <div className="student-announcements">
@@ -327,7 +368,15 @@ export default function Dashboard() {
 
       <section className="student-panel student-panel--services">
         <div className="student-panel__head">
-          <h2>Student services</h2>
+          <div className="student-panel__title">
+            <span className="student-panel__icon">
+              <Sparkles />
+            </span>
+            <div>
+              <h2>Student services</h2>
+              <p className="student-panel__sub">Forms you use most</p>
+            </div>
+          </div>
           <span className="student-panel__count">Quick access</span>
         </div>
         <div className="student-services">
