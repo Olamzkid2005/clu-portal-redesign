@@ -1,0 +1,215 @@
+/* ==========================================================================
+   Animated hero media
+   One white illustration frame shared by sign-in, student and lecturer.
+   ========================================================================== */
+
+.hero-animation {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--line, #e7ddd5) 85%, transparent);
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 28px 56px -44px rgba(53, 29, 37, 0.55);
+  isolation: isolate;
+}
+
+.hero-animation__video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: contain;
+  background: #fff;
+}
+
+.hero-animation::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.6);
+  pointer-events: none;
+}
+
+/* Sign-in: the animation fills the empty space below the intro copy. */
+
+.signin {
+  --canvas: #f4efe8;
+  --surface: #fffdf9;
+  --surface-2: #fbf7f1;
+  --line: #e7ddd5;
+  --ink: #241b1f;
+  --ink-2: #42374a;
+  --muted: #756962;
+  --faint: #9a8d84;
+  --brand: #6d3b4d;
+  --brand-2: #8c5669;
+  --brand-soft: #f3e4e5;
+  --brand-ink: #482735;
+  --accent: #4d7a66;
+  --accent-soft: #e8f1ec;
+  --cta-bg: #6d3b4d;
+  --cta-hover: #542b3b;
+  background: var(--canvas);
+}
+
+.signin__top {
+  background: color-mix(in srgb, var(--surface) 88%, transparent);
+}
+
+.signin__panel {
+  border-color: var(--line);
+  border-radius: 18px;
+  background: var(--surface);
+}
+
+.signin__animation {
+  width: min(100%, 340px);
+  margin-top: 28px;
+}
+
+.signin__animationcaption {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 13px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.signin__animationcaption::before {
+  content: "";
+  flex: none;
+  width: 20px;
+  height: 1px;
+  background: var(--accent);
+}
+
+/* Student: the media sits inside the greeting card, never over the next row. */
+
+#student-dashboard .student-hero-stage {
+  margin-bottom: 0;
+}
+
+#student-dashboard .student-hero {
+  grid-template-columns: minmax(0, 1fr) 280px;
+  align-items: center;
+  overflow: hidden;
+}
+
+#student-dashboard .student-hero__media {
+  width: 280px;
+  justify-self: end;
+  align-self: center;
+}
+
+/* Lecturer: a compact media hero that replaces the old oversized arc. */
+
+.shell--workspace .workspace-hero.workspace-hero--media {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 190px;
+  align-items: center;
+  gap: 28px;
+  min-height: 220px;
+  padding: 26px 28px;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--brand) 15%, var(--line));
+  border-radius: 18px;
+  background: var(--surface);
+  box-shadow: 0 28px 60px -54px rgba(74, 38, 51, 0.45);
+}
+
+.shell--workspace .workspace-hero.workspace-hero--media::before {
+  display: none;
+}
+
+.shell--workspace .workspace-hero--media .workspace-hero__body {
+  max-width: 62ch;
+}
+
+.shell--workspace .workspace-hero--media .workspace-hero__actions {
+  margin: 18px 0 0;
+}
+
+.workspace-hero__media {
+  width: 180px;
+  justify-self: end;
+}
+
+@media (max-width: 1240px) {
+  #student-dashboard .student-hero {
+    grid-template-columns: minmax(0, 1fr) 240px;
+  }
+
+  #student-dashboard .student-hero__media {
+    width: 240px;
+  }
+}
+
+@media (max-width: 980px) {
+  #student-dashboard .student-hero {
+    grid-template-columns: minmax(0, 1fr) 190px;
+    padding: var(--s-5);
+  }
+
+  #student-dashboard .student-hero__copy {
+    padding-right: 0;
+  }
+
+  #student-dashboard .student-hero__media {
+    width: 190px;
+  }
+
+  .shell--workspace .workspace-hero.workspace-hero--media {
+    grid-template-columns: minmax(0, 1fr) 150px;
+    gap: 20px;
+    padding: 24px;
+  }
+
+  .workspace-hero__media {
+    width: 150px;
+  }
+}
+
+@media (max-width: 720px) {
+  .signin__animation {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  #student-dashboard .student-hero {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #student-dashboard .student-hero__media {
+    order: 0;
+    width: 140px;
+    align-self: flex-start;
+    margin-bottom: var(--s-3);
+  }
+
+  #student-dashboard .student-hero__copy {
+    order: 1;
+  }
+
+  #student-dashboard .student-hero__actions {
+    width: 100%;
+  }
+
+  .shell--workspace .workspace-hero.workspace-hero--media {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .workspace-hero__media {
+    width: 130px;
+    justify-self: start;
+  }
+}
+
+@media (max-width: 600px) {
+  #student-dashboard .student-hero__media {
+    width: 120px;
+  }
+}
