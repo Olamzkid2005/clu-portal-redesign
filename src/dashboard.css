@@ -564,7 +564,7 @@
 
 #student-dashboard .student-hero__actions .btn:not(.btn--primary):hover {
   border-color: var(--d-accent);
-  background: var(--d-hover);
+  background: color-mix(in srgb, var(--d-accent) 7%, var(--d-surface));
   color: var(--d-ink);
 }
 

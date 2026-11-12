@@ -7,7 +7,7 @@
   position: relative;
   overflow: hidden;
   border: 1px solid color-mix(in srgb, var(--line, #e7ddd5) 85%, transparent);
-  border-radius: 18px;
+  border-radius: 12px;
   background: #fff;
   box-shadow: 0 28px 56px -44px rgba(53, 29, 37, 0.55);
   isolation: isolate;
@@ -59,7 +59,7 @@
 
 .signin__panel {
   border-color: var(--line);
-  border-radius: 18px;
+  border-radius: 12px;
   background: var(--surface);
 }
 
