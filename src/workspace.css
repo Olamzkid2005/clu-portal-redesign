@@ -3096,21 +3096,8 @@ body {
   font-size: 12px;
 }
 
-.signin__facts {
-  margin-top: 22px;
-}
 
-.signin__facts b {
-  color: var(--ink);
-  font-size: 14px;
-  font-weight: 650;
-}
 
-.signin__facts p {
-  color: var(--muted);
-  font-size: 13px;
-  line-height: 1.6;
-}
 
 .signin__panel {
   padding: clamp(24px, 3vw, 34px);

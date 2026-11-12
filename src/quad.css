@@ -3513,30 +3513,9 @@ a.lab__choose {
   letter-spacing: -0.04em;
 }
 
-.signin__facts {
-  margin-top: 22px;
-  border-top: 1px solid var(--line);
-}
 
-.signin__facts > div {
-  display: grid;
-  grid-template-columns: 92px minmax(0, 1fr);
-  gap: 18px;
-  padding: 14px 0;
-  border-bottom: 1px solid var(--line-2);
-}
 
-.signin__facts b {
-  color: var(--ink);
-  font-size: 11.5px;
-  font-weight: 500;
-}
 
-.signin__facts p {
-  color: var(--muted);
-  font-size: 10.5px;
-  line-height: 1.55;
-}
 
 .signin__role {
   display: flex;
@@ -3555,10 +3534,6 @@ a.lab__choose {
     font-size: clamp(42px, 12vw, 58px);
   }
 
-  .signin__facts > div {
-    grid-template-columns: 76px minmax(0, 1fr);
-    gap: 12px;
-  }
 }
 
 /* Keep the audit's section marker, but let the day view set its own rhythm. */
