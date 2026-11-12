@@ -287,10 +287,6 @@
   transform: translateX(3px);
 }
 
-.student-hero__figure img {
-  width: min(100%, 330px);
-  animation: clu-float 8s ease-in-out infinite;
-}
 
 .student-hero__level {
   padding: 8px 12px;
@@ -761,7 +757,6 @@
     display: none;
   }
 
-  .student-hero__figure img,
   .student-hero__pip,
   .student-home > * {
     animation: none !important;
@@ -1160,47 +1155,15 @@
   margin: 0;
 }
 
-.student-hero-stage .student-hero__figure {
-  position: absolute;
-  right: 54px;
-  bottom: -78px;
-  z-index: 5;
-  display: block;
-  width: 250px;
-  height: auto;
-  margin: 0;
-  align-self: auto;
-  justify-content: initial;
-  pointer-events: none;
-}
 
-.student-hero-stage .student-hero__figure::before {
-  display: none;
-}
 
-.student-hero-stage .student-hero__figure img {
-  display: block;
-  width: 100%;
-  max-width: none;
-  height: auto;
-  animation: none;
-  filter: drop-shadow(0 26px 28px rgba(75, 41, 53, 0.2));
-}
 
-[data-theme="dark"] .student-hero-stage .student-hero__figure img {
-  filter: drop-shadow(0 26px 34px rgba(0, 0, 0, 0.5));
-}
 
 @media (max-width: 1240px) {
   .student-hero-stage {
     margin-bottom: 58px;
   }
 
-  .student-hero-stage .student-hero__figure {
-    right: 34px;
-    bottom: -70px;
-    width: 232px;
-  }
 }
 
 @media (max-width: 980px) {
@@ -1208,9 +1171,6 @@
     margin-bottom: 0;
   }
 
-  .student-hero-stage .student-hero__figure {
-    display: none;
-  }
 
   .student-hero-stage .student-hero {
     grid-template-columns: minmax(0, 1fr);
