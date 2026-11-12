@@ -128,17 +128,6 @@ export default function SignIn() {
             <span>Portal support</span>
           </div>
 
-          <div className="signin__facts">
-            <div>
-              <b>Students</b>
-              <p>Timetable, registration, results, fees and campus services.</p>
-            </div>
-            <div>
-              <b>Staff</b>
-              <p>Teaching, finance, registry and systems workspaces.</p>
-            </div>
-          </div>
-
           <div className="signin__animation">
             <HeroAnimation
               src="/animations/signin.mp4"
