@@ -197,6 +197,12 @@
   --media-blob: color-mix(in srgb, var(--accent) 10%, var(--surface));
 }
 
+/* Keep the source artwork off the frame edge at every breakpoint. */
+#student-dashboard .student-hero__media.hero-animation,
+.workspace-hero__media.hero-animation {
+  padding: 4%;
+}
+
 @media (max-width: 1240px) {
   #student-dashboard .student-hero {
     grid-template-columns: minmax(0, 1fr) 280px;
