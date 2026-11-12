@@ -10,6 +10,7 @@ import "./refine.css";
 import "./dashboard.css";
 import "./signin.css";
 import "./unify.css";
+import "./hero-media.css";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
