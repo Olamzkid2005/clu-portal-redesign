@@ -94,7 +94,7 @@ export function RegistrarQueue() {
           <SearchField
             value={query}
             onChange={setQuery}
-            placeholder="Search student, matric or request type"
+            placeholder="Search student or request"
             label="Search requests"
           />
           <div className="seg">
