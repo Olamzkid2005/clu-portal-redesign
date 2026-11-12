@@ -67,6 +67,7 @@ export function LecturerOverview() {
         mark={<GraduationCap />}
         media={{
           src: "/animations/lecturer.mp4",
+          poster: "/animations/lecturer-poster.jpg",
           label: "A student in an online lesson with a teacher",
         }}
         actions={

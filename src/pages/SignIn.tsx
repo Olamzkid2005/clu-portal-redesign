@@ -131,6 +131,7 @@ export default function SignIn() {
           <div className="signin__animation">
             <HeroAnimation
               src="/animations/signin.mp4"
+              poster="/animations/signin-poster.jpg"
               label="Two students waving to each other on campus"
             />
             <p className="signin__animationcaption">

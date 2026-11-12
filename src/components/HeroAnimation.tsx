@@ -10,10 +10,12 @@ import { useEffect, useRef } from "react";
  */
 export default function HeroAnimation({
   src,
+  poster,
   label,
   className,
 }: {
   src: string;
+  poster: string;
   label: string;
   className?: string;
 }) {
@@ -50,6 +52,7 @@ export default function HeroAnimation({
         ref={videoRef}
         className="hero-animation__video"
         src={src}
+        poster={poster}
         autoPlay
         loop
         muted

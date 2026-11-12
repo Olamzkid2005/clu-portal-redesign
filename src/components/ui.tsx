@@ -116,7 +116,7 @@ export function WorkspaceHero({
   sub: ReactNode;
   actions?: ReactNode;
   mark?: ReactNode;
-  media?: { src: string; label: string };
+  media?: { src: string; poster: string; label: string };
 }) {
   return (
     <section className={cx("hero workspace-hero", media && "workspace-hero--media")}>
@@ -131,6 +131,7 @@ export function WorkspaceHero({
         <HeroAnimation
           className="workspace-hero__media"
           src={media.src}
+          poster={media.poster}
           label={media.label}
         />
       )}

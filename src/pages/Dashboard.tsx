@@ -156,6 +156,7 @@ export default function Dashboard() {
           <HeroAnimation
             className="student-hero__media"
             src="/animations/student.mp4"
+            poster="/animations/student-poster.jpg"
             label="A student studying at home with a laptop"
           />
         </section>
