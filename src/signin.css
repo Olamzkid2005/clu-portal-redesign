@@ -199,6 +199,54 @@
   }
 }
 
+/* The sign-in gate should honour the saved portal theme too. */
+[data-theme="dark"] .signin {
+  --canvas: #171214;
+  --surface: #211a1d;
+  --surface-2: #2a2025;
+  --line: #433136;
+  --ink: #f4ece8;
+  --ink-2: #e3d8d3;
+  --muted: #b3a49e;
+  --faint: #8f817b;
+  --brand: #d894a4;
+  --brand-2: #e5afbc;
+  --brand-soft: #35252b;
+  --brand-ink: #f4ece8;
+  --accent: #9dc4ae;
+  --accent-soft: #24312a;
+  --cta-bg: #a35c70;
+  --cta-hover: #b56c80;
+  --cta-ink: #fff9f2;
+}
+
+[data-theme="dark"] .signin .signin__top {
+  background: var(--surface);
+}
+
+[data-theme="dark"] .signin .signin__identity {
+  background: var(--surface-2);
+}
+
+[data-theme="dark"] .signin .signin__role.is-active {
+  border-color: #6b4a54;
+}
+
+[data-theme="dark"] .signin .signin__foot {
+  background: var(--canvas);
+  color: var(--muted);
+}
+
+[data-theme="dark"] .signin .signin__field > input:hover,
+[data-theme="dark"] .signin .signin__password input:hover {
+  border-color: #6b4a54;
+}
+
+[data-theme="dark"] .signin .signin__field > input:focus,
+[data-theme="dark"] .signin .signin__password input:focus {
+  box-shadow: 0 0 0 3px rgba(216, 148, 164, 0.2);
+}
+
 @media (max-width: 720px) {
   .signin .signin__form {
     gap: 15px;
@@ -207,5 +255,12 @@
   .signin .signin__fielderror,
   .signin .signin__error {
     font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Keep the full university address visible at phone widths. */
+  .signin .signin__field > input {
+    font-size: 13px;
   }
 }

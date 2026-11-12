@@ -96,6 +96,42 @@
   background-color: var(--u-rail) !important;
 }
 
+/* Keep the student rail dark like the other workspaces when the page is dark. */
+[data-theme="dark"] .shell--student {
+  --u-rail: var(--d-surface);
+  --u-rail-soft: color-mix(in srgb, var(--d-accent) 16%, var(--d-surface));
+}
+
+[data-theme="dark"] .shell--student .portal-rail {
+  background-color: var(--d-surface) !important;
+}
+
+[data-theme="dark"] .shell--student .portal-rail__brandcopy b,
+[data-theme="dark"] .shell--student .portal-rail__link.is-active {
+  color: var(--d-ink) !important;
+}
+
+[data-theme="dark"] .shell--student .portal-rail__brandcopy small,
+[data-theme="dark"] .shell--student .portal-rail__group-label,
+[data-theme="dark"] .shell--student .portal-rail__link,
+[data-theme="dark"] .shell--student .portal-rail__sublink {
+  color: var(--d-muted);
+}
+
+[data-theme="dark"] .shell--student .portal-rail__link:hover {
+  background-color: var(--u-rail-soft) !important;
+  color: var(--d-ink);
+}
+
+[data-theme="dark"] .shell--student .portal-rail__link.is-active {
+  background-color: var(--u-rail-soft) !important;
+}
+
+[data-theme="dark"] .shell--student .portal-rail__sublink.is-active {
+  background-color: var(--u-rail-soft) !important;
+  color: var(--d-ink) !important;
+}
+
 .shell--workspace .portal-rail__promo {
   background-color: var(--u-rail-soft) !important;
 }

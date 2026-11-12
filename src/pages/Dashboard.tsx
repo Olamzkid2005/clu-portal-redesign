@@ -27,7 +27,7 @@ import {
   timetable,
 } from "../data";
 import { Button, Ring } from "../components/ui";
-import HeroAmbient from "../components/HeroAmbient";
+import HeroAnimation from "../components/HeroAnimation";
 import { useNav } from "../nav";
 
 const DAY_NAMES = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
@@ -119,7 +119,6 @@ export default function Dashboard() {
     <div className="student-home" id="student-dashboard">
       <div className="student-hero-stage">
         <section className="student-hero">
-          <HeroAmbient />
           <div className="student-hero__copy">
             <div className="student-hero__topline">
               <div className="student-hero__eyebrow">
@@ -153,14 +152,14 @@ export default function Dashboard() {
               </Button>
             </div>
           </div>
-        </section>
 
-        <div className="student-hero__figure">
-          <img
-            src="/student-sitting.svg"
-            alt={`Illustration of ${student.firstName} sitting on the edge of the greeting card`}
+          <HeroAnimation
+            className="student-hero__media"
+            src="/animations/student.mp4"
+            poster="/animations/student-poster.jpg"
+            label="A student studying at home with a laptop"
           />
-        </div>
+        </section>
       </div>
 
       <section className="student-quickrow" aria-label="At a glance">

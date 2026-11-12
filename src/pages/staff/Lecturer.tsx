@@ -65,6 +65,11 @@ export function LecturerOverview() {
         title="Teaching overview"
         sub={`${courses.length} allocated courses · ${students} students · first semester.`}
         mark={<GraduationCap />}
+        media={{
+          src: "/animations/lecturer.mp4",
+          poster: "/animations/lecturer-poster.jpg",
+          label: "A student in an online lesson with a teacher",
+        }}
         actions={
           <Button variant="heroSolid" onClick={() => go("lecturer/courses")}>
             <ClipboardList /> Enter scores

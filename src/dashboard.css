@@ -56,10 +56,6 @@
   --control-lg: 48px;
   --tap: 44px;
   --dot: 6px;
-  --hero-figure: 250px;
-  --hero-figure-md: 232px;
-  --hero-figure-sm: 160px;
-  --hero-figure-xs: 120px;
 
   background: var(--d-paper);
   color: var(--d-ink);
@@ -377,7 +373,7 @@
 #student-dashboard .student-hero {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) var(--hero-figure);
+  grid-template-columns: minmax(0, 1fr) 320px;
   gap: 0;
   min-height: 0;
   padding: var(--s-6);
@@ -564,7 +560,7 @@
 
 #student-dashboard .student-hero__actions .btn:not(.btn--primary):hover {
   border-color: var(--d-accent);
-  background: var(--d-hover);
+  background: color-mix(in srgb, var(--d-accent) 7%, var(--d-surface));
   color: var(--d-ink);
 }
 
@@ -576,27 +572,7 @@
   transform: translateX(2px);
 }
 
-#student-dashboard .student-hero__figure {
-  position: absolute;
-  right: var(--s-7);
-  bottom: calc(var(--s-7) * -1);
-  z-index: 5;
-  display: block;
-  width: var(--hero-figure);
-  height: auto;
-  margin: 0;
-  align-self: auto;
-  justify-content: initial;
-  pointer-events: none;
-}
 
-#student-dashboard .student-hero__figure img {
-  display: block;
-  width: 100%;
-  max-width: none;
-  height: auto;
-  filter: drop-shadow(0 26px 28px color-mix(in srgb, var(--d-accent) 26%, transparent));
-}
 
 /* at-a-glance strip */
 
@@ -1214,12 +1190,6 @@
 
 /* ------------------------------ responsive ------------------------------ */
 
-@media (max-width: 1240px) {
-  #student-dashboard .student-hero__figure {
-    right: var(--s-6);
-    width: var(--hero-figure-md);
-  }
-}
 
 @media (max-width: 1120px) {
   #student-dashboard .student-hero {
@@ -1294,14 +1264,8 @@
 
   #student-dashboard .student-hero__copy {
     order: 0;
-    padding-right: calc(var(--hero-figure-sm) + var(--s-4));
   }
 
-  #student-dashboard .student-hero__figure {
-    right: var(--s-5);
-    bottom: calc(var(--s-5) * -1);
-    width: var(--hero-figure-sm);
-  }
 
   #student-dashboard .student-hero__actions {
     margin-top: var(--s-4);
@@ -1357,7 +1321,7 @@
   #student-dashboard .student-hero__actions {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
-    width: calc(100% - var(--hero-figure-xs) - var(--s-2));
+    width: 100%;
     gap: var(--s-2);
     margin-top: var(--s-4);
   }
@@ -1368,11 +1332,6 @@
     font-size: var(--t-2);
   }
 
-  #student-dashboard .student-hero__figure {
-    right: var(--s-2);
-    bottom: calc(var(--s-4) * -1);
-    width: var(--hero-figure-xs);
-  }
 }
 
 /* Drawer marks sit on stable dark/legacy surfaces, so their foreground must
