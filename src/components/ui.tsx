@@ -8,6 +8,7 @@ import {
   type ReactNode,
 } from "react";
 import { CheckCircle2, Search, X } from "lucide-react";
+import HeroAnimation from "./HeroAnimation";
 
 export const cx = (...parts: Array<string | false | null | undefined>) =>
   parts.filter(Boolean).join(" ");
@@ -107,21 +108,33 @@ export function WorkspaceHero({
   title,
   sub,
   actions,
+  mark,
+  media,
 }: {
   eyebrow: string;
   title: ReactNode;
   sub: ReactNode;
   actions?: ReactNode;
   mark?: ReactNode;
+  media?: { src: string; label: string };
 }) {
   return (
-    <section className="hero workspace-hero">
+    <section className={cx("hero workspace-hero", media && "workspace-hero--media")}>
       <div className="workspace-hero__body">
         <div className="eyebrow">{eyebrow}</div>
         <h1 className="hero__greet serif">{title}</h1>
         <div className="hero__meta">{sub}</div>
+        {media && actions && <div className="workspace-hero__actions">{actions}</div>}
       </div>
-      {actions && <div className="workspace-hero__actions">{actions}</div>}
+      {!media && actions && <div className="workspace-hero__actions">{actions}</div>}
+      {media && (
+        <HeroAnimation
+          className="workspace-hero__media"
+          src={media.src}
+          label={media.label}
+        />
+      )}
+      {mark ? <span className="workspace-hero__mark" aria-hidden="true">{mark}</span> : null}
     </section>
   );
 }
