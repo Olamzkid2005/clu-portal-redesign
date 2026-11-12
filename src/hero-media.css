@@ -36,14 +36,20 @@
   mix-blend-mode: multiply;
 }
 
-[data-theme="dark"] .hero-animation::before {
-  display: none;
+/* On dark surfaces the white video background must disappear into a soft
+   light spotlight, otherwise it reads as a pasted-on white rectangle. */
+[data-theme="dark"] .hero-animation,
+[data-theme="dark"] #student-dashboard .student-hero__media {
+  --media-blob: #f2e8e2;
+}
+
+[data-theme="dark"] .shell--workspace .workspace-hero__media {
+  --media-blob: #edf4ee;
 }
 
 [data-theme="dark"] .hero-animation__video {
-  background: #fff;
-  border-radius: 12px;
-  mix-blend-mode: normal;
+  background: transparent;
+  mix-blend-mode: multiply;
 }
 
 /* Sign-in: a wide, full-column illustration instead of a small corner card. */
