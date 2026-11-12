@@ -8,6 +8,7 @@ import {
   Loader2,
 } from "lucide-react";
 import { Avatar } from "../components/Avatar";
+import HeroAnimation from "../components/HeroAnimation";
 import { cx } from "../components/ui";
 import { ROLE_META, ROLE_ORDER, useRole, type Role } from "../roles";
 
@@ -136,6 +137,16 @@ export default function SignIn() {
               <b>Staff</b>
               <p>Teaching, finance, registry and systems workspaces.</p>
             </div>
+          </div>
+
+          <div className="signin__animation">
+            <HeroAnimation
+              src="/animations/signin.mp4"
+              label="Two students waving to each other on campus"
+            />
+            <p className="signin__animationcaption">
+              One portal for every part of campus life.
+            </p>
           </div>
         </section>
 
