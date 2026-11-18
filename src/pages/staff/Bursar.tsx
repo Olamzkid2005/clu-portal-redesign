@@ -271,7 +271,7 @@ export function BursarLedger() {
           <SearchField
             value={query}
             onChange={setQuery}
-            placeholder="Search student, matric or reference"
+            placeholder="Search student or reference"
             label="Search ledger"
           />
           <div className="seg">

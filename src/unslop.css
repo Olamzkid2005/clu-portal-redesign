@@ -1,0 +1,229 @@
+/* ==========================================================================
+   Unslop finish
+   One borderless surface language, one shape scale and denser phone layouts.
+   Hairlines are reserved for focus and form affordances, never decoration.
+   ========================================================================== */
+
+.shell--workspace {
+  --u-borderless-radius: 12px;
+  --u-control-radius: 8px;
+  --u-hairline: color-mix(in srgb, var(--u-ink) 8%, var(--u-canvas));
+}
+
+/* Decorative arcs and rings are noise, not information. */
+.shell--workspace .workspace-hero::before,
+.shell--workspace .student-hero::before,
+.shell--workspace .portal-rail__promo::after {
+  display: none !important;
+}
+
+/* Flat, borderless surfaces. Separation comes from tone and spacing. */
+.shell--workspace :is(
+    .card,
+    .stat,
+    .tablewrap,
+    .workspace-hero,
+    .student-hero,
+    .student-panel,
+    .quickcard,
+    .student-cgpa,
+    .signal,
+    .search__panel,
+    .menupanel,
+    .kv,
+    .modal,
+    .slotcard
+  ) {
+  border: 0 !important;
+  border-radius: var(--u-borderless-radius);
+  box-shadow: none !important;
+}
+
+.shell--workspace .workspace-hero {
+  min-height: 0;
+  padding: 26px 28px;
+}
+
+.shell--workspace .student-hero {
+  border-radius: var(--u-borderless-radius);
+}
+
+.shell--workspace .stat {
+  min-height: 0;
+  border-radius: var(--u-borderless-radius);
+}
+
+/* No bright separators across chrome or card headers. */
+.shell--workspace .tabbar,
+.shell--workspace .portal-rail,
+.shell--workspace .card__hd,
+.shell--workspace .student-panel__head {
+  border: 0 !important;
+}
+
+/* Keep the audit's navigation/footer hairlines, but make them neutral. */
+.shell--workspace .quadhead,
+.shell--workspace .mobilebar {
+  border-bottom: 1px solid var(--u-hairline) !important;
+}
+
+.shell--workspace .foot {
+  border-top: 1px solid var(--u-hairline) !important;
+}
+
+.shell--workspace .quadbar .user {
+  border-left: 0 !important;
+}
+
+.shell--workspace .student-hero__level,
+.shell--workspace .student-hero__eyebrow {
+  border: 0 !important;
+}
+
+/* Tables read as grouped data, not a spreadsheet grid. */
+.shell--workspace .table th {
+  border: 0 !important;
+  background: transparent !important;
+  color: var(--u-muted);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  opacity: 1;
+}
+
+.shell--workspace .table td {
+  border: 0 !important;
+}
+
+.shell--workspace .table tbody tr {
+  border: 0 !important;
+}
+
+.shell--workspace .table tbody tr:nth-child(even) {
+  background: color-mix(in srgb, var(--u-ink) 3%, var(--u-surface));
+}
+
+.shell--workspace .table tbody tr:hover {
+  background: var(--u-surface-2);
+}
+
+.shell--workspace .rowitem,
+.shell--workspace .rows > * + * {
+  border: 0 !important;
+}
+
+/* Solid chips instead of outlined pills. */
+.shell--workspace .pill {
+  padding: 3px 8px;
+  border: 0 !important;
+  border-radius: 6px;
+  box-shadow: inset 2px 0 0 currentColor !important;
+}
+
+.shell--workspace .pill--outline {
+  background: var(--u-surface-2);
+  color: var(--u-muted);
+}
+
+/* Compact, filled controls without hairline outlines. */
+.shell--workspace :is(
+    .btn,
+    .input,
+    .select,
+    .textarea,
+    .search__input,
+    .searchfield__input,
+    .iconbtn,
+    .seg
+  ) {
+  border: 0 !important;
+  border-radius: var(--u-control-radius);
+}
+
+.shell--workspace .seg {
+  background: var(--u-surface-2);
+}
+
+.shell--workspace .seg__btn {
+  border-radius: 6px;
+}
+
+/* Student quick actions are three cards, not one strip with dividers. */
+#student-dashboard .student-quickrow {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  overflow: visible;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+#student-dashboard .quickcard {
+  border: 0;
+  border-radius: var(--u-borderless-radius);
+  background: var(--u-surface);
+}
+
+#student-dashboard .quickcard + .quickcard {
+  border: 0;
+}
+
+#student-dashboard .student-class,
+#student-dashboard .student-task,
+#student-dashboard .student-announcement,
+#student-dashboard .student-service,
+#student-dashboard .student-service + .student-service {
+  border: 0 !important;
+}
+
+#student-dashboard .student-class__date,
+#student-dashboard .student-class__tag {
+  border: 0 !important;
+  background: var(--u-surface-2);
+}
+
+/* Phones: keep KPIs at a useful density and let actions fill the row. */
+@media (max-width: 720px) {
+  #student-dashboard .student-quickrow {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 10px;
+  }
+
+  .shell--workspace .statgrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+    border: 0 !important;
+  }
+
+  .shell--workspace .stat {
+    padding: 14px 12px;
+  }
+
+  .shell--workspace .stat__value {
+    font-size: clamp(22px, 6.6vw, 27px);
+    line-height: 1.1;
+  }
+
+  .shell--workspace .stat__label,
+  .shell--workspace .stat__meta {
+    font-size: 11.5px;
+  }
+
+  .shell--workspace .workspace-hero {
+    padding: 22px 20px;
+  }
+
+  .shell--workspace .workspace-hero__actions {
+    width: 100%;
+  }
+
+  .shell--workspace .workspace-hero__actions .btn {
+    flex: 1 1 150px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 359px) {
+  .shell--workspace .statgrid {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+}

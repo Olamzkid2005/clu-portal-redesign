@@ -11,6 +11,7 @@ import "./dashboard.css";
 import "./signin.css";
 import "./unify.css";
 import "./hero-media.css";
+import "./unslop.css";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
